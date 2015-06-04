@@ -1,0 +1,15 @@
+.. _aircraft.static_margin:
+
+Parameter: static_margin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The distance from the aerdynamic centre of the aircraft and the posCoGMAX. Calculated by the gradient of the moment to the lift coefficient.
+    
+    :Unit: [-] 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.CoG.static_margin.static_margin.calc
+
+

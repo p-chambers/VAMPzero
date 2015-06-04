@@ -1,0 +1,25 @@
+Component: Slat
+=====================================
+
+
+    Calculates the area and the average chord of the slats. 
+    The area is the total area of all slats of one half of the wing, the average chord
+    is the chord derived from this area. 
+    Assumes that both wings are symmetric. 
+
+    :Author: Lisanne van Veen
+    
+
+Included Disciplines
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+   
+   Geometry<Geometry>
+   
+   
+CPACS Export
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. automethod:: VAMPzero.Component.Slat.slat.slat.cpacsExport
+

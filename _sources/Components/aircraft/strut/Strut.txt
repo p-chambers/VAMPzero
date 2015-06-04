@@ -1,0 +1,32 @@
+Component: Strut
+=====================================
+
+
+    class for the description of the strut as it would be included in a strut-braced wing design
+    inherits component to throw errors and methods
+    Component Class
+    
+
+Included Disciplines
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+   
+   Aerodynamic<Aerodynamic>
+   Geometry<Geometry>
+   Mass<Mass>
+   
+Nested Components
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+   
+   Strutrootairfoil<strutrootairfoil/strutrootairfoil>
+   Struttipairfoil<struttipairfoil/struttipairfoil>
+   
+CPACS Export
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. automethod:: VAMPzero.Component.Strut.strut.strut.cpacsExport
+

@@ -1,0 +1,17 @@
+.. _htp.DPR:
+
+Parameter: DPR
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    dynamic pressure ratio (DPR) of the horizontal tail to the wing
+    
+    :Unit: [ ]
+    
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Aerodynamic.DPR.DPR.calc
+
+

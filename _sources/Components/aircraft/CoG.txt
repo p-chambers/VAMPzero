@@ -1,0 +1,14 @@
+.. _aircraft.CoG:
+
+Discipline: CoG
+---------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   posCoG<posCoG/posCoG>
+   posCoGMAX<posCoGMAX/posCoGMAX>
+   posCoGMIN<posCoGMIN/posCoGMIN>
+   posCoGOEM<posCoGOEM/posCoGOEM>
+   posNP<posNP/posNP>
+   static_margin<static_margin/static_margin>

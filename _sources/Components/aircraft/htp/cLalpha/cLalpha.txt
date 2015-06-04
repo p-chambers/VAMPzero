@@ -1,0 +1,50 @@
+.. _htp.cLalpha:
+
+Parameter: cLalpha
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The rise in cL depending on alpha 
+    
+    :Unit: [ ]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Aerodynamic.cLalpha.cLalpha.calc
+
+
+   :Dependencies: 
+   * :ref:`htp.aspectRatio`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Wing.Aerodynamic.cLalpha.cLalpha.calcRaymerSubsonic
+
+
+   :Dependencies: 
+   * :ref:`htp.aspectRatio`
+   * :ref:`htp.expArea`
+   * :ref:`htp.refArea`
+   * :ref:`htp.span`
+   * :ref:`htp.phi25`
+   * :ref:`fuselage.dfus`
+   * :ref:`aircraft.machCR`
+
+
+
+.. automethod:: VAMPzero.Component.Wing.Aerodynamic.cLalpha.cLalpha.calcVoitNitschmann
+
+
+   :Dependencies: 
+   * :ref:`htp.aspectRatio`
+
+
+   :Sensitivities: 
+.. image:: calcVoitNitschmann.jpg 
+   :width: 80% 
+
+

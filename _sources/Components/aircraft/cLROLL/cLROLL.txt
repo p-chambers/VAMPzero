@@ -1,0 +1,25 @@
+.. _aircraft.cLROLL:
+
+Parameter: cLROLL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The airplanes CL for the Take Off during rolling.
+    
+    :Unit: [ ]  
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.Aerodynamic.cLROLL.cLROLL.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.oswald`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

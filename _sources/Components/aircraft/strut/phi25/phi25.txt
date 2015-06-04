@@ -1,0 +1,27 @@
+.. _strut.phi25:
+
+Parameter: phi25
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The sweep angle of the strut at the 25% chord line. Currently, there are
+    two simplifications included in the strut model:
+
+    * The strut is not tapered and hence all sweep angles are identical
+    * This parameter may be set as user input.
+      All other sweep angles of the strut read their values from here
+
+    The angle of sweep which characterizes a swept wing is
+    conventionally measured along the 25% chord line. If 
+    the 25% chord line varies in sweep angle, the leading edge is used; 
+    if that varies, the sweep is expressed in sections (e.g., 25 degrees 
+    from 0 to 50% span, 15 degrees from 50% to wingtip).
+
+    :Unit: [deg]
+    :Wiki: http://en.wikipedia.org/wiki/Swept_wing
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.phi25.phi25.calc
+
+

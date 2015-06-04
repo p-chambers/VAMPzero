@@ -1,0 +1,26 @@
+.. _strut.refArea:
+
+Parameter: refArea
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The reference area of the struts, i.e. summed up for right and left strut.
+    
+    :Unit: [m2]
+    :Wiki: http://adg.stanford.edu/aa241/wingdesign/winggeometry.html
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.refArea.refArea.calc
+
+
+   :Dependencies: 
+   * :ref:`strut.cRoot`
+   * :ref:`strut.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

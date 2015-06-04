@@ -1,0 +1,25 @@
+Component: Spoiler
+=====================================
+
+
+    Calculates the area and the average chord of the spoilers. 
+    The area is the total area of all spoilers of one half of the wing, the average chord
+    is the chord of one single spoiler. 
+    Assumes that both wings are symmetric. 
+
+    :Author: Lisanne van Veen
+    
+
+Included Disciplines
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+   
+   Geometry<Geometry>
+   
+   
+CPACS Export
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. automethod:: VAMPzero.Component.Spoiler.spoiler.spoiler.cpacsExport
+

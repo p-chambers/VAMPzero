@@ -1,0 +1,26 @@
+.. _aircraft.COO:
+
+Parameter: COO
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The cost of ownership per flight hour
+    
+    :Unit: [EU/bh]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.COO.COO.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.costDepreciation`
+   * :ref:`aircraft.costInterest`
+   * :ref:`aircraft.costInsurance`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,70 @@
+.. _htp.refAreaCruise:
+
+Parameter: refAreaCruise
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The reference area of the horizontal tailplane
+    
+    :Unit: [m2]
+
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis    
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Geometry.refAreaCruise.refAreaCruise.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.machCR`
+   * :ref:`atmosphere.aCR`
+   * :ref:`atmosphere.rhoCR`
+   * :ref:`htp.DPR`
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.phi50`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.cMAC`
+   * :ref:`wing.refArea`
+   * :ref:`htp.lHT`
+   * :ref:`htp.xMAC`
+   * :ref:`aircraft.static_margin`
+   * :ref:`htp.CLalphaHTP_CR`
+   * :ref:`htp.detadalpha`
+
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.refAreaCruise.refAreaCruise.calcControl
+
+
+   :Dependencies: 
+   * :ref:`htp.cLMAXht`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.cMAC`
+   * :ref:`wing.refArea`
+   * :ref:`htp.lHT`
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.oswald`
+   * :ref:`wing.cM0CR`
+   * :ref:`aircraft.cD0`
+   * :ref:`engine.nEngine`
+   * :ref:`engine.zEngine`
+
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.refAreaCruise.refAreaCruise.calcStability
+
+
+   :Dependencies: 
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.phi50`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.cMAC`
+   * :ref:`wing.refArea`
+   * :ref:`htp.lHT`
+   * :ref:`htp.xMAC`
+   * :ref:`aircraft.static_margin`
+   * :ref:`htp.CLalphaHTP_CR`
+   * :ref:`htp.detadalpha`
+
+
+

@@ -1,0 +1,39 @@
+.. _aircraft.posCoGOEM:
+
+Parameter: posCoGOEM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The x position of the center of gravity of the empty aircraft (OEM).
+    
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.CoG.posCoGOEM.posCoGOEM.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.oEM`
+   * :ref:`pylon.mPylon`
+   * :ref:`landingGear.mLandingGear`
+   * :ref:`engine.posCoG`
+   * :ref:`engine.mEngine`
+   * :ref:`wing.posCoG`
+   * :ref:`wing.mWing`
+   * :ref:`htp.posCoG`
+   * :ref:`htp.mHtp`
+   * :ref:`vtp.posCoG`
+   * :ref:`vtp.mVtp`
+   * :ref:`fuselage.posCoG`
+   * :ref:`fuselage.mFuselage`
+   * :ref:`systems.posCoG`
+   * :ref:`systems.mSystems`
+   * :ref:`aircraft.oIM`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

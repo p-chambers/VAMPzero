@@ -1,0 +1,28 @@
+.. _wing.phi50:
+
+Parameter: phi50
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The wings sweep angle for the 50% chord line. This is simply a helper value
+    
+    :Unit: [deg]
+    :Wiki: http://en.wikipedia.org/wiki/Swept_wing
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Geometry.phi50.phi50.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.span`
+   * :ref:`wing.phiLE`
+   * :ref:`wing.cRoot`
+   * :ref:`wing.cTip`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

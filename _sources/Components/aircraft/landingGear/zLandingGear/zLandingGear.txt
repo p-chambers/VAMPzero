@@ -1,0 +1,29 @@
+.. _landingGear.zLandingGear:
+
+Parameter: zLandingGear
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The z-position of the landing gear
+    
+    :Unit: [m]
+    
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.LandingGear.Position.zLandingGear.zLandingGear.calc
+
+
+   :Dependencies: 
+   * :ref:`fuselage.ltail`
+   * :ref:`fuselage.lfus`
+   * :ref:`fuselage.dfus`
+   * :ref:`landingGear.xLandingGear`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,24 @@
+.. _aircraft.nCabinCrew:
+
+Parameter: nCabinCrew
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The number of cabin crew personal for the aircraft  
+    
+    :Unit: []
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.Crew.nCabinCrew.nCabinCrew.calc
+
+
+   :Dependencies: 
+   * :ref:`payload.paxSeats`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

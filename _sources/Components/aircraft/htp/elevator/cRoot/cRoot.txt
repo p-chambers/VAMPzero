@@ -1,0 +1,30 @@
+.. _elevator.cRoot:
+
+Parameter: cRoot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the root chord of the elevator (note: only one elevator is considered).
+
+    :Unit: [m]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Elevator.Geometry.cRoot.cRoot.calc
+
+
+   :Dependencies: 
+   * :ref:`elevator.refArea`
+   * :ref:`elevator.span`
+   * :ref:`htp.taperRatio`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,35 @@
+.. _aircraft.DOC:
+
+Discipline: DOC
+---------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   C1<C1/C1>
+   C2<C2/C2>
+   COC<COC/COC>
+   COO<COO/COO>
+   DOC<DOC/DOC>
+   USDexchangeEURO<USDexchangeEURO/USDexchangeEURO>
+   aFactor<aFactor/aFactor>
+   costAircraftMaintenance<costAircraftMaintenance/costAircraftMaintenance>
+   costCap<costCap/costCap>
+   costCrew<costCrew/costCrew>
+   costDepreciation<costDepreciation/costDepreciation>
+   costEmissionTrade<costEmissionTrade/costEmissionTrade>
+   costEngineMaintenance<costEngineMaintenance/costEngineMaintenance>
+   costFuel<costFuel/costFuel>
+   costGround<costGround/costGround>
+   costInsurance<costInsurance/costInsurance>
+   costInterest<costInterest/costInterest>
+   costLanding<costLanding/costLanding>
+   costMaintenance<costMaintenance/costMaintenance>
+   costNavigation<costNavigation/costNavigation>
+   flightCycles<flightCycles/flightCycles>
+   inflation<inflation/inflation>
+   priceAircraft<priceAircraft/priceAircraft>
+   priceFuel<priceFuel/priceFuel>
+   tBlock<tBlock/tBlock>
+   tFlight<tFlight/tFlight>
+   utilization<utilization/utilization>

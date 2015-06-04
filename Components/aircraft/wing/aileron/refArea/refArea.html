@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: refArea &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../../../index.html" />
+    <link rel="up" title="Discipline: Geometry" href="../Geometry.html" />
+    <link rel="next" title="Parameter: span" href="../span/span.html" />
+    <link rel="prev" title="Parameter: cTip" href="../cTip/cTip.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../../../index.html"><img src="../../../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../span/span.html" title="Parameter: span"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cTip/cTip.html" title="Parameter: cTip"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../../wing.html" >Component: Wing</a> &raquo;</li>
+          <li><a href="../aileron.html" >Component: Aileron</a> &raquo;</li>
+          <li><a href="../Geometry.html" accesskey="U">Discipline: Geometry</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: refArea</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../cTip/cTip.html"
+                        title="previous chapter">Parameter: cTip</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../span/span.html"
+                        title="next chapter">Parameter: span</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../../../_sources/Components/aircraft/wing/aileron/refArea/refArea.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-refarea">
+<span id="aileron-refarea"></span><h1>Parameter: refArea<a class="headerlink" href="#parameter-refarea" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Calculates the reference area of the aileron (note: only one aileron is considered).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[m2]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Source:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Lisanne van Veen</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Aileron.Geometry.refArea.refArea.calc">
+<tt class="descclassname">refArea.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Aileron.Geometry.refArea.refArea.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function is a statistical relation obtained by analyzing data of large passenger aircraft.
+The design space of this equation is:</p>
+<ul class="simple">
+<li>refAreaWing 72.72 - 845 m2</li>
+<li>spanWing 26 - 79.80 m</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+<li><a class="reference internal" href="../../span/span.html#wing-span"><em>Parameter: span</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../../_images/calc273.jpg"><img alt="../../../../../_images/calc273.jpg" src="../../../../../_images/calc273.jpg" style="width: 80%;" /></a>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../span/span.html" title="Parameter: span"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cTip/cTip.html" title="Parameter: cTip"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../../wing.html" >Component: Wing</a> &raquo;</li>
+          <li><a href="../aileron.html" >Component: Aileron</a> &raquo;</li>
+          <li><a href="../Geometry.html" >Discipline: Geometry</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

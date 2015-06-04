@@ -1,0 +1,30 @@
+.. _aircraft.COC:
+
+Parameter: COC
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The cash operating costs per flight hour
+    
+    :Unit: [EU/h]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.COC.COC.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.costCrew`
+   * :ref:`aircraft.costFuel`
+   * :ref:`aircraft.costNavigation`
+   * :ref:`aircraft.costLanding`
+   * :ref:`aircraft.costGround`
+   * :ref:`aircraft.costMaintenance`
+   * :ref:`aircraft.costEmissionTrade`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

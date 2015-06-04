@@ -1,0 +1,40 @@
+.. _aircraft.costMaintenance:
+
+Parameter: costMaintenance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The maintenance costs per flight hour
+    
+    :Unit: [EU/hr]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.costMaintenance.costMaintenance.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.tFlight`
+   * :ref:`engine.nEngine`
+   * :ref:`aircraft.oEM`
+   * :ref:`engine.thrustTOISA`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.costMaintenance.costMaintenance.calcKundu
+
+
+   :Dependencies: 
+   * :ref:`aircraft.costAircraftMaintenance`
+   * :ref:`aircraft.costEngineMaintenance`
+
+
+   :Sensitivities: 
+.. image:: calcKundu.jpg 
+   :width: 80% 
+
+

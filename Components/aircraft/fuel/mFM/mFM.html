@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: mFM &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../../index.html" />
+    <link rel="up" title="Discipline: Mass" href="../Mass.html" />
+    <link rel="next" title="Parameter: mFuelCLIMB" href="../mFuelCLIMB/mFuelCLIMB.html" />
+    <link rel="prev" title="Parameter: TrimTank" href="../TrimTank/TrimTank.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../../index.html"><img src="../../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../mFuelCLIMB/mFuelCLIMB.html" title="Parameter: mFuelCLIMB"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../TrimTank/TrimTank.html" title="Parameter: TrimTank"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../fuel.html" >Component: Fuel</a> &raquo;</li>
+          <li><a href="../Mass.html" accesskey="U">Discipline: Mass</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: mFM</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+<li><a class="reference internal" href="#cpacs-import">CPACS Import</a><ul>
+<li><a class="reference internal" href="#cpacs-export">CPACS Export</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../TrimTank/TrimTank.html"
+                        title="previous chapter">Parameter: TrimTank</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../mFuelCLIMB/mFuelCLIMB.html"
+                        title="next chapter">Parameter: mFuelCLIMB</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../../_sources/Components/aircraft/fuel/mFM/mFM.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-mfm">
+<span id="fuel-mfm"></span><h1>Parameter: mFM<a class="headerlink" href="#parameter-mfm" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>The complete mission fuel mass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[kg]</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Fuel.Mass.mFM.mFM.calc">
+<tt class="descclassname">mFM.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Fuel.Mass.mFM.mFM.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the calc method. If the <a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a> is fixed calcMass is chosen. If the <a class="reference internal" href="../../desRange/desRange.html#aircraft-desrange"><em>Parameter: desRange</em></a> is fixed calcSum is chosen.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../mFuelCLIMB/mFuelCLIMB.html#fuel-mfuelclimb"><em>Parameter: mFuelCLIMB</em></a></li>
+<li><a class="reference internal" href="../mFuelDESCENT/mFuelDESCENT.html#fuel-mfueldescent"><em>Parameter: mFuelDESCENT</em></a></li>
+<li><a class="reference internal" href="../mFuelCR/mFuelCR.html#fuel-mfuelcr"><em>Parameter: mFuelCR</em></a></li>
+<li><a class="reference internal" href="../mFuelTO/mFuelTO.html#fuel-mfuelto"><em>Parameter: mFuelTO</em></a></li>
+<li><a class="reference internal" href="../mFuelRES/mFuelRES.html#fuel-mfuelres"><em>Parameter: mFuelRES</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calc94.jpg"><img alt="../../../../_images/calc94.jpg" src="../../../../_images/calc94.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Fuel.Mass.mFM.mFM.calcMass">
+<tt class="descclassname">mFM.</tt><tt class="descname">calcMass</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Fuel.Mass.mFM.mFM.calcMass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the mission fuel mass from the maximum takeoff mass and the operating empty weight and payload</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../../oEM/oEM.html#aircraft-oem"><em>Parameter: oEM</em></a></li>
+<li><a class="reference internal" href="../../payload/mPayload/mPayload.html#payload-mpayload"><em>Parameter: mPayload</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcMass.jpg"><img alt="../../../../_images/calcMass.jpg" src="../../../../_images/calcMass.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Fuel.Mass.mFM.mFM.calcRaymer">
+<tt class="descclassname">mFM.</tt><tt class="descname">calcRaymer</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Fuel.Mass.mFM.mFM.calcRaymer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the fuel needed for the complete mission via Brequet equation and fuel fractions</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Aircraft Design: A Conceptual Approach, D. P. Raymer, AIAA Education Series, 1992, Second Edition, p. 19</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../atmosphere/TASCR/TASCR.html#atmosphere-tascr"><em>Parameter: TASCR</em></a></li>
+<li><a class="reference internal" href="../../desRange/desRange.html#aircraft-desrange"><em>Parameter: desRange</em></a></li>
+<li><a class="reference internal" href="../../engine/sfcCR/sfcCR.html#engine-sfccr"><em>Parameter: sfcCR</em></a></li>
+<li><a class="reference internal" href="../../loDCR/loDCR.html#aircraft-lodcr"><em>Parameter: loDCR</em></a></li>
+<li><a class="reference internal" href="../../timeRES/timeRES.html#aircraft-timeres"><em>Parameter: timeRES</em></a></li>
+<li><a class="reference internal" href="../../engine/sfcLOI/sfcLOI.html#engine-sfcloi"><em>Parameter: sfcLOI</em></a></li>
+<li><a class="reference internal" href="../../loDLOI/loDLOI.html#aircraft-lodloi"><em>Parameter: loDLOI</em></a></li>
+<li><a class="reference internal" href="../../oEM/oEM.html#aircraft-oem"><em>Parameter: oEM</em></a></li>
+<li><a class="reference internal" href="../../payload/mPayload/mPayload.html#payload-mpayload"><em>Parameter: mPayload</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcRaymer.jpg"><img alt="../../../../_images/calcRaymer.jpg" src="../../../../_images/calcRaymer.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Fuel.Mass.mFM.mFM.calcSum">
+<tt class="descclassname">mFM.</tt><tt class="descname">calcSum</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Fuel.Mass.mFM.mFM.calcSum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the fuel needed for the complete mission via the sum of all mission segment fuel masses</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../mFuelCLIMB/mFuelCLIMB.html#fuel-mfuelclimb"><em>Parameter: mFuelCLIMB</em></a></li>
+<li><a class="reference internal" href="../mFuelDESCENT/mFuelDESCENT.html#fuel-mfueldescent"><em>Parameter: mFuelDESCENT</em></a></li>
+<li><a class="reference internal" href="../mFuelCR/mFuelCR.html#fuel-mfuelcr"><em>Parameter: mFuelCR</em></a></li>
+<li><a class="reference internal" href="../mFuelTO/mFuelTO.html#fuel-mfuelto"><em>Parameter: mFuelTO</em></a></li>
+<li><a class="reference internal" href="../mFuelRES/mFuelRES.html#fuel-mfuelres"><em>Parameter: mFuelRES</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcSum1.jpg"><img alt="../../../../_images/calcSum1.jpg" src="../../../../_images/calcSum1.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Fuel.Mass.mFM.mFM.calcViaRange">
+<tt class="descclassname">mFM.</tt><tt class="descname">calcViaRange</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Fuel.Mass.mFM.mFM.calcViaRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the mission fuel mass for for an 
+electric airplane where no mission fuel is lost during cruise</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Marco Friederich, TU Braunschweig</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">missing Source calcViaRange mFM</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../desRange/desRange.html#aircraft-desrange"><em>Parameter: desRange</em></a></li>
+<li><a class="reference internal" href="../../cDCR/cDCR.html#aircraft-cdcr"><em>Parameter: cDCR</em></a></li>
+<li><a class="reference internal" href="../../atmosphere/qCR/qCR.html#atmosphere-qcr"><em>Parameter: qCR</em></a></li>
+<li><a class="reference internal" href="../../wing/refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+<li><a class="reference internal" href="../../oEM/oEM.html#aircraft-oem"><em>Parameter: oEM</em></a></li>
+<li><a class="reference internal" href="../../payload/mPayload/mPayload.html#payload-mpayload"><em>Parameter: mPayload</em></a></li>
+<li><a class="reference internal" href="../../loDCR/loDCR.html#aircraft-lodcr"><em>Parameter: loDCR</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcViaRange.jpg"><img alt="../../../../_images/calcViaRange.jpg" src="../../../../_images/calcViaRange.jpg" style="width: 80%;" /></a>
+</div>
+<div class="section" id="cpacs-import">
+<h2>CPACS Import<a class="headerlink" href="#cpacs-import" title="Permalink to this headline">¶</a></h2>
+<p>The values for mFM are imported from:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;cpacs&gt;</span>
+   <span class="nt">&lt;vehicles&gt;</span>
+      <span class="nt">&lt;aircraft&gt;</span>
+         <span class="nt">&lt;model&gt;</span>
+            <span class="nt">&lt;analyses&gt;</span>
+               <span class="nt">&lt;massBreakdown&gt;</span>
+                  <span class="nt">&lt;fuel&gt;</span>
+                     <span class="nt">&lt;massDescription&gt;</span>
+                        <span class="nt">&lt;mass&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="cpacs-export">
+<h3>CPACS Export<a class="headerlink" href="#cpacs-export" title="Permalink to this headline">¶</a></h3>
+<p>The values for mFM are exported to:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;cpacs&gt;</span>
+   <span class="nt">&lt;vehicles&gt;</span>
+      <span class="nt">&lt;aircraft&gt;</span>
+         <span class="nt">&lt;model&gt;</span>
+            <span class="nt">&lt;analyses&gt;</span>
+               <span class="nt">&lt;massBreakdown&gt;</span>
+                  <span class="nt">&lt;fuel&gt;</span>
+                     <span class="nt">&lt;massDescription&gt;</span>
+                        <span class="nt">&lt;mass&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../mFuelCLIMB/mFuelCLIMB.html" title="Parameter: mFuelCLIMB"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../TrimTank/TrimTank.html" title="Parameter: TrimTank"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../fuel.html" >Component: Fuel</a> &raquo;</li>
+          <li><a href="../Mass.html" >Discipline: Mass</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

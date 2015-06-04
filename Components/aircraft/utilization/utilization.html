@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: utilization &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../index.html" />
+    <link rel="up" title="Discipline: DOC" href="../DOC.html" />
+    <link rel="next" title="Discipline: Inertia" href="../Inertia.html" />
+    <link rel="prev" title="Parameter: tFlight" href="../tFlight/tFlight.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../index.html"><img src="../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../Inertia.html" title="Discipline: Inertia"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../tFlight/tFlight.html" title="Parameter: tFlight"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../DOC.html" accesskey="U">Discipline: DOC</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: utilization</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../tFlight/tFlight.html"
+                        title="previous chapter">Parameter: tFlight</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../Inertia.html"
+                        title="next chapter">Discipline: Inertia</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/Components/aircraft/utilization/utilization.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-utilization">
+<span id="aircraft-utilization"></span><h1>Parameter: utilization<a class="headerlink" href="#parameter-utilization" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>The annual utilization  defines the number of flight hours relative to the number of possible flight hours</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[h/a]</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Main.DOC.utilization.utilization.calc">
+<tt class="descclassname">utilization.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Main.DOC.utilization.utilization.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the annual flight hours</p>
+<p>The calculation method stems from the QUICE project</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Analyse und Vergleich von DOC-Modellen zur Etablierung eines gemeinsam genutzten Rechenmodells bei Airbus und Universitaeten, M. Weiss, 2008</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../desRange/desRange.html#aircraft-desrange"><em>Parameter: desRange</em></a></li>
+<li><a class="reference internal" href="../tFlight/tFlight.html#aircraft-tflight"><em>Parameter: tFlight</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../_images/calc240.jpg"><img alt="../../../_images/calc240.jpg" src="../../../_images/calc240.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Main.DOC.utilization.utilization.calcLufthansa">
+<tt class="descclassname">utilization.</tt><tt class="descname">calcLufthansa</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Main.DOC.utilization.utilization.calcLufthansa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the utilization from the number of available flight hours and 
+assuming that the aircraft is grounded for quarter of an hour. This 
+approach is taken from a Lufthansa Method quoted by W. Heinze</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Entwerfen von Verkehrsflugzeugen I, W. Heinze, TU Braunschweig, 2005, p. 258</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../tBlock/tBlock.html#aircraft-tblock"><em>Parameter: tBlock</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../_images/calcLufthansa.jpg"><img alt="../../../_images/calcLufthansa.jpg" src="../../../_images/calcLufthansa.jpg" style="width: 80%;" /></a>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../Inertia.html" title="Discipline: Inertia"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../tFlight/tFlight.html" title="Parameter: tFlight"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../DOC.html" >Discipline: DOC</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

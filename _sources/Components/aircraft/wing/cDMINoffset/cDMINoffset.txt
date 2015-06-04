@@ -1,0 +1,33 @@
+.. _wing.cDMINoffset:
+
+Parameter: cDMINoffset
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Modelling the drag polar as CD = k*(CL**2) + b*CL + CD0,
+    cDMINoffset would be 'b'. This class was mostly adapted
+    from Daniel Boehnke's oswald class. The value is normally
+    negative, as the point of minimum drag is at a positive CL.
+
+    :Unit: [ ]
+
+    :Wiki: http://en.wikipedia.org/wiki/Drag_Polar
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Aerodynamic.cDMINoffset.cDMINoffset.calc
+
+
+.. automethod:: VAMPzero.Component.Wing.Aerodynamic.cDMINoffset.cDMINoffset.calcLiLi
+
+
+   :Dependencies: 
+   * :ref:`aircraft.machCR`
+   * :ref:`wing.reynoldsNr`
+
+
+
+CPACS Import
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Aerodynamic.cDMINoffset.cDMINoffset.cpacsImport
+

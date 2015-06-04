@@ -1,0 +1,32 @@
+.. _htp.CLalphaHTP_TO:
+
+Parameter: CLalphaHTP_TO
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The derivative of the lift coefficient of the horizontal tailplane for the Take Off.
+    
+    :Unit: [-]
+
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Aerodynamic.CLalphaHTP_TO.CLalphaHTP_TO.calc
+
+
+   :Dependencies: 
+   * :ref:`htp.aspectRatio`
+   * :ref:`htp.phi50`
+   * :ref:`aircraft.mTOM`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`atmosphere.aAP`
+   * :ref:`aircraft.cLTO`
+   * :ref:`wing.refArea`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,52 @@
+.. _htp.cRoot:
+
+Parameter: cRoot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The root chord of the wing
+    
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Geometry.cRoot.cRoot.calc
+
+
+   :Dependencies: 
+   * :ref:`htp.refArea`
+   * :ref:`htp.span`
+   * :ref:`htp.taperRatio`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.cRoot.cRoot.calcConventional
+
+
+   :Dependencies: 
+   * :ref:`htp.refArea`
+   * :ref:`htp.span`
+   * :ref:`htp.taperRatio`
+
+
+   :Sensitivities: 
+.. image:: calcConventional.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.cRoot.cRoot.calcTtail
+
+
+   :Dependencies: 
+   * :ref:`vtp.cTip`
+
+
+   :Sensitivities: 
+.. image:: calcTtail.jpg 
+   :width: 80% 
+
+

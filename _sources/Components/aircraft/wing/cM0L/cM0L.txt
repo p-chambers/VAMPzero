@@ -1,0 +1,15 @@
+.. _wing.cM0L:
+
+Parameter: cM0L
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    moment coefficient for wing during landing
+    
+    :Unit: [ ]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Aerodynamic.cM0L.cM0L.calc
+
+

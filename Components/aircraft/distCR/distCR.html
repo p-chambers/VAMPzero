@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: distCR &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../index.html" />
+    <link rel="up" title="Discipline: Performance" href="../Performance.html" />
+    <link rel="next" title="Parameter: distDESCENT" href="../distDESCENT/distDESCENT.html" />
+    <link rel="prev" title="Parameter: distCLIMB" href="../distCLIMB/distCLIMB.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../index.html"><img src="../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../distDESCENT/distDESCENT.html" title="Parameter: distDESCENT"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../distCLIMB/distCLIMB.html" title="Parameter: distCLIMB"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../Performance.html" accesskey="U">Discipline: Performance</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: distCR</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../distCLIMB/distCLIMB.html"
+                        title="previous chapter">Parameter: distCLIMB</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../distDESCENT/distDESCENT.html"
+                        title="next chapter">Parameter: distDESCENT</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/Components/aircraft/distCR/distCR.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-distcr">
+<span id="aircraft-distcr"></span><h1>Parameter: distCR<a class="headerlink" href="#parameter-distcr" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>The distance traveled during the cruise segment</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[m]</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Main.Performance.distCR.distCR.calc">
+<tt class="descclassname">distCR.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Main.Performance.distCR.distCR.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets ths calc method for the calculation of the distance traveled in the cruise segment
+depending on the status of the design range. If the design range is fixed calcFixRange is chosen, 
+else calcFixFuel is chosen.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">catch error if both or none are fixed.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../distCLIMB/distCLIMB.html#aircraft-distclimb"><em>Parameter: distCLIMB</em></a></li>
+<li><a class="reference internal" href="../distDESCENT/distDESCENT.html#aircraft-distdescent"><em>Parameter: distDESCENT</em></a></li>
+<li><a class="reference internal" href="../distRES/distRES.html#aircraft-distres"><em>Parameter: distRES</em></a></li>
+<li><a class="reference internal" href="../desRange/desRange.html#aircraft-desrange"><em>Parameter: desRange</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../_images/calc64.jpg"><img alt="../../../_images/calc64.jpg" src="../../../_images/calc64.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Main.Performance.distCR.distCR.calcFixFuel">
+<tt class="descclassname">distCR.</tt><tt class="descname">calcFixFuel</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Main.Performance.distCR.distCR.calcFixFuel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the distance for the cruise segment if the fuel for the segment is given</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">adapted from DLR-LY-IL Performance Tool, J. Fuchte, 2011</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../atmosphere/TASCR/TASCR.html#atmosphere-tascr"><em>Parameter: TASCR</em></a></li>
+<li><a class="reference internal" href="../timeCR/timeCR.html#aircraft-timecr"><em>Parameter: timeCR</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../_images/calcFixFuel.jpg"><img alt="../../../_images/calcFixFuel.jpg" src="../../../_images/calcFixFuel.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Main.Performance.distCR.distCR.calcFixRange">
+<tt class="descclassname">distCR.</tt><tt class="descname">calcFixRange</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Main.Performance.distCR.distCR.calcFixRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the distance for the cruise segment if the range is given</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">adapted from DLR-LY-IL Performance Tool, J. Fuchte, 2011</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../distCLIMB/distCLIMB.html#aircraft-distclimb"><em>Parameter: distCLIMB</em></a></li>
+<li><a class="reference internal" href="../distDESCENT/distDESCENT.html#aircraft-distdescent"><em>Parameter: distDESCENT</em></a></li>
+<li><a class="reference internal" href="../distRES/distRES.html#aircraft-distres"><em>Parameter: distRES</em></a></li>
+<li><a class="reference internal" href="../desRange/desRange.html#aircraft-desrange"><em>Parameter: desRange</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../_images/calcFixRange.jpg"><img alt="../../../_images/calcFixRange.jpg" src="../../../_images/calcFixRange.jpg" style="width: 80%;" /></a>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../distDESCENT/distDESCENT.html" title="Parameter: distDESCENT"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../distCLIMB/distCLIMB.html" title="Parameter: distCLIMB"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../Performance.html" >Discipline: Performance</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

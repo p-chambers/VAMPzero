@@ -1,0 +1,28 @@
+.. _rudder.span:
+
+Parameter: span
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the span of the rudder.
+
+    :Unit: [m]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Vtp.Rudder.Geometry.span.span.calc
+
+
+   :Dependencies: 
+   * :ref:`vtp.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

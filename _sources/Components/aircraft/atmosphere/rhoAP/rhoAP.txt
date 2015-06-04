@@ -1,0 +1,23 @@
+.. _atmosphere.rhoAP:
+
+Parameter: rhoAP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    density at airport height 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Atmosphere.Airport.rhoAP.rhoAP.calc
+
+
+   :Dependencies: 
+   * :ref:`atmosphere.hAP`
+   * :ref:`atmosphere.deltaT`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

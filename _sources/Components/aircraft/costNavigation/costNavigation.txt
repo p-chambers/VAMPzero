@@ -1,0 +1,55 @@
+.. _aircraft.costNavigation:
+
+Parameter: costNavigation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The navigation costs per flight hour
+    
+    :Unit: [EU/h]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.costNavigation.costNavigation.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.desRange`
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.tFlight`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.costNavigation.costNavigation.calcKundu
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.desRange`
+   * :ref:`aircraft.tFlight`
+   * :ref:`aircraft.USDexchangeEURO`
+
+
+   :Sensitivities: 
+.. image:: calcKundu.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.costNavigation.costNavigation.calcWeiss
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.desRange`
+   * :ref:`aircraft.tFlight`
+
+
+   :Sensitivities: 
+.. image:: calcWeiss.jpg 
+   :width: 80% 
+
+

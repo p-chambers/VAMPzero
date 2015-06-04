@@ -1,0 +1,16 @@
+.. _engine.location:
+
+Parameter: location
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The location of the engines on the airframe. Boolean value. True for wing mounted, false for
+     fuselage mounted. Default is wing mounted.
+    
+    :Unit: []
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Engine.Geometry.location.location.calc
+
+

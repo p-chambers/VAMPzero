@@ -1,0 +1,24 @@
+.. _strut.zRoot:
+
+Parameter: zRoot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The z position of the root leading edge of the strut.
+
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.zRoot.zRoot.calc
+
+
+   :Dependencies: 
+   * :ref:`fuselage.dfus`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

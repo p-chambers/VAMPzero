@@ -1,0 +1,28 @@
+.. _fuselage.vcabin:
+
+Parameter: vcabin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The volume of the cabin
+    
+    :Unit: [m3] 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuselage.Cabin.vcabin.vcabin.calc
+
+
+   :Dependencies: 
+   * :ref:`fuselage.zFloor`
+   * :ref:`fuselage.hcabin`
+   * :ref:`fuselage.dcabin`
+   * :ref:`fuselage.yFloor`
+   * :ref:`fuselage.lcabin`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

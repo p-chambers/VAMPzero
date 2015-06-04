@@ -1,0 +1,49 @@
+.. _aircraft.sTOFL:
+
+Parameter: sTOFL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The take-off field length for airport conditions, i.e. influenced by temperature and altitude 
+    
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.Performance.sTOFL.sTOFL.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`engine.thrustTO`
+   * :ref:`wing.refArea`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`aircraft.cLTO`
+   * :ref:`aircraft.cD0`
+   * :ref:`flap.dCDTO`
+   * :ref:`landingGear.dCDextendedLG`
+   * :ref:`engine.dCDOEI`
+   * :ref:`aircraft.oswald`
+   * :ref:`wing.aspectRatio`
+   * :ref:`engine.nEngine`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.Performance.sTOFL.sTOFL.calcRoskam
+
+
+   :Dependencies: 
+   * :ref:`aircraft.wsTO`
+   * :ref:`aircraft.cLTO`
+   * :ref:`aircraft.twTO`
+
+
+   :Sensitivities: 
+.. image:: calcRoskam.jpg 
+   :width: 80% 
+
+

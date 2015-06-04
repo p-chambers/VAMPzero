@@ -1,0 +1,29 @@
+.. _spoiler.refArea:
+
+Parameter: refArea
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the total reference area of all spoilers, one half of the wing.
+
+    :Unit: [m2]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Spoiler.Geometry.refArea.refArea.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.refArea`
+   * :ref:`wing.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

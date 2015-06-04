@@ -1,0 +1,81 @@
+.. _engine.yEngine:
+
+Parameter: yEngine
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Y-location of the engine
+
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Engine.Geometry.yEngine.yEngine.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Engine.Geometry.yEngine.yEngine.calcFuselageMount
+
+
+   :Dependencies: 
+   * :ref:`engine.dEngine`
+   * :ref:`fuselage.dfus`
+
+
+   :Sensitivities: 
+.. image:: calcFuselageMount.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Engine.Geometry.yEngine.yEngine.calcWingMount
+
+
+   :Dependencies: 
+   * :ref:`wing.span`
+
+
+   :Sensitivities: 
+.. image:: calcWingMount.jpg 
+   :width: 80% 
+
+
+CPACS Import
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+The values for yEngine are imported from:
+
+.. code-block:: xml
+
+   <cpacs>
+      <vehicles>
+         <aircraft>
+            <model>
+               <engines>
+                  <engine>
+                     <transformation>
+                        <translation>
+                           <y>
+
+CPACS Export
+-------------------
+The values for yEngine are exported to:
+
+.. code-block:: xml
+
+   <cpacs>
+      <vehicles>
+         <aircraft>
+            <model>
+               <engines>
+                  <engine>
+                     <transformation>
+                        <translation>
+                           <y>
+

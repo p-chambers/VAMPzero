@@ -1,0 +1,16 @@
+.. _strut.etaStrut:
+
+Parameter: etaStrut
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    the eta coordinate of the strut tip location where eta is a nondimensional representation
+    of the wing span. 0 eguals the wing root, 1 the wing tip
+
+    :unit: [ ]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.etaStrut.etaStrut.calc
+
+

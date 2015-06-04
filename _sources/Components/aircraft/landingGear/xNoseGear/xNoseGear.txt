@@ -1,0 +1,26 @@
+.. _landingGear.xNoseGear:
+
+Parameter: xNoseGear
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The x-position of the nose gear
+    
+    :Unit: [m]
+    
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.LandingGear.Position.xNoseGear.xNoseGear.calc
+
+
+   :Dependencies: 
+   * :ref:`fuselage.dfus`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

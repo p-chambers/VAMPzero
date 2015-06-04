@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Knowledge Base &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../index.html" />
+    <link rel="up" title="Introduction" href="../introduction.html" />
+    <link rel="next" title="Feedback Loop" href="../Feedback/feedback.html" />
+    <link rel="prev" title="Parameter" href="../Parameter/parameter.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../Feedback/feedback.html" title="Feedback Loop"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Parameter/parameter.html" title="Parameter"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../introduction.html" accesskey="U">Introduction</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Knowledge Base</a><ul>
+<li><a class="reference internal" href="#geometry-generation">Geometry Generation</a><ul>
+<li><a class="reference internal" href="#wing">Wing</a></li>
+<li><a class="reference internal" href="#fuselage">Fuselage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../Parameter/parameter.html"
+                        title="previous chapter">Parameter</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../Feedback/feedback.html"
+                        title="next chapter">Feedback Loop</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/Introduction/Knowledgebase/knowledgebase.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="knowledge-base">
+<span id="knowledgebase"></span><h1>Knowledge Base<a class="headerlink" href="#knowledge-base" title="Permalink to this headline">¶</a></h1>
+<p>As already outlined, one of the requirements for a conceptual
+design module is closing the gap between TLAR and a dataset
+sufficient enough to trigger higher level methods. An increase
+in information is equivalent to a transfer from a system
+with lower dimensionality to a system with more dimensions.
+Hence this can only be carried out using additional (design)
+knowledge. By utilizing techniques from KBE this process
+can be coded and automated.
+For the purposes of this project it was important to generate
+the parametric geometry description as defined by CPACS out
+of the reduced parameter set of the conceptual design module.
+As we are currently focussing on civil jet transport,
+a sufficient database to retrieve rules for a KBE approach
+is available. Additionally, data generated by VAMPzero,
+mainly mass distributions, moments of intertia, as well as
+tool-specific data are transfered to CPACS. Thereby product
+and process knowledge are used.</p>
+<a class="reference internal image-reference" href="../../_images/knowledge.jpg"><img alt="../../_images/knowledge.jpg" class="align-center" src="../../_images/knowledge.jpg" style="width: 80%;" /></a>
+<p>An example for a cpacsExport method that was implemented
+to the wing component can be seen in Figure 8. As the horizontal
+and vertical tail inherit the wing component, the same
+methods can be applied easily. The upward change in level
+of detail can only be realized by applying knowledge-based
+rules and hence this process should usually be monitored by
+an engineer-in-the-loop.</p>
+<p>Both CPACS and VAMPzero are coded in object-oriented
+languages. Although CPACS is more a schema definition
+than tool it was possible to extract libraries from this definition
+that allowed for easy handling of objects. Generating
+CPACS-like objects and exporting them in the correct syntax
+is therefore integrated in VAMPzero without implementing
+additional code fragments.</p>
+<div class="section" id="geometry-generation">
+<h2>Geometry Generation<a class="headerlink" href="#geometry-generation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="wing">
+<h3>Wing<a class="headerlink" href="#wing" title="Permalink to this headline">¶</a></h3>
+<p>The calculation methods within VAMPzero define a simple trapezoid wing.
+To extend the output geometry VAMPzero can produce several wing structures via similarity transformation.
+Due to the value of the wings &#8216;LoD&#8217; parameter one of the following geometries will be exported:</p>
+<ul class="simple">
+<li>&#8216;N&#8217;   - no geometry</li>
+<li>&#8216;T&#8217;   - the trapezoid wing</li>
+<li>&#8216;DT&#8217;  - a double trapezoid wing</li>
+<li>&#8216;ADT&#8217; - an advanced double trapezoid wing</li>
+<li>&#8216;UCAV&#8217;- a geometry of an unmanned combat air vehicle</li>
+</ul>
+<p>As said, the generation of advanced wing geometries needs additional information.
+To assure the similarity between the trapezoid wing within VAMPzero and the generated advanced wing geometry, the dimensionless numbers will be kept constant during the transformation.
+The dimensionless numbers kept from the original trapezoid wing are the following:</p>
+<ol class="arabic simple">
+<li>Lambda - the aspect ratio</li>
+<li>tau_f - the taper ratio</li>
+<li>phi - the sweep angle of the leading edge</li>
+<li>psi - the dihedral</li>
+</ol>
+<p>The reference area is used for dimensioning the wing.
+Details on the geometry generation can be found in [...].</p>
+</div>
+<div class="section" id="fuselage">
+<h3>Fuselage<a class="headerlink" href="#fuselage" title="Permalink to this headline">¶</a></h3>
+<p>For the generation of a complex fuselage geometry, a database is used.
+At the moment there is only one complex fuselage geometry to choose from, but there will be more geometries available in the future.
+The geometries for the nose, middle and tail can be chosen individually.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../Feedback/feedback.html" title="Feedback Loop"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Parameter/parameter.html" title="Parameter"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../introduction.html" >Introduction</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

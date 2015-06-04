@@ -1,0 +1,24 @@
+.. _fuselage.dcabin:
+
+Parameter: dcabin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The diameter of the cabin section at its widest part
+    
+    :Unit: [m] 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuselage.Cabin.dcabin.dcabin.calc
+
+
+   :Dependencies: 
+   * :ref:`fuselage.dfus`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

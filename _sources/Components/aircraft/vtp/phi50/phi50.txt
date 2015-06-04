@@ -1,0 +1,22 @@
+.. _vtp.phi50:
+
+Parameter: phi50
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The 50% chord chord sweep angle of the vertical tail  
+    
+    :Unit: [deg]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Vtp.Geometry.phi50.phi50.calc
+
+
+   :Dependencies: 
+   * :ref:`vtp.phi25`
+   * :ref:`vtp.aspectRatio`
+   * :ref:`vtp.taperRatio`
+
+
+

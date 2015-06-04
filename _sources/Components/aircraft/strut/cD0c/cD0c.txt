@@ -1,0 +1,29 @@
+.. _strut.cD0c:
+
+Parameter: cD0c
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Component zero lift drag coefficient of the wing
+    
+    :Unit: [ ]
+    :Wiki: http://en.wikipedia.org/wiki/Drag_coefficient
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Aerodynamic.cD0c.cD0c.calc
+
+
+   :Dependencies: 
+   * :ref:`strut.wetArea`
+   * :ref:`strut.cfLAM`
+   * :ref:`strut.cfTURB`
+   * :ref:`strut.formFactor`
+   * :ref:`strut.nLam`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

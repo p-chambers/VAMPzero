@@ -1,0 +1,29 @@
+.. _slat.refArea:
+
+Parameter: refArea
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the total reference area of all slats, one half of the wing.
+
+    :Unit: [m2]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Slat.Geometry.refArea.refArea.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.refArea`
+   * :ref:`wing.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

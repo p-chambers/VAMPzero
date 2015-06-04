@@ -1,0 +1,27 @@
+.. _landingGear.yLandingGear:
+
+Parameter: yLandingGear
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The y-position of the landing gear
+    
+    :Unit: [m]
+    
+    :Author: Patrick Goden
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.LandingGear.Position.yLandingGear.yLandingGear.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.span`
+   * :ref:`landingGear.eta`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

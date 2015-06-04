@@ -1,0 +1,52 @@
+.. _aircraft.costLanding:
+
+Parameter: costLanding
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The landing costs per flight hour
+    
+    :Unit: [EU/h]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.costLanding.costLanding.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.tFlight`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.costLanding.costLanding.calcKundu
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.tFlight`
+   * :ref:`aircraft.USDexchangeEURO`
+
+
+   :Sensitivities: 
+.. image:: calcKundu.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.costLanding.costLanding.calcQUICE
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.tFlight`
+
+
+   :Sensitivities: 
+.. image:: calcQUICE.jpg 
+   :width: 80% 
+
+

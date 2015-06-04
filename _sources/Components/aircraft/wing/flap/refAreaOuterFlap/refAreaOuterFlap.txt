@@ -1,0 +1,30 @@
+.. _flap.refAreaOuterFlap:
+
+Parameter: refAreaOuterFlap
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the reference area of the outer flap, one half of the wing.
+    Assumes single slotted flaps.
+    
+    :Unit: [m2]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Flap.Geometry.refAreaOuterFlap.refAreaOuterFlap.calc
+
+
+   :Dependencies: 
+   * :ref:`flap.refAreaInnerFlap`
+   * :ref:`flap.refArea`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

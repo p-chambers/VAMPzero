@@ -1,0 +1,16 @@
+.. _htp.location:
+
+Parameter: location
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The type of the empennage of the aircraft. Boolean value. True for conventional, false for
+     T-tail configuration. Default is conventional.
+    
+    :Unit: []
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Geometry.location.location.calc
+
+

@@ -1,0 +1,24 @@
+.. _strut.yRoot:
+
+Parameter: yRoot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The y position of the root leading edge of the strut.
+
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.yRoot.yRoot.calc
+
+
+   :Dependencies: 
+   * :ref:`fuselage.dfus`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

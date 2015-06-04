@@ -1,0 +1,26 @@
+.. _landingGear.dCDextendedLG:
+
+Parameter: dCDextendedLG
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The delta in the total drag coefficient of the aircraft due an extended landing gear
+    
+    :Unit: []
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.LandingGear.Aerodynamic.dCDextendedLG.dCDextendedLG.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`landingGear.mLandingGear`
+   * :ref:`wing.refArea`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

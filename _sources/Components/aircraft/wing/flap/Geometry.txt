@@ -1,0 +1,15 @@
+.. _flap.Geometry:
+
+Discipline: Geometry
+---------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   avgChordInnerFlap<avgChordInnerFlap/avgChordInnerFlap>
+   avgChordOuterFlap<avgChordOuterFlap/avgChordOuterFlap>
+   refArea<refArea/refArea>
+   refAreaInnerFlap<refAreaInnerFlap/refAreaInnerFlap>
+   refAreaOuterFlap<refAreaOuterFlap/refAreaOuterFlap>
+   spanInnerFlap<spanInnerFlap/spanInnerFlap>
+   spanOuterFlap<spanOuterFlap/spanOuterFlap>

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>The Sensitivities &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../index.html" />
+    <link rel="up" title="Results" href="../results.html" />
+    <link rel="next" title="The Log File" href="../Log/log.html" />
+    <link rel="prev" title="The CPACS file" href="../CPACS/cpacs.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../index.html"><img src="../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../Log/log.html" title="The Log File"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../CPACS/cpacs.html" title="The CPACS file"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../getting_started.html" >Getting Started</a> &raquo;</li>
+          <li><a href="../results.html" accesskey="U">Results</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The Sensitivities</a><ul>
+<li><a class="reference internal" href="#example-sensitivity-for-the-wing-mass">Example: Sensitivity for the wing mass</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../CPACS/cpacs.html"
+                        title="previous chapter">The CPACS file</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../Log/log.html"
+                        title="next chapter">The Log File</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/Getting_started/Results/Sensitivities/sensitivities.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="the-sensitivities">
+<span id="sensitivities"></span><h1>The Sensitivities<a class="headerlink" href="#the-sensitivities" title="Permalink to this headline">¶</a></h1>
+<p>At the end of a calculation run, VAMPzero calculates the sensitivities for each parameter. To derive these
+results each parameter is recalculated for a change in the imaginary part of its callers values. This is called complex
+step derivative approximation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>A well written introduction and some references to complex-step approximation can be found on
+the University of Toronto - Multidisciplinary Optimization Laboratory homepage</p>
+<p class="last"><a class="reference external" href="http://mdolab.utias.utoronto.ca/resources/complex-step">http://mdolab.utias.utoronto.ca/resources/complex-step</a></p>
+</div>
+<p>The results of the complex step approximation are shown in form of barplots. The barplot always shows the change
+of a parameter relative to change of one of its callees. Below an example for the wing mass is shown.</p>
+<div class="section" id="example-sensitivity-for-the-wing-mass">
+<h2>Example: Sensitivity for the wing mass<a class="headerlink" href="#example-sensitivity-for-the-wing-mass" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Mass.mWing.mWing.calc">
+<tt class="descclassname">mWing.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Mass.mWing.mWing.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines the appropriate wing mass estimation method based on the strut or not</p>
+<p>CalcStrut and CalcDiss are currently being used</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../../Components/aircraft/wing/phi25/phi25.html#wing-phi25"><em>Parameter: phi25</em></a></li>
+<li><a class="reference internal" href="../../../Components/aircraft/wing/aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../../../Components/aircraft/wing/tcAVG/tcAVG.html#wing-tcavg"><em>Parameter: tcAVG</em></a></li>
+<li><a class="reference internal" href="../../../Components/aircraft/mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../../../Components/aircraft/wing/refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../_images/calc336.jpg"><img alt="../../../_images/calc336.jpg" src="../../../_images/calc336.jpg" style="width: 80%;" /></a>
+<p>Each bar shows the change for the wing mass depending on the parameters change. Blue indicates
+that the parameter was increased, red means that the parameter was decreased. In this example this implies
+that for a positive change in the wing&#8217;s reference area the wing mass increases. The same tendency is true for the
+maximum takeoff mass, the aspect ratio and the quarter-chord sweep. Nevertheless, the wing mass reacts more or less
+sensitive to these inputs. For the thickness to chord ratio the tendency is mirrored. For a thicker (i.e. greater t/c)
+wing we get less wing mass as the thickness of the spars also increases</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../Log/log.html" title="The Log File"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../CPACS/cpacs.html" title="The CPACS file"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../getting_started.html" >Getting Started</a> &raquo;</li>
+          <li><a href="../results.html" >Results</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

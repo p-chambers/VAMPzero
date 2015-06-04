@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: mPylon &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../../index.html" />
+    <link rel="up" title="Discipline: Mass" href="../Mass.html" />
+    <link rel="next" title="Component: Systems" href="../../systems/systems.html" />
+    <link rel="prev" title="Discipline: Mass" href="../Mass.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../../index.html"><img src="../../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../systems/systems.html" title="Component: Systems"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Mass.html" title="Discipline: Mass"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../pylon.html" >Component: Pylon</a> &raquo;</li>
+          <li><a href="../Mass.html" accesskey="U">Discipline: Mass</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: mPylon</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+<li><a class="reference internal" href="#cpacs-import">CPACS Import</a><ul>
+<li><a class="reference internal" href="#cpacs-export">CPACS Export</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../Mass.html"
+                        title="previous chapter">Discipline: Mass</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../systems/systems.html"
+                        title="next chapter">Component: Systems</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../../_sources/Components/aircraft/pylon/mPylon/mPylon.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-mpylon">
+<span id="pylon-mpylon"></span><h1>Parameter: mPylon<a class="headerlink" href="#parameter-mpylon" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>The under wing engine pylon mass definition equals the Airbus weight chapter 16. The
+pylon mass includes the complete pylon structure between the wing and
+the removable power plant, broken down as follows:</p>
+<ul>
+<li><p class="first">primary structure</p>
+<blockquote>
+<div><ul class="simple">
+<li>pylon box (ribs, spars, upper and lower panel, stringers, access doors)</li>
+<li>forward and rear engine mount (mount fittings, link assy , pin, nut, bearing, thrust rod)</li>
+<li>forward and rear wing interfaces (link assy, pin, bearing, nut)</li>
+<li>spigot fittings, fixed support, spar splice</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">secondary structure</p>
+</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>fairings, fairing ribs, sealant, external paint final coat, firewalls, soft mounts</li>
+</ul>
+</div></blockquote>
+<p>The pylon mass excludes systems (e.g. actuators) but fittings on which e.g.
+the actuators are fixed are included into the pylon mass but not the
+bolts that are used for fixing the actuator.</p>
+<p>The main difference between the DIN 9020 (which is normally used within LTH)
+and the Airbus definition is, that pylons and nacelles are accounted within
+the chapter <em>nacelle and engine installation</em> in DIN 9020, while the engine
+nacelle is accounted within the equipped engine weight (Ch. 20) according to the Airbus accounting.</p>
+<p>For the Fokker F100, the pylon mass (according to the Airbus
+definition) is ~28% of the <em>nacelle and engine installation</em> -mass of the
+DIN 9020 accounting. Pleas note, that the fuselage pylon mass of the F100 is nameable lighter, compared with an under wing pylon.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[kg]</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Pylon.Mass.mPylon.mPylon.calc">
+<tt class="descclassname">mPylon.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Pylon.Mass.mPylon.mPylon.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>For wing mounted engine, sets the calc method to calcBoxBeam;
+For fuselage mounted engine, sets the calc method to calcEmpirical.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../engine/nEngine/nEngine.html#engine-nengine"><em>Parameter: nEngine</em></a></li>
+<li><a class="reference internal" href="../../engine/thrustTOISA/thrustTOISA.html#engine-thrusttoisa"><em>Parameter: thrustTOISA</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calc200.jpg"><img alt="../../../../_images/calc200.jpg" src="../../../../_images/calc200.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Pylon.Mass.mPylon.mPylon.calcBoxBeam">
+<tt class="descclassname">mPylon.</tt><tt class="descname">calcBoxBeam</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Pylon.Mass.mPylon.mPylon.calcBoxBeam" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the Pylon Mass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">LTH UL-442.0(T).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../engine/nEngine/nEngine.html#engine-nengine"><em>Parameter: nEngine</em></a></li>
+<li><a class="reference internal" href="../../engine/thrustTOISA/thrustTOISA.html#engine-thrusttoisa"><em>Parameter: thrustTOISA</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcBoxBeam.jpg"><img alt="../../../../_images/calcBoxBeam.jpg" src="../../../../_images/calcBoxBeam.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Pylon.Mass.mPylon.mPylon.calcDorbathPraktikum">
+<tt class="descclassname">mPylon.</tt><tt class="descname">calcDorbathPraktikum</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Pylon.Mass.mPylon.mPylon.calcDorbathPraktikum" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the Pylon Mass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Improvements on a Very Simple Preliminary Aircraft Design Model, F. Dorbath, Airbus FPO, 2008, p. 141</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../engine/mEngine/mEngine.html#engine-mengine"><em>Parameter: mEngine</em></a></li>
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcDorbathPraktikum4.jpg"><img alt="../../../../_images/calcDorbathPraktikum4.jpg" src="../../../../_images/calcDorbathPraktikum4.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Pylon.Mass.mPylon.mPylon.calcDragStrut">
+<tt class="descclassname">mPylon.</tt><tt class="descname">calcDragStrut</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Pylon.Mass.mPylon.mPylon.calcDragStrut" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the Pylon Mass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">LTH UL-442.0(T).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../engine/nEngine/nEngine.html#engine-nengine"><em>Parameter: nEngine</em></a></li>
+<li><a class="reference internal" href="../../engine/thrustTOISA/thrustTOISA.html#engine-thrusttoisa"><em>Parameter: thrustTOISA</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcDragStrut.jpg"><img alt="../../../../_images/calcDragStrut.jpg" src="../../../../_images/calcDragStrut.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Pylon.Mass.mPylon.mPylon.calcEmpirical">
+<tt class="descclassname">mPylon.</tt><tt class="descname">calcEmpirical</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Pylon.Mass.mPylon.mPylon.calcEmpirical" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the Pylon Mass by empirical method generated by:
+Fokker F28 MK4000       Fokker 70       Fokker 100      MPC75   P316    P317/5</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../engine/nEngine/nEngine.html#engine-nengine"><em>Parameter: nEngine</em></a></li>
+<li><a class="reference internal" href="../../engine/dEngine/dEngine.html#engine-dengine"><em>Parameter: dEngine</em></a></li>
+<li><a class="reference internal" href="../../engine/mEngine/mEngine.html#engine-mengine"><em>Parameter: mEngine</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcEmpirical.jpg"><img alt="../../../../_images/calcEmpirical.jpg" src="../../../../_images/calcEmpirical.jpg" style="width: 80%;" /></a>
+</div>
+<div class="section" id="cpacs-import">
+<h2>CPACS Import<a class="headerlink" href="#cpacs-import" title="Permalink to this headline">¶</a></h2>
+<p>The values for mPylon are imported from:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;cpacs&gt;</span>
+   <span class="nt">&lt;vehicles&gt;</span>
+      <span class="nt">&lt;aircraft&gt;</span>
+         <span class="nt">&lt;model&gt;</span>
+            <span class="nt">&lt;analyses&gt;</span>
+               <span class="nt">&lt;massBreakdown&gt;</span>
+                  <span class="nt">&lt;mOEM&gt;</span>
+                     <span class="nt">&lt;mEM&gt;</span>
+                        <span class="nt">&lt;mStructure&gt;</span>
+                           <span class="nt">&lt;mPylons&gt;</span>
+                              <span class="nt">&lt;massDescription&gt;</span>
+                                 <span class="nt">&lt;mass&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="cpacs-export">
+<h3>CPACS Export<a class="headerlink" href="#cpacs-export" title="Permalink to this headline">¶</a></h3>
+<p>The values for mPylon are exported to:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;cpacs&gt;</span>
+   <span class="nt">&lt;vehicles&gt;</span>
+      <span class="nt">&lt;aircraft&gt;</span>
+         <span class="nt">&lt;model&gt;</span>
+            <span class="nt">&lt;analyses&gt;</span>
+               <span class="nt">&lt;massBreakdown&gt;</span>
+                  <span class="nt">&lt;mOEM&gt;</span>
+                     <span class="nt">&lt;mEM&gt;</span>
+                        <span class="nt">&lt;mStructure&gt;</span>
+                           <span class="nt">&lt;mPylons&gt;</span>
+                              <span class="nt">&lt;massDescription&gt;</span>
+                                 <span class="nt">&lt;mass&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../systems/systems.html" title="Component: Systems"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Mass.html" title="Discipline: Mass"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../pylon.html" >Component: Pylon</a> &raquo;</li>
+          <li><a href="../Mass.html" >Discipline: Mass</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

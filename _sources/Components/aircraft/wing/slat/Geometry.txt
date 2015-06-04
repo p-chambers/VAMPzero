@@ -1,0 +1,10 @@
+.. _slat.Geometry:
+
+Discipline: Geometry
+---------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   avgChord<avgChord/avgChord>
+   refArea<refArea/refArea>

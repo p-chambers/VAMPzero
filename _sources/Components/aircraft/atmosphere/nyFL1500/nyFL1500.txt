@@ -1,0 +1,23 @@
+.. _atmosphere.nyFL1500:
+
+Parameter: nyFL1500
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    ny at FL1500 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Atmosphere.FL1500.nyFL1500.nyFL1500.calc
+
+
+   :Dependencies: 
+   * :ref:`atmosphere.myFL1500`
+   * :ref:`atmosphere.rhoFL1500`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

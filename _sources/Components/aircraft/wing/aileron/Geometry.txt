@@ -1,0 +1,14 @@
+.. _aileron.Geometry:
+
+Discipline: Geometry
+---------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   cRoot<cRoot/cRoot>
+   cTip<cTip/cTip>
+   refArea<refArea/refArea>
+   span<span/span>
+   taperRatio<taperRatio/taperRatio>
+   tipYLocation<tipYLocation/tipYLocation>

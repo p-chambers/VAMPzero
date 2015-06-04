@@ -1,0 +1,25 @@
+.. _strut.xMAC25:
+
+Parameter: xMAC25
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The x location of 25% of the mean aerodynamic chord of the wing in absolute coordinates
+    
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Geometry.xMAC25.xMAC25.calc
+
+
+   :Dependencies: 
+   * :ref:`strut.xMAC`
+   * :ref:`strut.cMAC`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

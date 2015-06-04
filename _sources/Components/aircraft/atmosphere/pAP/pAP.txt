@@ -1,0 +1,23 @@
+.. _atmosphere.pAP:
+
+Parameter: pAP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    air pressure at airport height 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Atmosphere.Airport.pAP.pAP.calc
+
+
+   :Dependencies: 
+   * :ref:`atmosphere.TAP`
+   * :ref:`atmosphere.rhoAP`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,30 @@
+.. _elevator.span:
+
+Parameter: span
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the span of the elevator (note: only one elevator is considered).
+
+    :Unit: [m]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Elevator.Geometry.span.span.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.span`
+   * :ref:`htp.span`
+   * :ref:`elevator.rootYLocation`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

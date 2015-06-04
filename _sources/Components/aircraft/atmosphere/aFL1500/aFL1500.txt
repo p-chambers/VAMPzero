@@ -1,0 +1,22 @@
+.. _atmosphere.aFL1500:
+
+Parameter: aFL1500
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    speed of sound at FL1500 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Atmosphere.FL1500.aFL1500.aFL1500.calc
+
+
+   :Dependencies: 
+   * :ref:`atmosphere.TFL1500`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

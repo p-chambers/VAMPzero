@@ -1,0 +1,38 @@
+.. _aircraft.DOC:
+
+Parameter: DOC
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The direct operating costs per flight hour
+    
+    :Unit: [EU/hr]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.DOC.DOC.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.C1`
+   * :ref:`aircraft.C2`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.DOC.DOC.calcCOOCOC
+
+
+   :Dependencies: 
+   * :ref:`aircraft.COO`
+   * :ref:`aircraft.COC`
+
+
+   :Sensitivities: 
+.. image:: calcCOOCOC.jpg 
+   :width: 80% 
+
+

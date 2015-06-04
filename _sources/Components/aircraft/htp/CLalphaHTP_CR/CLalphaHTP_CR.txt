@@ -1,0 +1,28 @@
+.. _htp.CLalphaHTP_CR:
+
+Parameter: CLalphaHTP_CR
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The derivative of the lift coefficient of the horizontal tailplane for the Cruise.
+    
+    :Unit: [-]
+
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Aerodynamic.CLalphaHTP_CR.CLalphaHTP_CR.calc
+
+
+   :Dependencies: 
+   * :ref:`htp.aspectRatio`
+   * :ref:`htp.phi50`
+   * :ref:`aircraft.machCR`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,32 @@
+.. _landingGear.xLandingGear:
+
+Parameter: xLandingGear
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The x-position of the landing gear
+    
+    :Unit: [m]
+    
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.LandingGear.Position.xLandingGear.xLandingGear.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.span`
+   * :ref:`wing.xRoot`
+   * :ref:`wing.cRoot`
+   * :ref:`wing.cTip`
+   * :ref:`wing.phiLE`
+   * :ref:`landingGear.eta`
+   * :ref:`landingGear.xsi`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

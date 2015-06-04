@@ -1,0 +1,17 @@
+.. _strut.depth:
+
+Parameter: depth
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The depth factor of the strut. Defines how much of the wing's root chord is
+    applied as chord for the strut
+
+
+    :Unit: []
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.depth.depth.calc
+
+

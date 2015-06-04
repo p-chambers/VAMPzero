@@ -1,0 +1,26 @@
+.. _fuel.mFuelMAXinnerWT:
+
+Parameter: mFuelMAXinnerWT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The maximum fuel mass that can be stored in the inner wing tank
+    
+    :Unit: [kg] 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuel.Mass.mFuelMAXinnerWT.mFuelMAXinnerWT.calc
+
+
+   :Dependencies: 
+   * :ref:`fuel.mFuelMAXcenterWT`
+   * :ref:`fuel.mFuelMAXTT`
+   * :ref:`fuel.mFuelMAX`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

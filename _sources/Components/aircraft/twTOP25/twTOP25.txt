@@ -1,0 +1,28 @@
+.. _aircraft.twTOP25:
+
+Parameter: twTOP25
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The thrust to weight ratio for take-off due to FAR takeoff field length sizing
+    
+    :Unit: [kg/m2]
+    :Wiki: http://en.wikipedia.org/wiki/Thrust-to-weight_ratio
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.Sizing.twTOP25.twTOP25.calc
+
+
+   :Dependencies: 
+   * :ref:`atmosphere.pAP`
+   * :ref:`aircraft.sTOFL`
+   * :ref:`aircraft.cLTO`
+   * :ref:`aircraft.wsTO`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

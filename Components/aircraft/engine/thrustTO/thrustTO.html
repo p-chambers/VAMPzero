@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: thrustTO &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../../index.html" />
+    <link rel="up" title="Discipline: Propulsion" href="../Propulsion.html" />
+    <link rel="next" title="Parameter: thrustTOISA" href="../thrustTOISA/thrustTOISA.html" />
+    <link rel="prev" title="Parameter: thrustCR" href="../thrustCR/thrustCR.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../../index.html"><img src="../../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../thrustTOISA/thrustTOISA.html" title="Parameter: thrustTOISA"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../thrustCR/thrustCR.html" title="Parameter: thrustCR"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../engine.html" >Component: Engine</a> &raquo;</li>
+          <li><a href="../Propulsion.html" accesskey="U">Discipline: Propulsion</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: thrustTO</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+<li><a class="reference internal" href="#cpacs-import">CPACS Import</a><ul>
+<li><a class="reference internal" href="#cpacs-export">CPACS Export</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../thrustCR/thrustCR.html"
+                        title="previous chapter">Parameter: thrustCR</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../thrustTOISA/thrustTOISA.html"
+                        title="next chapter">Parameter: thrustTOISA</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../../_sources/Components/aircraft/engine/thrustTO/thrustTO.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-thrustto">
+<span id="engine-thrustto"></span><h1>Parameter: thrustTO<a class="headerlink" href="#parameter-thrustto" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Takeoff thrust for one engine. Conditions for airport level</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[N]</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calc">
+<tt class="descclassname">thrustTO.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>chooses the appropriate calculation method for the thrust at takeoff
+depending on the status of the takeoff field length</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../../twTO/twTO.html#aircraft-twto"><em>Parameter: twTO</em></a></li>
+<li><a class="reference internal" href="../nEngine/nEngine.html#engine-nengine"><em>Parameter: nEngine</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calc87.jpg"><img alt="../../../../_images/calc87.jpg" src="../../../../_images/calc87.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calcThrustCR">
+<tt class="descclassname">thrustTO.</tt><tt class="descname">calcThrustCR</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calcThrustCR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the takeoff thrust backwards from the cruise thrust</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">TU Berlin Aircraft Design Course I</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../bypassRatio/bypassRatio.html#engine-bypassratio"><em>Parameter: bypassRatio</em></a></li>
+<li><a class="reference internal" href="../thrustCR/thrustCR.html#engine-thrustcr"><em>Parameter: thrustCR</em></a></li>
+<li><a class="reference internal" href="../../atmosphere/rhoAP/rhoAP.html#atmosphere-rhoap"><em>Parameter: rhoAP</em></a></li>
+<li><a class="reference internal" href="../../atmosphere/rhoCR/rhoCR.html#atmosphere-rhocr"><em>Parameter: rhoCR</em></a></li>
+<li><a class="reference internal" href="../../atmosphere/MaCR/MaCR.html#atmosphere-macr"><em>Parameter: MaCR</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcThrustCR.jpg"><img alt="../../../../_images/calcThrustCR.jpg" src="../../../../_images/calcThrustCR.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calcThrustISA">
+<tt class="descclassname">thrustTO.</tt><tt class="descname">calcThrustISA</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calcThrustISA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the takeoff thrust from the takeoff thrust at ISA conditions</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Uebungen im Fach Flugzeugbau, K. Kuhlmann, RWTH Aachen, 2006/2007, p. 10, eq. 30</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../thrustTOISA/thrustTOISA.html#engine-thrusttoisa"><em>Parameter: thrustTOISA</em></a></li>
+<li><a class="reference internal" href="../../atmosphere/TAP/TAP.html#atmosphere-tap"><em>Parameter: TAP</em></a></li>
+<li><a class="reference internal" href="../../atmosphere/pAP/pAP.html#atmosphere-pap"><em>Parameter: pAP</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcThrustISA.jpg"><img alt="../../../../_images/calcThrustISA.jpg" src="../../../../_images/calcThrustISA.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calctwTO">
+<tt class="descclassname">thrustTO.</tt><tt class="descname">calctwTO</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calctwTO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the takeoff thrust from the thrust to weight ratio!</p>
+<p>The thrust to weight ratios from FAR are calculated to standard atmosphere at SL and deltaT = 0.</p>
+<p>This calculation does take the airport level and deltaT into account.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Airplane Design Part II, J. Roskam, DARCorporation, 2005, Fourth Edition, p. 98</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../../twTO/twTO.html#aircraft-twto"><em>Parameter: twTO</em></a></li>
+<li><a class="reference internal" href="../nEngine/nEngine.html#engine-nengine"><em>Parameter: nEngine</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calctwTO.jpg"><img alt="../../../../_images/calctwTO.jpg" src="../../../../_images/calctwTO.jpg" style="width: 80%;" /></a>
+</div>
+<div class="section" id="cpacs-import">
+<h2>CPACS Import<a class="headerlink" href="#cpacs-import" title="Permalink to this headline">¶</a></h2>
+<p>The values for thrustTO are imported from:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;cpacs&gt;</span>
+   <span class="nt">&lt;vehicles&gt;</span>
+      <span class="nt">&lt;engines&gt;</span>
+         <span class="nt">&lt;engine&gt;</span>
+            <span class="nt">&lt;analysis&gt;</span>
+               <span class="nt">&lt;thrust00&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="cpacs-export">
+<h3>CPACS Export<a class="headerlink" href="#cpacs-export" title="Permalink to this headline">¶</a></h3>
+<p>The values for thrustTO are exported to:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;cpacs&gt;</span>
+   <span class="nt">&lt;vehicles&gt;</span>
+      <span class="nt">&lt;engines&gt;</span>
+         <span class="nt">&lt;engine&gt;</span>
+            <span class="nt">&lt;analysis&gt;</span>
+               <span class="nt">&lt;thrust00&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../thrustTOISA/thrustTOISA.html" title="Parameter: thrustTOISA"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../thrustCR/thrustCR.html" title="Parameter: thrustCR"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../engine.html" >Component: Engine</a> &raquo;</li>
+          <li><a href="../Propulsion.html" >Discipline: Propulsion</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+.. _htp.cLMAXht:
+
+Parameter: cLMAXht
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    max lift coefficient for the HTP
+    
+    :Unit: [ ]
+    
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Aerodynamic.cLMAXht.cLMAXht.calc
+
+
+   :Dependencies: 
+   * :ref:`htp.phi25`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

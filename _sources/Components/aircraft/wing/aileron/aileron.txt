@@ -1,0 +1,24 @@
+Component: Aileron
+=====================================
+
+
+    Calculates the area, span, spanwise tip location, root chord and tip chord of the aileron.
+    The outcome of the calculations is valid for one aileron. 
+    Assumes that both ailerons are symmetric.     
+
+    :Author: Lisanne van Veen
+    
+
+Included Disciplines
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+   
+   Geometry<Geometry>
+   
+   
+CPACS Export
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. automethod:: VAMPzero.Component.Aileron.aileron.aileron.cpacsExport
+

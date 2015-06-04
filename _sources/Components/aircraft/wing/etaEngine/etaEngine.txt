@@ -1,0 +1,25 @@
+.. _wing.etaEngine:
+
+Parameter: etaEngine
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The eta coordinate of the engine on the wing. This parameter is recognised for the export of wing geometries
+    
+    :Unit: [ ]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Geometry.etaEngine.etaEngine.calc
+
+
+   :Dependencies: 
+   * :ref:`engine.yEngine`
+   * :ref:`wing.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

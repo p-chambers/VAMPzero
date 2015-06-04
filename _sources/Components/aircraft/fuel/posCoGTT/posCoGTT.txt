@@ -1,0 +1,28 @@
+.. _fuel.posCoGTT:
+
+Parameter: posCoGTT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    X Position of the center of gravity of the trim tank
+	
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuel.CoG.posCoGTT.posCoGTT.calc
+
+
+   :Dependencies: 
+   * :ref:`htp.xRoot`
+   * :ref:`htp.cRoot`
+   * :ref:`htp.phiLE`
+   * :ref:`htp.taperRatio`
+   * :ref:`htp.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,15 @@
+.. _aircraft.priceFuel:
+
+Parameter: priceFuel
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The fuel price
+    
+    :Unit [$/kg]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.priceFuel.priceFuel.calc
+
+

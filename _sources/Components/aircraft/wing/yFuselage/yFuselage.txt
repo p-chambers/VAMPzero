@@ -1,0 +1,24 @@
+.. _wing.yFuselage:
+
+Parameter: yFuselage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    y Position where the center plane (x-y) of the wing intersects the fuselage 
+    
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.CPACS.yFuselage.yFuselage.calc
+
+
+   :Dependencies: 
+   * :ref:`fuselage.dfus`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,52 @@
+.. _aircraft.costGround:
+
+Parameter: costGround
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The ground handling costs per flight hour
+    
+    :Unit: [EU/h]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.costGround.costGround.calc
+
+
+   :Dependencies: 
+   * :ref:`payload.mPayload`
+   * :ref:`aircraft.tFlight`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.costGround.costGround.calcKundu
+
+
+   :Dependencies: 
+   * :ref:`payload.mPayload`
+   * :ref:`aircraft.tFlight`
+   * :ref:`aircraft.USDexchangeEURO`
+
+
+   :Sensitivities: 
+.. image:: calcKundu.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.costGround.costGround.calcQUICE
+
+
+   :Dependencies: 
+   * :ref:`payload.mPayload`
+   * :ref:`aircraft.tFlight`
+
+
+   :Sensitivities: 
+.. image:: calcQUICE.jpg 
+   :width: 80% 
+
+

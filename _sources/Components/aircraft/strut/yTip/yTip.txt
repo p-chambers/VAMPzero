@@ -1,0 +1,25 @@
+.. _strut.yTip:
+
+Parameter: yTip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The y position of the tip leading edge of the strut.
+
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.yTip.yTip.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.span`
+   * :ref:`strut.etaStrut`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

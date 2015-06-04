@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: costNavigation &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../index.html" />
+    <link rel="up" title="Discipline: DOC" href="../DOC.html" />
+    <link rel="next" title="Parameter: flightCycles" href="../flightCycles/flightCycles.html" />
+    <link rel="prev" title="Parameter: costMaintenance" href="../costMaintenance/costMaintenance.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../index.html"><img src="../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../flightCycles/flightCycles.html" title="Parameter: flightCycles"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../costMaintenance/costMaintenance.html" title="Parameter: costMaintenance"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../DOC.html" accesskey="U">Discipline: DOC</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: costNavigation</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../costMaintenance/costMaintenance.html"
+                        title="previous chapter">Parameter: costMaintenance</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../flightCycles/flightCycles.html"
+                        title="next chapter">Parameter: flightCycles</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/Components/aircraft/costNavigation/costNavigation.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-costnavigation">
+<span id="aircraft-costnavigation"></span><h1>Parameter: costNavigation<a class="headerlink" href="#parameter-costnavigation" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>The navigation costs per flight hour</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[EU/h]</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Main.DOC.costNavigation.costNavigation.calc">
+<tt class="descclassname">costNavigation.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Main.DOC.costNavigation.costNavigation.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates navigation costs per flight hour</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">TU Berlin - Simplified DOC model, J. Thorbeck (remarks by D. Scholz)
+<a class="reference external" href="http://www.fzt.haw-hamburg.de/pers/Scholz/Aero/TU-Berlin_DOC-Method_with_remarks_13-09-19.pdf">http://www.fzt.haw-hamburg.de/pers/Scholz/Aero/TU-Berlin_DOC-Method_with_remarks_13-09-19.pdf</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../desRange/desRange.html#aircraft-desrange"><em>Parameter: desRange</em></a></li>
+<li><a class="reference internal" href="../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../tFlight/tFlight.html#aircraft-tflight"><em>Parameter: tFlight</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../_images/calc61.jpg"><img alt="../../../_images/calc61.jpg" src="../../../_images/calc61.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Main.DOC.costNavigation.costNavigation.calcKundu">
+<tt class="descclassname">costNavigation.</tt><tt class="descname">calcKundu</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Main.DOC.costNavigation.costNavigation.calcKundu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the navigation costs per flight hour</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Aircraft Design, A. Kundu, 2010, p.546</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Source:</th><td class="field-body">Customer Guide to Charges - Version 5.1, Eurocontrol, 2011</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">AirTOBS, Aircraft Technology &amp; Operations Benchmark System, T. Schilling, S. Langhans, N. Hoelzel, 2011, p. 57</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../desRange/desRange.html#aircraft-desrange"><em>Parameter: desRange</em></a></li>
+<li><a class="reference internal" href="../tFlight/tFlight.html#aircraft-tflight"><em>Parameter: tFlight</em></a></li>
+<li><a class="reference internal" href="../USDexchangeEURO/USDexchangeEURO.html#aircraft-usdexchangeeuro"><em>Parameter: USDexchangeEURO</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../_images/calcKundu8.jpg"><img alt="../../../_images/calcKundu8.jpg" src="../../../_images/calcKundu8.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Main.DOC.costNavigation.costNavigation.calcWeiss">
+<tt class="descclassname">costNavigation.</tt><tt class="descname">calcWeiss</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Main.DOC.costNavigation.costNavigation.calcWeiss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the navigation cost per flight hour
+The calculation method stems from the QUICE project</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Analyse und Vergleich von DOC-Modellen zur Etablierung eines gemeinsam genutzten Rechenmodells bei Airbus und Universitaeten, M. Weiss, 2008</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../desRange/desRange.html#aircraft-desrange"><em>Parameter: desRange</em></a></li>
+<li><a class="reference internal" href="../tFlight/tFlight.html#aircraft-tflight"><em>Parameter: tFlight</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../_images/calcWeiss.jpg"><img alt="../../../_images/calcWeiss.jpg" src="../../../_images/calcWeiss.jpg" style="width: 80%;" /></a>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../flightCycles/flightCycles.html" title="Parameter: flightCycles"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../costMaintenance/costMaintenance.html" title="Parameter: costMaintenance"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../DOC.html" >Discipline: DOC</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

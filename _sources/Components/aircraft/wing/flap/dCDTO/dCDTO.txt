@@ -1,0 +1,27 @@
+.. _flap.dCDTO:
+
+Parameter: dCDTO
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The delta Drag Coefficient for extended flaps in take-off configuration.
+    
+    :Unit: []
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Flap.Aerodynamic.dCDTO.dCDTO.calc
+
+
+   :Dependencies: 
+   * :ref:`flap.refArea`
+   * :ref:`flap.spanInnerFlap`
+   * :ref:`flap.spanOuterFlap`
+   * :ref:`wing.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

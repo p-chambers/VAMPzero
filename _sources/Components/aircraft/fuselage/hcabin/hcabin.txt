@@ -1,0 +1,24 @@
+.. _fuselage.hcabin:
+
+Parameter: hcabin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The aisle height in the cabin 
+    
+    :Unit: [m] 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuselage.Cabin.hcabin.hcabin.calc
+
+
+   :Dependencies: 
+   * :ref:`fuselage.nAisle`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

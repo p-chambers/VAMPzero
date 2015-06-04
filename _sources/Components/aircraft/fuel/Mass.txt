@@ -1,0 +1,20 @@
+.. _fuel.Mass:
+
+Discipline: Mass
+---------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   TrimTank<TrimTank/TrimTank>
+   mFM<mFM/mFM>
+   mFuelCLIMB<mFuelCLIMB/mFuelCLIMB>
+   mFuelCR<mFuelCR/mFuelCR>
+   mFuelDESCENT<mFuelDESCENT/mFuelDESCENT>
+   mFuelMAX<mFuelMAX/mFuelMAX>
+   mFuelMAXTT<mFuelMAXTT/mFuelMAXTT>
+   mFuelMAXcenterWT<mFuelMAXcenterWT/mFuelMAXcenterWT>
+   mFuelMAXinnerWT<mFuelMAXinnerWT/mFuelMAXinnerWT>
+   mFuelMAXouterWT<mFuelMAXouterWT/mFuelMAXouterWT>
+   mFuelRES<mFuelRES/mFuelRES>
+   mFuelTO<mFuelTO/mFuelTO>

@@ -1,0 +1,87 @@
+.. _engine.zEngine:
+
+Parameter: zEngine
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Z-location of the engine inlet
+	
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Engine.Geometry.zEngine.zEngine.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.span`
+   * :ref:`wing.etaEngine`
+   * :ref:`wing.phiLE`
+   * :ref:`wing.phiTE`
+   * :ref:`wing.cRoot`
+   * :ref:`wing.etaKink`
+   * :ref:`wing.yFuselage`
+
+
+
+.. automethod:: VAMPzero.Component.Engine.Geometry.zEngine.zEngine.calcChortAtEta
+
+
+.. automethod:: VAMPzero.Component.Engine.Geometry.zEngine.zEngine.calcFuselageMount
+
+
+   :Dependencies: 
+   * :ref:`fuselage.dfus`
+
+
+   :Sensitivities: 
+.. image:: calcFuselageMount.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Engine.Geometry.zEngine.zEngine.calcWingMount
+
+
+   :Dependencies: 
+   * :ref:`wing.span`
+   * :ref:`wing.etaEngine`
+   * :ref:`wing.phiLE`
+   * :ref:`wing.phiTE`
+   * :ref:`wing.cRoot`
+   * :ref:`wing.etaKink`
+   * :ref:`wing.yFuselage`
+
+
+
+CPACS Import
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+The values for zEngine are imported from:
+
+.. code-block:: xml
+
+   <cpacs>
+      <vehicles>
+         <aircraft>
+            <model>
+               <engines>
+                  <engine>
+                     <transformation>
+                        <translation>
+                           <z>
+
+CPACS Export
+-------------------
+The values for zEngine are exported to:
+
+.. code-block:: xml
+
+   <cpacs>
+      <vehicles>
+         <aircraft>
+            <model>
+               <engines>
+                  <engine>
+                     <transformation>
+                        <translation>
+                           <z>
+

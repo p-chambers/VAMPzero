@@ -1,0 +1,32 @@
+.. _htp.CLalphaHTP_L:
+
+Parameter: CLalphaHTP_L
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The derivative of the lift coefficient of the horizontal tailplane for the Landing.
+    
+    :Unit: [-]
+
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Aerodynamic.CLalphaHTP_L.CLalphaHTP_L.calc
+
+
+   :Dependencies: 
+   * :ref:`htp.aspectRatio`
+   * :ref:`htp.phi50`
+   * :ref:`aircraft.mLM`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`atmosphere.aAP`
+   * :ref:`aircraft.cLL`
+   * :ref:`wing.refArea`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

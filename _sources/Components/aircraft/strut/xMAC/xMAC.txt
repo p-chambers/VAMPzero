@@ -1,0 +1,26 @@
+.. _strut.xMAC:
+
+Parameter: xMAC
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The x location of the mean aerodynamic chord of the wing in absolute coordinates
+    
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Geometry.xMAC.xMAC.calc
+
+
+   :Dependencies: 
+   * :ref:`strut.xRoot`
+   * :ref:`strut.yMAC`
+   * :ref:`strut.phiLE`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

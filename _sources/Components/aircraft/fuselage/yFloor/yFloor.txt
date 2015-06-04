@@ -1,0 +1,26 @@
+.. _fuselage.yFloor:
+
+Parameter: yFloor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The width of the cabin floor. The floor is located at a 
+    position zFloor beneath the widest section of the cabin
+    
+    :Unit:[m]     
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuselage.Cabin.yFloor.yFloor.calc
+
+
+   :Dependencies: 
+   * :ref:`fuselage.dcabin`
+   * :ref:`fuselage.zFloor`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

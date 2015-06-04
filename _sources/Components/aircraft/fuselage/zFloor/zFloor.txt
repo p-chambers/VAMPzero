@@ -1,0 +1,16 @@
+.. _fuselage.zFloor:
+
+Parameter: zFloor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The height of the floor level according to the aircraft coordinate system. 
+    As the floor is ususally below the widest section of the aircraft this value is negative
+    
+    :Unit:[m]     
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuselage.Cabin.zFloor.zFloor.calc
+
+

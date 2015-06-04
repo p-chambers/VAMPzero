@@ -1,0 +1,55 @@
+.. _aircraft.costCrew:
+
+Parameter: costCrew
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The crew costs per flight hour
+    
+    :Unit: [EU/hr]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.costCrew.costCrew.calc
+
+
+   :Dependencies: 
+   * :ref:`payload.paxSeats`
+   * :ref:`aircraft.tFlight`
+   * :ref:`aircraft.flightCycles`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.costCrew.costCrew.calcEurocontrol
+
+
+   :Dependencies: 
+   * :ref:`aircraft.nPilot`
+   * :ref:`aircraft.nCabinCrew`
+
+
+   :Sensitivities: 
+.. image:: calcEurocontrol.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.costCrew.costCrew.calcQUICE
+
+
+   :Dependencies: 
+   * :ref:`aircraft.nPilot`
+   * :ref:`aircraft.nCabinCrew`
+   * :ref:`aircraft.utilization`
+   * :ref:`aircraft.tFlight`
+   * :ref:`aircraft.tBlock`
+
+
+   :Sensitivities: 
+.. image:: calcQUICE.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,30 @@
+.. _rudder.cRoot:
+
+Parameter: cRoot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the root chord of the rudder.
+
+    :Unit: [m]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Vtp.Rudder.Geometry.cRoot.cRoot.calc
+
+
+   :Dependencies: 
+   * :ref:`rudder.refArea`
+   * :ref:`rudder.span`
+   * :ref:`vtp.taperRatio`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

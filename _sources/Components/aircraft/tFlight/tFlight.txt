@@ -1,0 +1,26 @@
+.. _aircraft.tFlight:
+
+Parameter: tFlight
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The flight time for the design mission
+    
+    :Unit: [h]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.tFlight.tFlight.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.timeCLIMB`
+   * :ref:`aircraft.timeCR`
+   * :ref:`aircraft.timeDESCENT`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

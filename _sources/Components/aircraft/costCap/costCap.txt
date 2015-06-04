@@ -1,0 +1,29 @@
+.. _aircraft.costCap:
+
+Parameter: costCap
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Capital costs calculated using TU Berlin method
+
+    :Unit: [EU/hr]    
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.costCap.costCap.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.aFactor`
+   * :ref:`aircraft.oEM`
+   * :ref:`engine.nEngine`
+   * :ref:`engine.mEngine`
+   * :ref:`aircraft.tFlight`
+   * :ref:`aircraft.flightCycles`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

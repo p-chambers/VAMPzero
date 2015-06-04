@@ -1,0 +1,15 @@
+.. _wing.cM0CR:
+
+Parameter: cM0CR
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    moment coefficient for wing during takeoff
+    
+    :Unit: [ ]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Aerodynamic.cM0CR.cM0CR.calc
+
+

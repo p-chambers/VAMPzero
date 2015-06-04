@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../index.html" />
+    <link rel="next" title="Component" href="Component/component.html" />
+    <link rel="prev" title="Conceptual Aircraft Design" href="../index.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Component/component.html" title="Component"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Conceptual Aircraft Design"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="#">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction</a><ul>
+<li><a class="reference internal" href="#module-structure">Module Structure</a><ul>
+<li><a class="reference internal" href="#moving-on">Moving on</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">Conceptual Aircraft Design</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Component/component.html"
+                        title="next chapter">Component</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/Introduction/introduction.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="introduction">
+<span id="id1"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is an extract from a paper presented at the IEEE Aerospace Conference 2011 <a class="footnote-reference" href="#id4" id="id2">[1]</a>
+You can find the full version from IEEE Explore</p>
+</div>
+<div class="admonition-for-the-quick-reader admonition">
+<p class="first admonition-title">For the quick reader</p>
+<p class="last">If you want to start working right now, go to the <a class="reference internal" href="../Getting_started/getting_started.html#getting-started"><em>Getting Started</em></a> section!</p>
+</div>
+<p>The request for a new conceptual design tool originates from
+DLR&#8217;s multidisciplinary aircraft design processes. Although
+several higher order models are already coupled with CPACS,
+as described by Liersch, et al <a class="footnote-reference" href="#id5" id="id3">[2]</a> , some conceptual methods
+are required to close the gaps, e.g. deriving center of gravity
+locations from the input of component-based analysis modules,
+in the holistic design process. Consequentially, the new
+code needs to feature requirements such as batch capabilities
+and should be modular, reusable, readable and extensible.</p>
+<p>In this section, the module structure of the developed conceptual
+design code is elaborated on. The structure is elementary
+for interactions of VAMPzero with other analysis modules
+inside the design environment. The methods for up- and
+downscaling are described subsequently. These are an irreplaceable
+part when it comes to closing a multi-fidelity design
+loop.</p>
+<div class="section" id="module-structure">
+<h2>Module Structure<a class="headerlink" href="#module-structure" title="Permalink to this headline">¶</a></h2>
+<p>An object-oriented structure was chosen for the development
+of the new conceptual design code (VAMPzero) to increase
+the modularity and to be able to detach the feature aspects
+(file handling, convergence control, process control) from the
+design aspects (parameter definitions, calculation methods).
+In this way a code is introduced that can easily be extended
+and adapted.</p>
+<a class="reference internal image-reference" href="../_images/structure1.jpg"><img alt="../_images/structure1.jpg" class="align-center" src="../_images/structure1.jpg" style="width: 80%;" /></a>
+<p>The two main classes implemented in VAMPzero are
+<a class="reference internal" href="Component/component.html#component"><em>Component</em></a> and <a class="reference internal" href="Parameter/parameter.html#parameter"><em>Parameter</em></a> . These two classes hold
+generic routines that are inherited or overwritten by specific
+classes, e.g. a wing component class or a span
+parameter class. Components share associations with
+other components and are structured in a hierarchical
+way. Each component holds several parameters that
+are grouped by <a class="reference internal" href="Discipline/discipline.html#discipline"><em>Discipline</em></a> . A wing that is modeled
+as a component has a parameter span within the
+discipline geometry. The structure is displayed in the above figure
+. Each of the named elements holds a calc method. The
+calc methods in components and disciplines are used
+for process control, whereas the parameter calc methods
+hold the design knowledge mostly in empiric or analytic
+form. In this way it is possible to use parts of the analysis
+capabilities in a transverse way and replace components,
+parameters and disciplines. This is an essential part
+of the aspired multi-fidelity strategy and will be described in
+the following sections in more detail.</p>
+<p>In a baseline version of VAMPzero, which can be run stand
+alone, the parameter calculation methods based on handbook
+methods. At some points (e.g., mass estimations)
+new correlations are introduced to include databases that fit
+our design purposes better.</p>
+<p>Additionally, several other methods are available for both
+components and parameters. These are coded in the
+respective classes. Depending on the implementation of the
+subclass an arbitrary number of methods can be overwritten.
+The calculation process for example can be broken down into:
+importing a value from CPACS, calculating until converged,
+exporting to CPACS. As a matter of fact, the calc method
+needs to be overwritten for each new class. For the import
+and export methods, either XPath variables can be specified
+or new methods are implemented. The parameter class holds several
+generic methods and some of them are overwritten by the
+class for the thrust-specific fuel consumption, namely the import
+method and the calc method. A third calcCPACS method
+is specified as well which will be elaborated at a later point in
+this paper.</p>
+<p>Changing the calculation method of a parameter often
+changes the dependencies in the model. As the calculation
+method accesses the values of other parameters,
+it is possible to track the adjacencies in the model during
+runtime. The representation of the adjacencies is made
+using open-source mind-mapping software and supports
+the transparency of the analysis module. Links between
+parameters in the model can be displayed without looking
+into the code. As different calc methods are available
+within a parameter and are chosen depending on the status
+of other parameters and available input from CPACS, this
+representation reflects the analysis process even better than
+the underlying code. Examples of this representation can be
+seen in the following figures. The adjacencies are displayed for
+the parameter in the center with just one plane of entries.
+To the left hand side parameters accessing the value of
+the central parameter (caller) are aligned. For the calc
+method of the parameter, the parameters on the right
+hand side are accessed (callee). The views can be navigated
+in a browser-like way and help in understanding the recursive
+structure of the design process.</p>
+<p>Knowing the dependencies in the model is the basis for more
+operations to monitor the calculation. When an analysis run is
+set up, parameters are assigned a status that can either be
+initialized, calculation or fix. At the construction
+of the objects, each status is set to initialized. If a
+parameter is not fixed its value will be calculated by one
+of its calc methods. Fixing parameters in the model may
+lead to inconsistencies. These occur whenever all inputs of
+a parameter with status fix are fixed as well. The takeoff
+mass, for example, is derived from the payload mass, the operational
+empty mass and the mission fuel mass. If the latter
+three values are fixed, the takeoff mass can be calculated. If
+the takeoff mass is fix as well, a warning will be given.</p>
+<a class="reference internal image-reference" href="../_images/refAreaAspect.jpg"><img alt="../_images/refAreaAspect.jpg" class="align-center" src="../_images/refAreaAspect.jpg" style="width: 80%;" /></a>
+<p>Depending on the status of the model, different calc methods
+are chosen. If the parameters span and aspect ratio of
+a component wing are fixed (by user input), the reference
+area of the wing is calculated by geometric definitions. An
+example for this calculation can be found in Figure 5. On
+the right hand side the fixed (bold font) parameters span
+and aspect ratio are displayed. The left hand side shows all
+parameters derived from the reference area.</p>
+<p>In a different calculation run, the span may not be fixed as
+it is supposed to be calculated by VAMPzero. In this case a
+different calculation method for the reference area is chosen
+depending on the maximum wing loading and the maximum
+takeoff mass. The results for the calculation run are displayed
+in the figure below. In this setup the status of right hand values is also
+calc. The list of parameters on the left hand side is extended
+by the span as it is now determined from the reference area.</p>
+<a class="reference internal image-reference" href="../_images/refAreaLoading1.jpg"><img alt="../_images/refAreaLoading1.jpg" class="align-center" src="../_images/refAreaLoading1.jpg" style="width: 80%;" /></a>
+<p>When developing conceptual design codes or multidisciplinary
+design processes usually just a few key values,
+e.g. maximum takeoff mass, operation empty weight and
+static thrust, are checked for convergence. In VAMPzero convergence
+is checked for all parameters separately, as can
+be seen in the figure below. The relative change of the value of a parameter
+is displayed dependent on the number of iterations.
+All graphs11 are displayed on a logarithmic scale to improve
+the clarity of the diagram. The displayed convergence histories
+are shown for an analysis run with a minimum number of
+input values. As a matter of fact, this calculation requires several
+iterations but shows the numerical stability of the code.</p>
+<a class="reference internal image-reference" href="../_images/convergence.jpg"><img alt="../_images/convergence.jpg" class="align-center" src="../_images/convergence.jpg" style="width: 80%;" /></a>
+<p>Depending on the required amount of input data and computing
+time, higher order physical models may be used in
+preliminary and detail design. Several studies have been carried
+out to link higher order methods with fast geometry generation
+tools. These efforts have enabled the automatic use
+of physical methods, as most of the work-intensive reoccurring
+preprocessing is automated. Examples can be seen in
+knowledge-based engineering and rule-based systems. It can
+be expected that computational intricate and expensive tools
+are used in a later phase of the design, described by La Rocca
+as the converging phase.</p>
+<a class="reference internal image-reference" href="../_images/multifidelity1.jpeg"><img alt="../_images/multifidelity1.jpeg" class="align-center" src="../_images/multifidelity1.jpeg" style="width: 80%;" /></a>
+<p>The goal of this study is to show the development steps necessary
+to close a multi-fidelity design loop, as shown in the figure above.
+Part of this is the software structure within a conceptual
+design module, as well as the surrounding distributed design
+environment. Communication within the environment is established
+via a central model. These parts of the distributed
+design environment will be explained further in the following
+sections. They are split into the knowledge base enabling uses to export data
+to CPACS and the feedback loop that integrates this information into the design process again.</p>
+<div class="section" id="moving-on">
+<h3>Moving on<a class="headerlink" href="#moving-on" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Component/component.html">Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Discipline/discipline.html">Discipline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Parameter/parameter.html">Parameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Knowledgebase/knowledgebase.html">Knowledge Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Feedback/feedback.html">Feedback Loop</a></li>
+</ul>
+</div>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>Daniel Boehnke, Bjoern Nagel, Volker Gollnick, <em>An Approach to Multi-Fidelity in Distributed Design Environments</em>, IEEE Aerospace Conference, Big Sky, USA, 2011</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>Carsten Liersch, Martin Hepperle, <em>An Unified Approach for Multidisciplinary Aircraft Design</em>, CEAS Conference, Manchester, UK, 2009</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Component/component.html" title="Component"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Conceptual Aircraft Design"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="#">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+ 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

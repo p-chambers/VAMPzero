@@ -1,0 +1,42 @@
+.. _vtp.refArea:
+
+Parameter: refArea
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The reference area for the vertical tail
+    
+    :Unit: [m2]  
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Vtp.Geometry.refArea.refArea.calc
+
+
+   :Dependencies: 
+   * :ref:`vtp.refAreaTakeOff`
+   * :ref:`vtp.refAreaLanding`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Vtp.Geometry.refArea.refArea.calcDetail
+
+
+   :Dependencies: 
+   * :ref:`vtp.refAreaTakeOff`
+   * :ref:`vtp.refAreaLanding`
+
+
+   :Sensitivities: 
+.. image:: calcDetail.jpg 
+   :width: 80% 
+
+
+CPACS Import
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Vtp.Geometry.refArea.refArea.cpacsImport
+

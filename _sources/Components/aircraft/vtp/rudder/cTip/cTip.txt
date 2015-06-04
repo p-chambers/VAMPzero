@@ -1,0 +1,29 @@
+.. _rudder.cTip:
+
+Parameter: cTip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the tip chord of the rudder.
+
+    :Unit: [m]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Vtp.Rudder.Geometry.cTip.cTip.calc
+
+
+   :Dependencies: 
+   * :ref:`vtp.taperRatio`
+   * :ref:`rudder.cRoot`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

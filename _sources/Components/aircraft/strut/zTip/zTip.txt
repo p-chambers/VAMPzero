@@ -1,0 +1,29 @@
+.. _strut.zTip:
+
+Parameter: zTip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The z position of the tip leading edge of the strut.
+
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.zTip.zTip.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.dihedral`
+   * :ref:`wing.phi25`
+   * :ref:`wing.span`
+   * :ref:`wing.zRoot`
+   * :ref:`fuselage.dfus`
+   * :ref:`strut.etaStrut`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

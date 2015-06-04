@@ -1,0 +1,32 @@
+.. _vtp.refAreaLanding:
+
+Parameter: refAreaLanding
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The reference area for the vertical tailplane for the Take Off.
+    
+    :Unit: [m2]
+
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Vtp.Geometry.refAreaLanding.refAreaLanding.calc
+
+
+   :Dependencies: 
+   * :ref:`atmosphere.aAP`
+   * :ref:`vtp.aspectRatio`
+   * :ref:`vtp.phi50`
+   * :ref:`vtp.refAreaTakeOff`
+   * :ref:`aircraft.wsL`
+   * :ref:`aircraft.cLL`
+   * :ref:`atmosphere.rhoAP`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

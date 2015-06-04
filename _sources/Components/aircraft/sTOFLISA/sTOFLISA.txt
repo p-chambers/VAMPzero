@@ -1,0 +1,34 @@
+.. _aircraft.sTOFLISA:
+
+Parameter: sTOFLISA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The take-off field length for ISA standart conditions at sea level
+    
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.Performance.sTOFLISA.sTOFLISA.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`engine.thrustTOISA`
+   * :ref:`wing.refArea`
+   * :ref:`aircraft.cLTO`
+   * :ref:`aircraft.cD0`
+   * :ref:`flap.dCDTO`
+   * :ref:`landingGear.dCDextendedLG`
+   * :ref:`engine.dCDOEI`
+   * :ref:`aircraft.oswald`
+   * :ref:`wing.aspectRatio`
+   * :ref:`engine.nEngine`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

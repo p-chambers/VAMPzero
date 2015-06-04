@@ -1,0 +1,25 @@
+.. _fuel.mFuelMAXcenterWT:
+
+Parameter: mFuelMAXcenterWT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The maximum fuel mass that can be stored in the center wing tank
+    
+    :Unit: [kg] 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuel.Mass.mFuelMAXcenterWT.mFuelMAXcenterWT.calc
+
+
+   :Dependencies: 
+   * :ref:`fuel.mFuelMAXTT`
+   * :ref:`fuel.mFuelMAX`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

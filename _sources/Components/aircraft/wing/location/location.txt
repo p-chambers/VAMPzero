@@ -1,0 +1,26 @@
+.. _wing.location:
+
+Parameter: location
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The location of the wing, maybe either high (True, 1) or low (False, 0)
+    Default is low.
+
+    :Unit: [ ]
+    :Wiki: http://en.wikipedia.org/wiki/Aspect_ratio_(wing) 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Geometry.location.location.calc
+
+
+   :Dependencies: 
+   * :ref:`strut.active`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

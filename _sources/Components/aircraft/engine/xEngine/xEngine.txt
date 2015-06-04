@@ -1,0 +1,96 @@
+.. _engine.xEngine:
+
+Parameter: xEngine
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    X-location of the engine inlet
+	
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Engine.Geometry.xEngine.xEngine.calc
+
+
+   :Dependencies: 
+   * :ref:`engine.yEngine`
+   * :ref:`wing.span`
+   * :ref:`wing.etaEngine`
+   * :ref:`wing.phiLE`
+   * :ref:`wing.phiTE`
+   * :ref:`wing.cRoot`
+   * :ref:`wing.etaKink`
+   * :ref:`wing.yFuselage`
+   * :ref:`wing.xRoot`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Engine.Geometry.xEngine.xEngine.calcChortAtEta
+
+
+.. automethod:: VAMPzero.Component.Engine.Geometry.xEngine.xEngine.calcFuselageMount
+
+
+   :Dependencies: 
+   * :ref:`engine.lEngine`
+   * :ref:`fuselage.lfus`
+
+
+   :Sensitivities: 
+.. image:: calcFuselageMount.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Engine.Geometry.xEngine.xEngine.calcWingMount
+
+
+   :Dependencies: 
+   * :ref:`engine.yEngine`
+   * :ref:`wing.span`
+   * :ref:`wing.etaEngine`
+   * :ref:`wing.phiLE`
+   * :ref:`wing.phiTE`
+   * :ref:`wing.cRoot`
+   * :ref:`wing.etaKink`
+   * :ref:`wing.yFuselage`
+   * :ref:`wing.xRoot`
+
+
+
+CPACS Import
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+The values for xEngine are imported from:
+
+.. code-block:: xml
+
+   <cpacs>
+      <vehicles>
+         <aircraft>
+            <model>
+               <engines>
+                  <engine>
+                     <transformation>
+                        <translation>
+                           <x>
+
+CPACS Export
+-------------------
+The values for xEngine are exported to:
+
+.. code-block:: xml
+
+   <cpacs>
+      <vehicles>
+         <aircraft>
+            <model>
+               <engines>
+                  <engine>
+                     <transformation>
+                        <translation>
+                           <x>
+

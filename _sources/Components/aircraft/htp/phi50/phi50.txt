@@ -1,0 +1,22 @@
+.. _htp.phi50:
+
+Parameter: phi50
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The 50% chord chord sweep angle of the horizontal tail  
+    
+    :Unit: [deg]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Geometry.phi50.phi50.calc
+
+
+   :Dependencies: 
+   * :ref:`htp.phi25`
+   * :ref:`htp.aspectRatio`
+   * :ref:`htp.taperRatio`
+
+
+

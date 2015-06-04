@@ -1,0 +1,19 @@
+.. _fuel.TrimTank:
+
+Parameter: TrimTank
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Information about an available trim tank in the horizontal stabilizer.
+    1 = trim tank available
+    0 = not available
+    
+    The default setting is 0.
+    
+    :Unit: [-] 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuel.Mass.TrimTank.TrimTank.calc
+
+

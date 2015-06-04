@@ -1,0 +1,29 @@
+.. _elevator.refArea:
+
+Parameter: refArea
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the reference area of the elevator (note: only one elevator is considered).
+
+    :Unit: [m2]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Elevator.Geometry.refArea.refArea.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.refArea`
+   * :ref:`htp.refArea`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

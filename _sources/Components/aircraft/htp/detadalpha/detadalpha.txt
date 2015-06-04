@@ -1,0 +1,29 @@
+.. _htp.detadalpha:
+
+Parameter: detadalpha
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The downwash gradient describes the change in eta due to alpha.
+        
+    :Unit: [ ] 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Aerodynamic.detadalpha.detadalpha.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.phi25`
+   * :ref:`htp.xMAC`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.span`
+   * :ref:`aircraft.machCR`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

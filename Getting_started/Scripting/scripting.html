@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Scripting &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../index.html" />
+    <link rel="up" title="Getting Started" href="../getting_started.html" />
+    <link rel="next" title="Documentation" href="../../Components/components.html" />
+    <link rel="prev" title="The Log File" href="../Results/Log/log.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../Components/components.html" title="Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Results/Log/log.html" title="The Log File"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../getting_started.html" accesskey="U">Getting Started</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Scripting</a><ul>
+<li><a class="reference internal" href="#binary-version">Binary Version</a></li>
+<li><a class="reference internal" href="#source-version">Source Version</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../Results/Log/log.html"
+                        title="previous chapter">The Log File</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../Components/components.html"
+                        title="next chapter">Documentation</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/Getting_started/Scripting/scripting.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="scripting">
+<h1>Scripting<a class="headerlink" href="#scripting" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-if-it-comes-with-a-gui-it-can-t-be-science admonition">
+<p class="first admonition-title">If it comes with a GUI, it can&#8217;t be science!!!</p>
+<p class="last">This section will give some ideas on putting VAMPzero in a loop and use it for design studies</p>
+</div>
+<p>Depending on the version of VAMPzero you are working with there are
+of course different ways to handle scripting. I will explain some simple approaches on how to do this both
+for the binary and the source version. I am highly interested in any results that you could obtain (and of course all
+the bugs that you found)</p>
+<div class="section" id="binary-version">
+<h2>Binary Version<a class="headerlink" href="#binary-version" title="Permalink to this headline">¶</a></h2>
+<p>If you are unfamiliar with Python (it&#8217;s a great language) you will prefer working with the binary version
+of VAMPzero. I assume that you were already sucessful in downloading it and running some first calculations
+with the GUI. The GUI is a very simple tool. It doesn&#8217;t do anything else than creating the toolInput.xml file
+in the ToolInput folder and then runs VAMPzeroCPACS.exe. This is something you can do from any other tool as well.</p>
+<p>No matter what environment you are working in, be it Matlab or C++, by modifiying the toolInput.xml and executing VAMPzero
+you can put VAMPzero in a loop easily. Results can either be obtained from the stdout or from a file called VAMPzero.res that
+can be found in the folder ReturnDirectory.</p>
+<p>If you are working from an engineering framework like RCE or ModelCenter toolInput.xml and VAMPzero.res are again the files
+that should be covered by your wrappers. You might as well conctact me, as I might have some wrappers at hand.</p>
+</div>
+<div class="section" id="source-version">
+<h2>Source Version<a class="headerlink" href="#source-version" title="Permalink to this headline">¶</a></h2>
+<p>For the source version scripting can be quite simple. If you take a look into the VAMPzero.py  you are almost there.
+Putting values into VAMPzero is shown in the upper lines of code by executing something like:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">myAircaft</span><span class="o">.</span><span class="n">component</span><span class="o">.</span><span class="n">parameter</span><span class="o">.</span><span class="n">setValueFix</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The one import line of code is then:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">myAircraft</span><span class="o">.</span><span class="n">calcAuto</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If you put the calcAuto routine into a loop or optimizer you are already there. Any values that you are interested in can be optained
+by runnning a getValue() command on any parameter.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../Components/components.html" title="Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Results/Log/log.html" title="The Log File"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../getting_started.html" >Getting Started</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+.. _landingGear.Aerodynamic:
+
+Discipline: Aerodynamic
+---------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   dCDextendedLG<dCDextendedLG/dCDextendedLG>

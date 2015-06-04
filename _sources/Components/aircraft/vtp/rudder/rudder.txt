@@ -1,0 +1,24 @@
+Component: Rudder
+=====================================
+
+
+    Calculates the area, root chord and tip chord of the rudder.
+    Assumes that the span of the rudder is equal to the span of the vtp.
+    This assumption constrains the location of the rudder. 
+                  
+    :Author: Lisanne van Veen
+    
+
+Included Disciplines
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+   
+   Geometry<Geometry>
+   
+   
+CPACS Export
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. automethod:: VAMPzero.Component.Rudder.rudder.rudder.cpacsExport
+

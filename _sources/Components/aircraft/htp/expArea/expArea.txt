@@ -1,0 +1,59 @@
+.. _htp.expArea:
+
+Parameter: expArea
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The exposed area of the wing
+    
+    :Unit: [m2] 
+    :Wiki: http://adg.stanford.edu/aa241/wingdesign/winggeometry.html
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Geometry.expArea.expArea.calc
+
+
+   :Dependencies: 
+   * :ref:`htp.refArea`
+   * :ref:`htp.cRoot`
+   * :ref:`htp.cTip`
+   * :ref:`htp.span`
+   * :ref:`fuselage.dfus`
+   * :ref:`htp.zRoot`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.expArea.expArea.calcConventional
+
+
+   :Dependencies: 
+   * :ref:`htp.refArea`
+   * :ref:`htp.cRoot`
+   * :ref:`htp.cTip`
+   * :ref:`htp.span`
+   * :ref:`fuselage.dfus`
+   * :ref:`htp.zRoot`
+
+
+   :Sensitivities: 
+.. image:: calcConventional.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.expArea.expArea.calcTtail
+
+
+   :Dependencies: 
+   * :ref:`htp.refArea`
+
+
+   :Sensitivities: 
+.. image:: calcTtail.jpg 
+   :width: 80% 
+
+

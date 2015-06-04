@@ -1,0 +1,17 @@
+.. _landingGear.xsi:
+
+Parameter: xsi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The xsi-position of the landing gear wing attachment device
+    
+    :Unit: [-]
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.LandingGear.Position.xsi.xsi.calc
+
+

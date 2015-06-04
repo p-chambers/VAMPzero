@@ -1,0 +1,27 @@
+.. _strut.xRoot:
+
+Parameter: xRoot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The x position of the root leading edge of the strut.
+
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.xRoot.xRoot.calc
+
+
+   :Dependencies: 
+   * :ref:`strut.xTip`
+   * :ref:`strut.phiLE`
+   * :ref:`strut.yTip`
+   * :ref:`strut.yRoot`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

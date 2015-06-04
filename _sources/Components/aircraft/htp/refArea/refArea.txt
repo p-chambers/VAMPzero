@@ -1,0 +1,44 @@
+.. _htp.refArea:
+
+Parameter: refArea
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The reference area of the horizontal tailplane
+    
+    :Unit: [m2] 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Geometry.refArea.refArea.calc
+
+
+   :Dependencies: 
+   * :ref:`htp.refAreaTakeOff`
+   * :ref:`htp.refAreaCruise`
+   * :ref:`htp.refAreaLanding`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.refArea.refArea.calcDetail
+
+
+   :Dependencies: 
+   * :ref:`htp.refAreaTakeOff`
+   * :ref:`htp.refAreaCruise`
+   * :ref:`htp.refAreaLanding`
+
+
+   :Sensitivities: 
+.. image:: calcDetail.jpg 
+   :width: 80% 
+
+
+CPACS Import
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Geometry.refArea.refArea.cpacsImport
+

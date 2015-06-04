@@ -1,0 +1,26 @@
+.. _vtp.cRoot:
+
+Parameter: cRoot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The root chord of the vtp
+    
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Vtp.Geometry.cRoot.cRoot.calc
+
+
+   :Dependencies: 
+   * :ref:`vtp.refArea`
+   * :ref:`vtp.span`
+   * :ref:`vtp.taperRatio`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

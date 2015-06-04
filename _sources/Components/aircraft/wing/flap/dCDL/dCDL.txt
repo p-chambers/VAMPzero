@@ -1,0 +1,27 @@
+.. _flap.dCDL:
+
+Parameter: dCDL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The delta Drag Coefficient for extended flaps in landing configuration 
+
+    :Unit: []
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Flap.Aerodynamic.dCDL.dCDL.calc
+
+
+   :Dependencies: 
+   * :ref:`flap.refArea`
+   * :ref:`flap.spanInnerFlap`
+   * :ref:`flap.spanOuterFlap`
+   * :ref:`wing.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,9 @@
+.. _strut.Mass:
+
+Discipline: Mass
+---------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   mStrut<mStrut/mStrut>

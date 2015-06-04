@@ -1,0 +1,29 @@
+.. _strut.span:
+
+Parameter: span
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The span of the strut. It equals the distance from the root to the tip of the strut.
+    
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.span.span.calc
+
+
+   :Dependencies: 
+   * :ref:`strut.xRoot`
+   * :ref:`strut.yRoot`
+   * :ref:`strut.zRoot`
+   * :ref:`strut.xTip`
+   * :ref:`strut.yTip`
+   * :ref:`strut.zTip`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

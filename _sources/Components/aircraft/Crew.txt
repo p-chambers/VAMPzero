@@ -1,0 +1,10 @@
+.. _aircraft.Crew:
+
+Discipline: Crew
+---------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   nCabinCrew<nCabinCrew/nCabinCrew>
+   nPilot<nPilot/nPilot>

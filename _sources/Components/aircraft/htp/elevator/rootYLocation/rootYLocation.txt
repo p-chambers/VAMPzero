@@ -1,0 +1,31 @@
+.. _elevator.rootYLocation:
+
+Parameter: rootYLocation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the spanwise root location of the elevator, measured from the fuselage center line
+    (note: only one elevator is considered).
+
+    :Unit: [m]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Elevator.Geometry.rootYLocation.rootYLocation.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.span`
+   * :ref:`htp.span`
+   * :ref:`htp.refArea`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

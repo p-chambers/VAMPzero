@@ -1,0 +1,29 @@
+.. _flap.avgChordOuterFlap:
+
+Parameter: avgChordOuterFlap
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the average chord length of the outer flap, one half of the wing.
+
+    :Unit: [m]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Flap.Geometry.avgChordOuterFlap.avgChordOuterFlap.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.refArea`
+   * :ref:`wing.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

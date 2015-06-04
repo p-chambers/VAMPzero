@@ -1,0 +1,15 @@
+.. _aircraft.aFactor:
+
+Parameter: aFactor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculation of annuity factor
+    
+    :Unit: [-]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.aFactor.aFactor.calc
+
+

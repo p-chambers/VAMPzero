@@ -1,0 +1,107 @@
+.. _htp.refAreaTakeOff:
+
+Parameter: refAreaTakeOff
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The reference area of the horizontal tailplane for the Take Off.
+    
+    :Unit: [m2]
+
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Geometry.refAreaTakeOff.refAreaTakeOff.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`aircraft.cLTO`
+   * :ref:`wing.refArea`
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.phi50`
+   * :ref:`atmosphere.aAP`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.cMAC`
+   * :ref:`htp.lHT`
+   * :ref:`aircraft.static_margin`
+   * :ref:`htp.CLalphaHTP_TO`
+   * :ref:`htp.DPR`
+   * :ref:`htp.detadalpha`
+
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.refAreaTakeOff.refAreaTakeOff.calcControl
+
+
+   :Dependencies: 
+   * :ref:`htp.cLMAXht`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.cMAC`
+   * :ref:`wing.cM0TO`
+   * :ref:`wing.refArea`
+   * :ref:`htp.lHT`
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.oswald`
+   * :ref:`aircraft.cD0`
+   * :ref:`flap.dCDTO`
+   * :ref:`landingGear.dCDextendedLG`
+   * :ref:`engine.nEngine`
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.cLTO`
+   * :ref:`htp.DPR`
+   * :ref:`engine.zEngine`
+
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.refAreaTakeOff.refAreaTakeOff.calcRotationStatic
+
+
+   :Dependencies: 
+   * :ref:`htp.cLMAXht`
+   * :ref:`wing.refArea`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`wing.cMAC`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.cM0TO`
+   * :ref:`landingGear.xLandingGear`
+   * :ref:`landingGear.zLandingGear`
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.oswald`
+   * :ref:`htp.lHT`
+   * :ref:`aircraft.cD0`
+   * :ref:`flap.dCDTO`
+   * :ref:`landingGear.dCDextendedLG`
+   * :ref:`aircraft.cLROLL`
+   * :ref:`engine.nEngine`
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.cLTO`
+   * :ref:`htp.DPR`
+   * :ref:`engine.zEngine`
+
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.refAreaTakeOff.refAreaTakeOff.calcStability
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`aircraft.cLTO`
+   * :ref:`wing.refArea`
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.phi50`
+   * :ref:`atmosphere.aAP`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.cMAC`
+   * :ref:`htp.lHT`
+   * :ref:`aircraft.static_margin`
+   * :ref:`htp.CLalphaHTP_TO`
+   * :ref:`htp.DPR`
+   * :ref:`htp.detadalpha`
+
+
+

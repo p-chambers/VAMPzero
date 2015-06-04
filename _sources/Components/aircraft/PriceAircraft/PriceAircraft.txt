@@ -1,0 +1,42 @@
+.. _aircraft.priceAircraft:
+
+Parameter: priceAircraft
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The market price of the aircraft including engines. The market price of an aircraft is usually 
+    way lower than the list price. As this price is important for the airline's cost it is included here
+    
+    :Unit: [EU]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.priceAircraft.priceAircraft.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.oEM`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.priceAircraft.priceAircraft.calcPloetner
+
+
+   :Dependencies: 
+   * :ref:`aircraft.desRange`
+   * :ref:`aircraft.machCR`
+   * :ref:`payload.paxSeats`
+   * :ref:`fuselage.vcabin`
+   * :ref:`aircraft.sTOFL`
+   * :ref:`aircraft.USDexchangeEURO`
+
+
+   :Sensitivities: 
+.. image:: calcPloetner.jpg 
+   :width: 80% 
+
+

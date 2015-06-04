@@ -1,0 +1,31 @@
+.. _aircraft.C2:
+
+Parameter: C2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Route dependent yearly costs
+
+    :Unit: [EU/hr]     
+    
+    :Source: TU Berlin - Simplified DOC model, J. Thorbeck (remarks by D. Scholz)
+            http://www.fzt.haw-hamburg.de/pers/Scholz/Aero/TU-Berlin_DOC-Method_with_remarks_13-09-19.pdf
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.C2.C2.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.costFuel`
+   * :ref:`aircraft.costLanding`
+   * :ref:`aircraft.costGround`
+   * :ref:`aircraft.costNavigation`
+   * :ref:`aircraft.costMaintenance`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>The Log File &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../index.html" />
+    <link rel="up" title="Results" href="../results.html" />
+    <link rel="next" title="Scripting" href="../../Scripting/scripting.html" />
+    <link rel="prev" title="The Sensitivities" href="../Sensitivities/sensitivities.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../index.html"><img src="../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../Scripting/scripting.html" title="Scripting"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Sensitivities/sensitivities.html" title="The Sensitivities"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../getting_started.html" >Getting Started</a> &raquo;</li>
+          <li><a href="../results.html" accesskey="U">Results</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../Sensitivities/sensitivities.html"
+                        title="previous chapter">The Sensitivities</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../Scripting/scripting.html"
+                        title="next chapter">Scripting</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/Getting_started/Results/Log/log.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="the-log-file">
+<span id="logfile"></span><h1>The Log File<a class="headerlink" href="#the-log-file" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>There are two different types of logs in VAMPzero. During the execution print statements are shown in the <strong>commandline</strong> prompt.
+This output is on <strong>info</strong> level meaning, that only some elementary processes are documented. In this way it easy to track what happens
+during the calculation run without looking at too much detail.</p>
+<p class="last">In the <strong>VAMPzero.log</strong> file the output is on <strong>debug</strong> level. There is a lot more information! This is mostly useful for developers or if
+you run into an error during the calculation. If you need to ask for help is probably best to attach the log file and send it to me.</p>
+</div>
+<p>VAMPzero documents most of its actions in a log. For the binary version of VAMPzero there is a fixed order of actions
+that will occur in the log. These include:</p>
+<ul>
+<li><p class="first"><strong>Header</strong></p>
+<p>Information about the current version and license.</p>
+</li>
+<li><p class="first"><strong>GUI Import</strong></p>
+<p>Information about the values retrieved from the graphical user interface. These include the values for a parameter as well as technology factors</p>
+</li>
+<li><p class="first"><strong>CPACS Import</strong></p>
+<p>After the values are imported from the graphical user interface VAMPzero will look for further information according to the CPACS schema in the <em>./ToolInput/toolInput.xml</em> file.
+If there is any information available it will be imported. This means that values previously imported from the graphical user interface will be overwritten!</p>
+</li>
+<li><p class="first"><strong>Input Listing</strong></p>
+<p>A list of all parameters with the status == fix is given. You can control whether the import routines were successful.</p>
+</li>
+<li><p class="first"><strong>Calculation</strong></p>
+<p>In this section the calculation run is logged. VAMPzero checks each parameter for convergence. Therefore an arbitrary number (max. 2000) iterations will be documented.
+The check for convergence is made componentwise and converged components will be listed even if not all parameters are converged.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">It is likely that errors will occur in this section! Overflow or value errors are a good indication that your calculation did not converge!</p>
+</div>
+</li>
+<li><p class="first"><strong>Inits</strong></p>
+<p>A list of all parameters with the status == init is given. These parameters were not touched by any calculation method. In most cases this means
+that there is not yet a calculation method for this parameter or it is a default value.</p>
+</li>
+<li><p class="first"><strong>Export of Mind Maps</strong></p>
+<p>For each parameter a mind map is generated. See <a class="reference internal" href="../Mindmap/mindmap.html#mindmap"><em>The Mind-Maps</em></a> for further information.</p>
+</li>
+<li><p class="first"><strong>Export to CPACS</strong></p>
+<p>The aircraft is exported to CPACS. See <a class="reference internal" href="../../../Introduction/Knowledgebase/knowledgebase.html#knowledgebase"><em>Knowledge Base</em></a> for further information</p>
+</li>
+<li><p class="first"><strong>Check</strong></p>
+<p>All parameters in VAMPzero are linked via their calc methods.
+If all parameters that are called by the calc
+method of a parameter that is fixed are fixed as well this will produce a warning.</p>
+<p>For example: If the reference area of the wing is fixed and the span and the aspect ratio
+are fixed as well a warning will be given because the inputs may be inconsistent.</p>
+</li>
+<li><p class="first"><strong>Creating Plots</strong></p>
+<p>The plots are created. See <a class="reference internal" href="../Plot/plot.html#plot"><em>The Plots</em></a> for further information.</p>
+<p>The payload range calculation will trigger another three calc runs don&#8217;t get confused.</p>
+</li>
+<li><p class="first"><strong>Footer</strong></p>
+<p>The footer of VAMPzero and a guess on the runtime.</p>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../Scripting/scripting.html" title="Scripting"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Sensitivities/sensitivities.html" title="The Sensitivities"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../getting_started.html" >Getting Started</a> &raquo;</li>
+          <li><a href="../results.html" >Results</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

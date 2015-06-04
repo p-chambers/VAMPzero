@@ -1,0 +1,25 @@
+.. _aircraft.C1:
+
+Parameter: C1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Route independent (fixed) Cost per flight hour
+
+    :Unit: [EU/hr]        
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.C1.C1.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.costCap`
+   * :ref:`aircraft.costCrew`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

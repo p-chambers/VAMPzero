@@ -1,0 +1,17 @@
+.. _strut.taperRatio:
+
+Parameter: taperRatio
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The taper ratio of the strut is defined by the ratio of tip to root chord length
+
+    It is assumed that the strut is not tapered!
+
+    :Unit: [ ]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.taperRatio.taperRatio.calc
+
+

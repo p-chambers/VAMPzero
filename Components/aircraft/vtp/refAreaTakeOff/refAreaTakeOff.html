@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: refAreaTakeOff &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../../index.html" />
+    <link rel="up" title="Discipline: Geometry" href="../Geometry.html" />
+    <link rel="next" title="Parameter: span" href="../span/span.html" />
+    <link rel="prev" title="Parameter: refAreaLanding" href="../refAreaLanding/refAreaLanding.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../../index.html"><img src="../../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../span/span.html" title="Parameter: span"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../refAreaLanding/refAreaLanding.html" title="Parameter: refAreaLanding"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../vtp.html" >Component: Vtp</a> &raquo;</li>
+          <li><a href="../Geometry.html" accesskey="U">Discipline: Geometry</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: refAreaTakeOff</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../refAreaLanding/refAreaLanding.html"
+                        title="previous chapter">Parameter: refAreaLanding</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../span/span.html"
+                        title="next chapter">Parameter: span</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../../_sources/Components/aircraft/vtp/refAreaTakeOff/refAreaTakeOff.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-refareatakeoff">
+<span id="vtp-refareatakeoff"></span><h1>Parameter: refAreaTakeOff<a class="headerlink" href="#parameter-refareatakeoff" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>The reference area for the vertical tailplane for the Take Off.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[m2]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Author:</th><td class="field-body">Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Vtp.Geometry.refAreaTakeOff.refAreaTakeOff.calc">
+<tt class="descclassname">refAreaTakeOff.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Vtp.Geometry.refAreaTakeOff.refAreaTakeOff.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the reference area for the VTP from the maximum value of the different calculations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../wing/refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+<li><a class="reference internal" href="../../atmosphere/rhoAP/rhoAP.html#atmosphere-rhoap"><em>Parameter: rhoAP</em></a></li>
+<li><a class="reference internal" href="../../atmosphere/aAP/aAP.html#atmosphere-aap"><em>Parameter: aAP</em></a></li>
+<li><a class="reference internal" href="../lVT/lVT.html#vtp-lvt"><em>Parameter: lVT</em></a></li>
+<li><a class="reference internal" href="../aspectRatio/aspectRatio.html#vtp-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../../wing/aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../../wing/oswald/oswald.html#wing-oswald"><em>Parameter: oswald</em></a></li>
+<li><a class="reference internal" href="../phi50/phi50.html#vtp-phi50"><em>Parameter: phi50</em></a></li>
+<li><a class="reference internal" href="../../cD0/cD0.html#aircraft-cd0"><em>Parameter: cD0</em></a></li>
+<li><a class="reference internal" href="../../wing/flap/dCDTO/dCDTO.html#flap-dcdto"><em>Parameter: dCDTO</em></a></li>
+<li><a class="reference internal" href="../../landingGear/dCDextendedLG/dCDextendedLG.html#landinggear-dcdextendedlg"><em>Parameter: dCDextendedLG</em></a></li>
+<li><a class="reference internal" href="../../engine/nEngine/nEngine.html#engine-nengine"><em>Parameter: nEngine</em></a></li>
+<li><a class="reference internal" href="../../engine/yEngine/yEngine.html#engine-yengine"><em>Parameter: yEngine</em></a></li>
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../../cLTO/cLTO.html#aircraft-clto"><em>Parameter: cLTO</em></a></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Component.Vtp.Geometry.refAreaTakeOff.refAreaTakeOff.calcControl">
+<tt class="descclassname">refAreaTakeOff.</tt><tt class="descname">calcControl</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Vtp.Geometry.refAreaTakeOff.refAreaTakeOff.calcControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the reference area for the VTP from the moment of equilibrium as a result of one engine failure (OEI). The VTP has to compensate the
+remaining thrust from the active engine and additional the drag from the inactive engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../wing/refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+<li><a class="reference internal" href="../../atmosphere/rhoAP/rhoAP.html#atmosphere-rhoap"><em>Parameter: rhoAP</em></a></li>
+<li><a class="reference internal" href="../../atmosphere/aAP/aAP.html#atmosphere-aap"><em>Parameter: aAP</em></a></li>
+<li><a class="reference internal" href="../lVT/lVT.html#vtp-lvt"><em>Parameter: lVT</em></a></li>
+<li><a class="reference internal" href="../aspectRatio/aspectRatio.html#vtp-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../../wing/aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../../wing/oswald/oswald.html#wing-oswald"><em>Parameter: oswald</em></a></li>
+<li><a class="reference internal" href="../phi50/phi50.html#vtp-phi50"><em>Parameter: phi50</em></a></li>
+<li><a class="reference internal" href="../../cD0/cD0.html#aircraft-cd0"><em>Parameter: cD0</em></a></li>
+<li><a class="reference internal" href="../../wing/flap/dCDTO/dCDTO.html#flap-dcdto"><em>Parameter: dCDTO</em></a></li>
+<li><a class="reference internal" href="../../landingGear/dCDextendedLG/dCDextendedLG.html#landinggear-dcdextendedlg"><em>Parameter: dCDextendedLG</em></a></li>
+<li><a class="reference internal" href="../../engine/nEngine/nEngine.html#engine-nengine"><em>Parameter: nEngine</em></a></li>
+<li><a class="reference internal" href="../../engine/yEngine/yEngine.html#engine-yengine"><em>Parameter: yEngine</em></a></li>
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../../cLTO/cLTO.html#aircraft-clto"><em>Parameter: cLTO</em></a></li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../span/span.html" title="Parameter: span"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../refAreaLanding/refAreaLanding.html" title="Parameter: refAreaLanding"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../vtp.html" >Component: Vtp</a> &raquo;</li>
+          <li><a href="../Geometry.html" >Discipline: Geometry</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+.. _flap.refAreaInnerFlap:
+
+Parameter: refAreaInnerFlap
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the reference area of the inner flap, one half of the wing.
+    Assumes single slotted flaps.
+    
+    :Unit: [m2]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Flap.Geometry.refAreaInnerFlap.refAreaInnerFlap.calc
+
+
+   :Dependencies: 
+   * :ref:`flap.avgChordInnerFlap`
+   * :ref:`flap.spanInnerFlap`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

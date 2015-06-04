@@ -1,0 +1,15 @@
+.. _atmosphere.deltaT:
+
+Parameter: deltaT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Delta temperature as offset to the ISA standart atmosphere
+     
+    :Unit: [K] 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Atmosphere.Airport.deltaT.deltaT.calc
+
+

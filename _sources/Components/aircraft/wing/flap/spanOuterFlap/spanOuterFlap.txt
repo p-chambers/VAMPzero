@@ -1,0 +1,29 @@
+.. _flap.spanOuterFlap:
+
+Parameter: spanOuterFlap
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the span of the outer flap, one half of the wing.
+
+    :Unit: [m]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Flap.Geometry.spanOuterFlap.spanOuterFlap.calc
+
+
+   :Dependencies: 
+   * :ref:`flap.refAreaOuterFlap`
+   * :ref:`flap.avgChordOuterFlap`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,24 @@
+.. _aircraft.nPilot:
+
+Parameter: nPilot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The number of pilots operating the aircraft.  
+    
+    :Unit: []
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.Crew.nPilot.nPilot.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.tBlock`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

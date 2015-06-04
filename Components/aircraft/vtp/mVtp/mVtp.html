@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: mVtp &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../../index.html" />
+    <link rel="up" title="Discipline: Mass" href="../Mass.html" />
+    <link rel="next" title="Component: Vtpairfoil" href="../vtpairfoil/vtpairfoil.html" />
+    <link rel="prev" title="Discipline: Mass" href="../Mass.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../../index.html"><img src="../../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../vtpairfoil/vtpairfoil.html" title="Component: Vtpairfoil"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Mass.html" title="Discipline: Mass"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../vtp.html" >Component: Vtp</a> &raquo;</li>
+          <li><a href="../Mass.html" accesskey="U">Discipline: Mass</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: mVtp</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+<li><a class="reference internal" href="#cpacs-import">CPACS Import</a><ul>
+<li><a class="reference internal" href="#cpacs-export">CPACS Export</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../Mass.html"
+                        title="previous chapter">Discipline: Mass</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../vtpairfoil/vtpairfoil.html"
+                        title="next chapter">Component: Vtpairfoil</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../../_sources/Components/aircraft/vtp/mVtp/mVtp.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-mvtp">
+<span id="vtp-mvtp"></span><h1>Parameter: mVtp<a class="headerlink" href="#parameter-mvtp" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>The vertical tail plane (VTP) mass definition equals the Airbus weight chapter 14.
+The VTP mass includes the complete VTP structure, broken down as follows:</p>
+<ul class="simple">
+<li>torsion box (skins, spars, ribs, sealants, fuselage attachment)</li>
+<li>leading edge (dorsal fin, skins, ribs, panes)</li>
+<li>fixed trailing edge (panels, ribs, hinge and actuator fittings)</li>
+<li>rudders (complete rudder body, hinge and actuator fittings)</li>
+<li>tips and fairings (tips, fairing supports and fairings)</li>
+<li>miscellaneous (external paint final coat, VTP-fuselage bolts, torsion box-leading edge and torsion box-trailing edge bolts )</li>
+</ul>
+<p>The VTP mass excludes systems (e.g. actuators) but fittings on which e.g. the actuators
+are fixed are included into wing mass but not the bolts that are used for fixing the actuator.</p>
+<p>The difference between the DIN 9020 (which is normally used within LTH) and the Airbus
+definition is small. In the DIN 9020 definition actuator fittings are excluded in the VTP
+structure weight but therefore flutter dampers are included into the VTP structural weight.
+The VTP weight difference of the Fokker F100 is &lt;2% between the two weight breakdowns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[kg]</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Vtp.Mass.mVtp.mVtp.calc">
+<tt class="descclassname">mVtp.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Vtp.Mass.mVtp.mVtp.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chooses the calculation method for the mass of the horizontal tail depending
+on the location</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../refArea/refArea.html#vtp-refarea"><em>Parameter: refArea</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calc253.jpg"><img alt="../../../../_images/calc253.jpg" src="../../../../_images/calc253.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Vtp.Mass.mVtp.mVtp.calcConventional">
+<tt class="descclassname">mVtp.</tt><tt class="descname">calcConventional</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Vtp.Mass.mVtp.mVtp.calcConventional" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the vertical tail mass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">LTH UL-442.0(T).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../refArea/refArea.html#vtp-refarea"><em>Parameter: refArea</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcConventional5.jpg"><img alt="../../../../_images/calcConventional5.jpg" src="../../../../_images/calcConventional5.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Vtp.Mass.mVtp.mVtp.calcDorbathPraktikum">
+<tt class="descclassname">mVtp.</tt><tt class="descname">calcDorbathPraktikum</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Vtp.Mass.mVtp.mVtp.calcDorbathPraktikum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the vertical tail mass for a conventional tail
+switched back to the old equation in the same source due to non negative values!!!</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Improvements on a Very Simple Preliminary Aircraft Design Model, F. Dorbath, Airbus FPO, 2008, p. 151</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../refArea/refArea.html#vtp-refarea"><em>Parameter: refArea</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcDorbathPraktikum6.jpg"><img alt="../../../../_images/calcDorbathPraktikum6.jpg" src="../../../../_images/calcDorbathPraktikum6.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Vtp.Mass.mVtp.mVtp.calcTTail">
+<tt class="descclassname">mVtp.</tt><tt class="descname">calcTTail</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Vtp.Mass.mVtp.mVtp.calcTTail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the mass for horizontal tail in a T-tail setup</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Derived from statistical data for C-5A, C-141, HFB-320, B727-200, DH121 and DHC-5</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../refArea/refArea.html#vtp-refarea"><em>Parameter: refArea</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcTTail1.jpg"><img alt="../../../../_images/calcTTail1.jpg" src="../../../../_images/calcTTail1.jpg" style="width: 80%;" /></a>
+</div>
+<div class="section" id="cpacs-import">
+<h2>CPACS Import<a class="headerlink" href="#cpacs-import" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Vtp.Mass.mVtp.mVtp.cpacsImport">
+<tt class="descclassname">mVtp.</tt><tt class="descname">cpacsImport</tt><big>(</big><em>path='.\\cpacs.xml'</em>, <em>TIXIHandle=None</em>, <em>TIGLHandle=None</em><big>)</big><a class="headerlink" href="#VAMPzero.Component.Vtp.Mass.mVtp.mVtp.cpacsImport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="section" id="cpacs-export">
+<h3>CPACS Export<a class="headerlink" href="#cpacs-export" title="Permalink to this headline">¶</a></h3>
+<p>The values for mVtp are exported to:</p>
+<div class="highlight-xml"><div class="highlight"><pre>&lt;cpacs&gt;
+   &lt;vehicles&gt;
+      &lt;aircraft&gt;
+         &lt;model&gt;
+            &lt;analyses&gt;
+               &lt;massBreakdown&gt;
+                  &lt;mOEM&gt;
+                     &lt;mEM&gt;
+                        &lt;mStructure&gt;
+                           &lt;mWingsStructure&gt;
+                              &lt;mWingStructure[3]&gt;
+                                 &lt;massDescription[vtp_mass]&gt;
+                                    &lt;mass&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../vtpairfoil/vtpairfoil.html" title="Component: Vtpairfoil"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Mass.html" title="Discipline: Mass"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../vtp.html" >Component: Vtp</a> &raquo;</li>
+          <li><a href="../Mass.html" >Discipline: Mass</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

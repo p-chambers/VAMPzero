@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../index.html" />
+    <link rel="up" title="Introduction" href="../introduction.html" />
+    <link rel="next" title="Knowledge Base" href="../Knowledgebase/knowledgebase.html" />
+    <link rel="prev" title="Discipline" href="../Discipline/discipline.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../Knowledgebase/knowledgebase.html" title="Knowledge Base"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Discipline/discipline.html" title="Discipline"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../introduction.html" accesskey="U">Introduction</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../Discipline/discipline.html"
+                        title="previous chapter">Discipline</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../Knowledgebase/knowledgebase.html"
+                        title="next chapter">Knowledge Base</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/Introduction/Parameter/parameter.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter">
+<span id="id1"></span><h1>Parameter<a class="headerlink" href="#parameter" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../../_images/parameter.jpg"><img alt="../../_images/parameter.jpg" class="align-center" src="../../_images/parameter.jpg" style="width: 80%;" /></a>
+<dl class="class">
+<dt id="VAMPzero.Handler.Parameter.parameter">
+<em class="property">class </em><tt class="descclassname">VAMPzero.Handler.Parameter.</tt><tt class="descname">parameter</tt><big>(</big><em>value=0.0</em>, <em>unit=''</em>, <em>status='init'</em>, <em>doc='Default Doc'</em>, <em>factor=1.0</em>, <em>cpacsPath=''</em>, <em>name=''</em>, <em>parent=''</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Superclass for all Parameters</strong></p>
+<p>A parameter holds the design knowledge in VAMPzero. All parameters in the model need to inherit this class.</p>
+<p>Each parameter holds several attributes:</p>
+<ul>
+<li><p class="first">value</p>
+<p>The value of the parameter in the corresponding unit.</p>
+</li>
+<li><p class="first">factor</p>
+<p>Each parameter can hold a factor. These technology 
+factors can be used to 
+calibrate the calculation or introduce technologies 
+not directly modelled in VAMPzero.</p>
+</li>
+<li><p class="first">unit</p>
+<p>The unit of the parameter. Although units can be arbitrary strings, VAMPzero tries to stick to SI-units.</p>
+</li>
+<li><p class="first">status</p>
+<p>The status of a parameter influences the actions taken during the calculation. It can have different values:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>fixed</strong> by user input, may not be changed during the calculation</li>
+<li><em>init</em> the parameter was not altered during the calculation</li>
+<li>calc the parameter was calculated</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">cpacsPath</p>
+<p>The cpacsPath is an optional attribute. If it is given value will be imported/exported to the respective location in CPACS.</p>
+</li>
+</ul>
+<p>For the methods of parameter see the following documentation. Please note that some of these routines maybe overwritten.</p>
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.calc">
+<tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Each parameter will overwrite this method with it&#8217;s own calculation methods</p>
+<p>Strictly, speaking the method could also throw a warning if called</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.checkConvergence">
+<tt class="descname">checkConvergence</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.checkConvergence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether the parameter seems to have converged
+it will be checked whether the value has changed more than 10-5% from the last calculation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.complexify">
+<tt class="descname">complexify</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.complexify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to convert the own value to a zeroComplex value
+is necessary for the complex-step calculation of the sensitivities</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.cpacsExport">
+<tt class="descname">cpacsExport</tt><big>(</big><em>CPACSObj</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.cpacsExport" title="Permalink to this definition">¶</a></dt>
+<dd><p>this methods exports self.value to self.cpacsPath in path 
+cpacsPath must be filled
+path is an optional argument for the output
+Additionally, all values are parsed into the resultList so that they can be exported later on</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.cpacsImport">
+<tt class="descname">cpacsImport</tt><big>(</big><em>path='.\\cpacs.xml'</em>, <em>TIXIHandle=None</em>, <em>TIGLHandle=None</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.cpacsImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>TIXI and TIGL Handle should be given, to save some valueable time
+Imports self.cpacsPath from path
+Input Values will be set to &#8216;fix&#8217;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.createDoc">
+<tt class="descname">createDoc</tt><big>(</big><em>myAircraft</em>, <em>parentFolder</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.createDoc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a structured Text File so that the documentation can be created</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.createGraphNode">
+<tt class="descname">createGraphNode</tt><big>(</big><em>myGraph</em>, <em>propList</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.createGraphNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Created a Node in a Graph and adds Edges to EgdeList</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.freemindExport">
+<tt class="descname">freemindExport</tt><big>(</big><em>depth=3</em>, <em>withValues=True</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.freemindExport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Mindmap from caller and callee entries and exports it</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.getCpacsPath">
+<tt class="descname">getCpacsPath</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.getCpacsPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the cpacs Path of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.getDeviationFactor">
+<tt class="descname">getDeviationFactor</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.getDeviationFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Factor which is multiplied with the standard deviation.
+Percentage of standard deviation to be applied.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.getDiscipline">
+<tt class="descname">getDiscipline</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.getDiscipline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the discipline of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.getFactor">
+<tt class="descname">getFactor</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.getFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the technology factor of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.getHistory">
+<tt class="descname">getHistory</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.getHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the calculation history of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.getName">
+<tt class="descname">getName</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.getStatus">
+<tt class="descname">getStatus</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.getStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the statur of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.getUnit">
+<tt class="descname">getUnit</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.getUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unit of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.getValue">
+<tt class="descname">getValue</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.getValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function getValue returns the value of a parameter.</p>
+<p>If the doAdjacence switch is set to true it tries to resolve the dependencies in the code, 
+i.e. it logs which parameter tries to execute getValue(). If a parameter triggers getValue
+this means that it relies on a parameter for the calculation.</p>
+<p>This information is very important for a designer. E.g. If you look up a book and try to 
+find information how to calculate the wings reference area this is easy. Just look up the page.
+But if you want to find out which parameter is influenced by the wing area you have to 
+look through all pages of the book and find out if the wing area is used in a formula.</p>
+<ul>
+<li><p class="first">Caller</p>
+<p>A Caller is a parameter that call&#8217;s for it&#8217;s own calculation of this value, 
+i.e. it is on the left hand side of the equation</p>
+</li>
+<li><p class="first">Callee</p>
+<p>A Callee is called by this parameter, i.e. it is on the right hand side of the equation</p>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.help">
+<tt class="descname">help</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a help String similar to Matlab</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.importError">
+<tt class="descname">importError</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.importError" title="Permalink to this definition">¶</a></dt>
+<dd><p>gets Triggered if an Import Fails</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.importSuccess">
+<tt class="descname">importSuccess</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.importSuccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>gets Triggered if an Import succeeds</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.monkeyPatch">
+<tt class="descname">monkeyPatch</tt><big>(</big><em>routine='new one'</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.monkeyPatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>prints a warning after a monkey patch</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.realify">
+<tt class="descname">realify</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.realify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to convert the own value to a real value
+is necessary for the complex-step calculation of the sensitivities</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.resultExport">
+<tt class="descname">resultExport</tt><big>(</big><em>fileHandle</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.resultExport" title="Permalink to this definition">¶</a></dt>
+<dd><p>writes all entries from the resultList into VAMPzero.m file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.sense">
+<tt class="descname">sense</tt><big>(</big><em>myAircraft</em>, <em>senseFile=None</em>, <em>doc=False</em>, <em>name=''</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.sense" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a sensitivity plot
+&#64;param senseFile: file handle</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setCpacsPath">
+<tt class="descname">setCpacsPath</tt><big>(</big><em>cpacsPath=''</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setCpacsPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the cpacsPath of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setDeviation">
+<tt class="descname">setDeviation</tt><big>(</big><em>stdDeviation</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setDeviation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the standard deviation of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setDeviationFactor">
+<tt class="descname">setDeviationFactor</tt><big>(</big><em>value</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setDeviationFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Factor which is multiplied with the standard deviation.
+Percentage of standard deviation to be applied.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setDiscipline">
+<tt class="descname">setDiscipline</tt><big>(</big><em>discipline=''</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setDiscipline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the unit of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setFactor">
+<tt class="descname">setFactor</tt><big>(</big><em>factor=''</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the technology factor for a parameter.</p>
+<p>If factor is not unity it will be applied to the value directly</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setHistory">
+<tt class="descname">setHistory</tt><big>(</big><em>history=''</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the history of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setName">
+<tt class="descname">setName</tt><big>(</big><em>name=''</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the unit of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setStatus">
+<tt class="descname">setStatus</tt><big>(</big><em>status=''</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the status of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setUnit">
+<tt class="descname">setUnit</tt><big>(</big><em>unit=''</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the unit of the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setValue">
+<tt class="descname">setValue</tt><big>(</big><em>value=''</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value for a parameter!</p>
+<p>The behaviour of this function is dependent on the parameter.isComplex switch
+If isComplex is true all values need to be converted to zeroComplex. 
+If isComplex is false value should only have a real part</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setValueCalc">
+<tt class="descname">setValueCalc</tt><big>(</big><em>value=0.0</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setValueCalc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Each calc() function of a parameter will use this method to store its result. setValueCalc will not 
+overwrite the value of a parameter that has the status &#8216;fix&#8217;</p>
+<p>If the status of the parameter unequals &#8216;fix&#8217; then this method will set the status to &#8216;calc&#8217;</p>
+<p>Furthermore, this method adds the value to the parameter&#8217;s calculation history so that 
+convergence checks can be run.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Parameter.parameter.setValueFix">
+<tt class="descname">setValueFix</tt><big>(</big><em>value=0.0</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Parameter.parameter.setValueFix" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called to enter a value to a parameter and fix it, 
+so that it can not be changed during a calculation. A User Input is a good example
+application of this funtion:</p>
+<ul class="simple">
+<li>parameter[&#8220;value&#8221;] will be set to the given value</li>
+<li>parameter[&#8220;status&#8221;] will be set to &#8216;fix&#8217;</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../Knowledgebase/knowledgebase.html" title="Knowledge Base"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Discipline/discipline.html" title="Discipline"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../introduction.html" >Introduction</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

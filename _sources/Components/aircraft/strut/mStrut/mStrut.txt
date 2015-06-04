@@ -1,0 +1,70 @@
+.. _strut.mStrut:
+
+Parameter: mStrut
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The mass of the struts (sum of both sides). The strut does not include any systems or control surfaces
+
+    :Unit: [kg]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Mass.mStrut.mStrut.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.refArea`
+   * :ref:`wing.tcAVG`
+   * :ref:`wing.phi25`
+   * :ref:`aircraft.mTOM`
+   * :ref:`strut.depth`
+   * :ref:`strut.etaStrut`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+CPACS Import
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+The values for mStrut are imported from:
+
+.. code-block:: xml
+
+   <cpacs>
+      <vehicles>
+         <aircraft>
+            <model>
+               <analyses>
+                  <massBreakdown>
+                     <mOEM>
+                        <mEM>
+                           <mStructure>
+                              <mWingsStructure>
+                                 <mWingStructure[4]>
+                                    <massDescription[strut_mass]>
+                                       <mass>
+
+CPACS Export
+-------------------
+The values for mStrut are exported to:
+
+.. code-block:: xml
+
+   <cpacs>
+      <vehicles>
+         <aircraft>
+            <model>
+               <analyses>
+                  <massBreakdown>
+                     <mOEM>
+                        <mEM>
+                           <mStructure>
+                              <mWingsStructure>
+                                 <mWingStructure[4]>
+                                    <massDescription[strut_mass]>
+                                       <mass>
+

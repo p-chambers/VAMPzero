@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>The Mind-Maps &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../index.html" />
+    <link rel="up" title="Results" href="../results.html" />
+    <link rel="next" title="The Plots" href="../Plot/plot.html" />
+    <link rel="prev" title="Results" href="../results.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../index.html"><img src="../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../Plot/plot.html" title="The Plots"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../results.html" title="Results"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../getting_started.html" >Getting Started</a> &raquo;</li>
+          <li><a href="../results.html" accesskey="U">Results</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../results.html"
+                        title="previous chapter">Results</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../Plot/plot.html"
+                        title="next chapter">The Plots</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/Getting_started/Results/Mindmap/mindmap.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="the-mind-maps">
+<span id="mindmap"></span><h1>The Mind-Maps<a class="headerlink" href="#the-mind-maps" title="Permalink to this headline">¶</a></h1>
+<p>The most outstanding feature of VAMPzero is the ability to trace the call hierarchy of the calculation in the
+form of mind-maps. During a calculation the <em>calc</em> method for each parameter is called, if the parameter is not
+fixed. A <em>calc</em> method will in most cases build up dependencies to other parameters to determine the value
+of its parent parameter. VAMPzero traces theses dependencies in both directions and displays them as mind-maps.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The mind-maps are exported as *.mm (xml) files. The visualization is made using the open-source software
+<a class="reference external" href="http://freemind.sourceforge.net">Freemind</a>.</p>
+<p class="last">If you run VAMPzero through the graphical user interface the mind-maps will be opened automatically.
+You can also find them in them in the folder ./ReturnDirectory/mindMaps</p>
+</div>
+<p>You can think of these dependencies as the right and left-hand side of an equation. If you look at one of the mind-maps
+focus on the parameter in the middle. To calculate the value of this parameter it takes all the parameters one step
+to the right from this parameter. The parameters on the right are called from the parameter in the center, therefore
+they are named <em>callees</em>. To them the parameter in the middle is the <em>caller</em>.</p>
+<p>The parameters to the left of the middle parameter are depending on the parameter in the middle for the calculation
+of their own value. They may be depending on other parameters as well. If you want to know everything about the parameters
+on the left just click them and a new mind-map will open with this parameter in the middle.</p>
+<a class="reference internal image-reference" href="../../../_images/refAreaLoading.jpg"><img alt="../../../_images/refAreaLoading.jpg" class="align-center" src="../../../_images/refAreaLoading.jpg" style="width: 80%;" /></a>
+<p>Let&#8217;s take a look at an example. In the above mind-map the wing&#8217;s reference area is the parameter in the middle. In this
+case VAMPzero has chosen to calculate the reference area (<a class="reference internal" href="../../../Components/aircraft/wing/refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a>) from the maximum take-off mass (<a class="reference internal" href="../../../Components/aircraft/mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a>) and the maximum
+wing loading (<a class="reference internal" href="../../../Components/aircraft/wsMAX/wsMAX.html#aircraft-wsmax"><em>Parameter: wsMAX</em></a>). Therefore the middle parameter is (exclusively) dependent on the two parameters on the right side. If you divide
+the maximum take-off mass by the wing loading you will see that the results should match.</p>
+<p>All parameters on the left side, starting with the lift coefficient in the cruise segment (<a class="reference internal" href="../../../Components/aircraft/cLCR/cLCR.html#aircraft-clcr"><em>Parameter: cLCR</em></a>) and and ending with the X-location of
+the mean aerodynamic chord (<a class="reference internal" href="../../../Components/aircraft/wing/xMAC/xMAC.html#wing-xmac"><em>Parameter: xMAC</em></a>), are dependent on the reference area of the wing for their calculation. They are, of course, also
+dependent on other parameters. If you want to examine these dependencies just click on one of the parameters.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Different font types mean different status of a parameter. The following applies:</p>
+<ul class="last simple">
+<li><strong>bold parameter is fixed by user/CPACS input</strong></li>
+<li><em>italics parameter is initialized, no calc method available</em></li>
+<li>normal parameter was calculated</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../Plot/plot.html" title="The Plots"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../results.html" title="Results"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../getting_started.html" >Getting Started</a> &raquo;</li>
+          <li><a href="../results.html" >Results</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+.. _engine.dCDOEI:
+
+Parameter: dCDOEI
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The delta in the total drag coefficient of the aircraft due to one engine inoperative
+    
+    :Unit: []
+    :Wiki: http://en.wikipedia.org/wiki/Critical_engine
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Engine.Aerodynamic.dCDOEI.dCDOEI.calc
+
+
+   :Dependencies: 
+   * :ref:`engine.dEngine`
+   * :ref:`wing.refArea`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

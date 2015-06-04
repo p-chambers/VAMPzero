@@ -1,0 +1,25 @@
+.. _strut.yMAC:
+
+Parameter: yMAC
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The wing's mean aerodynamic chord's y location in absolute coordinates
+    
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Geometry.yMAC.yMAC.calc
+
+
+   :Dependencies: 
+   * :ref:`strut.taperRatio`
+   * :ref:`strut.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

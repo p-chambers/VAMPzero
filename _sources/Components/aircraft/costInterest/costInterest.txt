@@ -1,0 +1,29 @@
+.. _aircraft.costInterest:
+
+Parameter: costInterest
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The interest costs per flight hour
+    
+    :Unit: [EU/h]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.costInterest.costInterest.calc
+
+
+.. automethod:: VAMPzero.Component.Main.DOC.costInterest.costInterest.calcKundu
+
+
+   :Dependencies: 
+   * :ref:`aircraft.priceAircraft`
+   * :ref:`aircraft.utilization`
+   * :ref:`aircraft.USDexchangeEURO`
+
+
+   :Sensitivities: 
+.. image:: calcKundu.jpg 
+   :width: 80% 
+
+

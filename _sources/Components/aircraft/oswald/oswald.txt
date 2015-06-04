@@ -1,0 +1,31 @@
+.. _aircraft.oswald:
+
+Parameter: oswald
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The Oswald efficiency, similar to the span efficiency, is a correction factor that represents
+    the change in drag with lift of a three dimensional wing or airplane, as compared with an ideal
+    wing having the same aspect ratio and an elliptical lift distribution.
+
+    :Unit: [ ]
+
+    :Wiki: http://en.wikipedia.org/wiki/Oswald_efficiency_number
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.Aerodynamic.oswald.oswald.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.oswald`
+   * :ref:`wing.span`
+   * :ref:`fuselage.dfus`
+   * :ref:`aircraft.cD0`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

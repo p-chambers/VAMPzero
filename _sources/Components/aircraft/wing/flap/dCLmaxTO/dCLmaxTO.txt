@@ -1,0 +1,15 @@
+.. _flap.dCLmaxTO:
+
+Parameter: dCLmaxTO
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The delta maximum Lift Coefficient for extended flaps in takeoff configuration 
+
+    :Unit: []
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Flap.Aerodynamic.dCLmaxTO.dCLmaxTO.calc
+
+

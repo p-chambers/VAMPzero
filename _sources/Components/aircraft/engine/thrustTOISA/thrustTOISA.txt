@@ -1,0 +1,56 @@
+.. _engine.thrustTOISA:
+
+Parameter: thrustTOISA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Takeoff thrust for one engine. Conditions for sea-level, standard day
+    
+    :Unit: [N]
+	
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Engine.Propulsion.thrustTOISA.thrustTOISA.calc
+
+
+   :Dependencies: 
+   * :ref:`engine.thrustTO`
+   * :ref:`atmosphere.TAP`
+   * :ref:`atmosphere.pAP`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Engine.Propulsion.thrustTOISA.thrustTOISA.calcThrustCR
+
+
+   :Dependencies: 
+   * :ref:`engine.bypassRatio`
+   * :ref:`engine.thrustCR`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`atmosphere.rhoCR`
+   * :ref:`atmosphere.MaCR`
+
+
+
+.. automethod:: VAMPzero.Component.Engine.Propulsion.thrustTOISA.thrustTOISA.calctwTO
+
+
+   :Dependencies: 
+   * :ref:`engine.thrustTO`
+   * :ref:`atmosphere.TAP`
+   * :ref:`atmosphere.pAP`
+
+
+   :Sensitivities: 
+.. image:: calctwTO.jpg 
+   :width: 80% 
+
+
+CPACS Import
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Engine.Propulsion.thrustTOISA.thrustTOISA.cpacsImport
+

@@ -1,0 +1,58 @@
+.. _vtp.refAreaTakeOff:
+
+Parameter: refAreaTakeOff
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The reference area for the vertical tailplane for the Take Off.
+    
+    :Unit: [m2]
+
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Vtp.Geometry.refAreaTakeOff.refAreaTakeOff.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.refArea`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`atmosphere.aAP`
+   * :ref:`vtp.lVT`
+   * :ref:`vtp.aspectRatio`
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.oswald`
+   * :ref:`vtp.phi50`
+   * :ref:`aircraft.cD0`
+   * :ref:`flap.dCDTO`
+   * :ref:`landingGear.dCDextendedLG`
+   * :ref:`engine.nEngine`
+   * :ref:`engine.yEngine`
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.cLTO`
+
+
+
+.. automethod:: VAMPzero.Component.Vtp.Geometry.refAreaTakeOff.refAreaTakeOff.calcControl
+
+
+   :Dependencies: 
+   * :ref:`wing.refArea`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`atmosphere.aAP`
+   * :ref:`vtp.lVT`
+   * :ref:`vtp.aspectRatio`
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.oswald`
+   * :ref:`vtp.phi50`
+   * :ref:`aircraft.cD0`
+   * :ref:`flap.dCDTO`
+   * :ref:`landingGear.dCDextendedLG`
+   * :ref:`engine.nEngine`
+   * :ref:`engine.yEngine`
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.cLTO`
+
+
+

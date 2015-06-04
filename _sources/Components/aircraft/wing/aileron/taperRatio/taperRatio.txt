@@ -1,0 +1,28 @@
+.. _aileron.taperRatio:
+
+Parameter: taperRatio
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the taper ratio of the aileron (note: only one aileron is considered).
+
+    :Unit: [-]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Aileron.Geometry.taperRatio.taperRatio.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.taperRatio`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

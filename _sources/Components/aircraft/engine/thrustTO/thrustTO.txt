@@ -1,0 +1,96 @@
+.. _engine.thrustTO:
+
+Parameter: thrustTO
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Takeoff thrust for one engine. Conditions for airport level
+    
+    :Unit: [N]
+	
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.twTO`
+   * :ref:`engine.nEngine`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calcThrustCR
+
+
+   :Dependencies: 
+   * :ref:`engine.bypassRatio`
+   * :ref:`engine.thrustCR`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`atmosphere.rhoCR`
+   * :ref:`atmosphere.MaCR`
+
+
+   :Sensitivities: 
+.. image:: calcThrustCR.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calcThrustISA
+
+
+   :Dependencies: 
+   * :ref:`engine.thrustTOISA`
+   * :ref:`atmosphere.TAP`
+   * :ref:`atmosphere.pAP`
+
+
+   :Sensitivities: 
+.. image:: calcThrustISA.jpg 
+   :width: 80% 
+
+
+.. automethod:: VAMPzero.Component.Engine.Propulsion.thrustTO.thrustTO.calctwTO
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`aircraft.twTO`
+   * :ref:`engine.nEngine`
+
+
+   :Sensitivities: 
+.. image:: calctwTO.jpg 
+   :width: 80% 
+
+
+CPACS Import
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+The values for thrustTO are imported from:
+
+.. code-block:: xml
+
+   <cpacs>
+      <vehicles>
+         <engines>
+            <engine>
+               <analysis>
+                  <thrust00>
+
+CPACS Export
+-------------------
+The values for thrustTO are exported to:
+
+.. code-block:: xml
+
+   <cpacs>
+      <vehicles>
+         <engines>
+            <engine>
+               <analysis>
+                  <thrust00>
+

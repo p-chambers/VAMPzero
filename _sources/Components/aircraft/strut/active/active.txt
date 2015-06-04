@@ -1,0 +1,17 @@
+.. _strut.active:
+
+Parameter: active
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    This parameter determines whether the strut is active or not, i.e., whether the configuration is a strut braced wing or not.active
+
+    Default: 0
+
+    :Unit: [ ]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.active.active.calc
+
+

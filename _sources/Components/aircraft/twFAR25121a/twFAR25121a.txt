@@ -1,0 +1,40 @@
+.. _aircraft.twFAR25121a:
+
+Parameter: twFAR25121a
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The thrust to weight ratio for the transition climb segment
+    
+    The configuration is:
+     
+     * Take-off Flaps extended
+     * Landing Gear is down
+     * Full thrust on remaining engines
+     * V = VLOF
+     * mTOM 
+    
+    :Unit: [kg/m2]
+    :Wiki: http://en.wikipedia.org/wiki/Thrust-to-weight_ratio
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.Sizing.twFAR25121a.twFAR25121a.calc
+
+
+   :Dependencies: 
+   * :ref:`engine.nEngine`
+   * :ref:`aircraft.cLTO`
+   * :ref:`aircraft.cD0`
+   * :ref:`engine.dCDOEI`
+   * :ref:`flap.dCDTO`
+   * :ref:`landingGear.dCDextendedLG`
+   * :ref:`aircraft.oswald`
+   * :ref:`wing.aspectRatio`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,27 @@
+.. _aircraft.flightCycles:
+
+Parameter: flightCycles
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Yearly Flight Cycles
+    
+    :Unit: [#/year]
+
+    :Source: TU Berlin - Simplified DOC model, J. Thorbeck (remarks by D. Scholz)
+                http://www.fzt.haw-hamburg.de/pers/Scholz/Aero/TU-Berlin_DOC-Method_with_remarks_13-09-19.pdf      
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.DOC.flightCycles.flightCycles.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.tFlight`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

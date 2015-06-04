@@ -1,0 +1,27 @@
+.. _strut.cRoot:
+
+Parameter: cRoot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The root chord of the strut.
+
+    The root of the strut is located at the lowest position of the fuselage at its widest position.
+    
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.cRoot.cRoot.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.cRoot`
+   * :ref:`strut.depth`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

@@ -1,0 +1,26 @@
+.. _fuel.mFuelMAXTT:
+
+Parameter: mFuelMAXTT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The maximum fuel mass that can be stored in the trim tank
+    
+    :Unit: [kg] 
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuel.Mass.mFuelMAXTT.mFuelMAXTT.calc
+
+
+   :Dependencies: 
+   * :ref:`fuel.mFuelMAXcenterWT`
+   * :ref:`fuel.mFuelMAX`
+   * :ref:`fuel.TrimTank`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

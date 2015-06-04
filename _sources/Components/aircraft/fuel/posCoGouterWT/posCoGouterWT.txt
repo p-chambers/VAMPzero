@@ -1,0 +1,28 @@
+.. _fuel.posCoGouterWT:
+
+Parameter: posCoGouterWT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    X Position of the center of gravity of the outer wing tank
+	
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuel.CoG.posCoGouterWT.posCoGouterWT.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.xRoot`
+   * :ref:`wing.cRoot`
+   * :ref:`wing.phiLE`
+   * :ref:`wing.taperRatio`
+   * :ref:`wing.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

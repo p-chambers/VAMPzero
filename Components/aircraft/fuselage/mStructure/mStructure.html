@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: mStructure &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../../index.html" />
+    <link rel="up" title="Discipline: Mass" href="../Mass.html" />
+    <link rel="next" title="Component: Htp" href="../../htp/htp.html" />
+    <link rel="prev" title="Parameter: mFuselage" href="../mFuselage/mFuselage.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../../index.html"><img src="../../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../htp/htp.html" title="Component: Htp"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../mFuselage/mFuselage.html" title="Parameter: mFuselage"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../fuselage.html" >Component: Fuselage</a> &raquo;</li>
+          <li><a href="../Mass.html" accesskey="U">Discipline: Mass</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: mStructure</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+<li><a class="reference internal" href="#cpacs-import">CPACS Import</a><ul>
+<li><a class="reference internal" href="#cpacs-export">CPACS Export</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../mFuselage/mFuselage.html"
+                        title="previous chapter">Parameter: mFuselage</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../htp/htp.html"
+                        title="next chapter">Component: Htp</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../../_sources/Components/aircraft/fuselage/mStructure/mStructure.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-mstructure">
+<span id="fuselage-mstructure"></span><h1>Parameter: mStructure<a class="headerlink" href="#parameter-mstructure" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>The fuselage mass definition equals the Airbus weight chapter 11. The fuselage mass includes the complete fuselage structure, broken down as follows:</p>
+<ul class="simple">
+<li>panels (skin shell panels, stringer, doubler, window frames)</li>
+<li>frames (frames, pressure bulkheads, clips, frame junction fittings)</li>
+<li>doors (doors, locking mechanism, hinge arm and fittings, door seal)</li>
+<li>windscreens and windows</li>
+<li>windscreen and opening frames</li>
+<li>cabin floor structure</li>
+<li>cargo compartment floor structure</li>
+<li>special structures (landing gear bays, keel beam, VTP and HTP attachment, APU attachment)</li>
+<li>fillet and fairings (belly fairing, leading edge root fillets, upper/lower wing fairing, APU fairing)</li>
+<li>miscellaneous (external paint final coat, stairs, barrier wall, installation parts)</li>
+</ul>
+<p>The fuselage mass excludes systems (e.g. actuators) but fittings on which e.g. the actuators are fixed are included into wing mass but not the bolts, that are used for fixing the actuator.</p>
+<p>The main differences between the DIN 9020 (which is normally used within LTH) and the Airbus definition is that all wing-fuselage fairings, landing gear fittings and fittings of subsystems are accounted within the fuselage chapter.
+The fuselage weight of Airbus aircraft is between 0% and 3.4% heavier according to the airbus weight chapter definition and the Fokker F100 is ~6% heavier.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[kg]</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Fuselage.Mass.mStructure.mStructure.calc">
+<tt class="descclassname">mStructure.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Fuselage.Mass.mStructure.mStructure.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>For wing mounted engine, sets the calc method to calcWingMount;
+For fuselage mounted engine, sets the calc method to calcFuselageMount.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../dfus/dfus.html#fuselage-dfus"><em>Parameter: dfus</em></a></li>
+<li><a class="reference internal" href="../lfus/lfus.html#fuselage-lfus"><em>Parameter: lfus</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calc125.jpg"><img alt="../../../../_images/calc125.jpg" src="../../../../_images/calc125.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Fuselage.Mass.mStructure.mStructure.calcDorbathPraktikum">
+<tt class="descclassname">mStructure.</tt><tt class="descname">calcDorbathPraktikum</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Fuselage.Mass.mStructure.mStructure.calcDorbathPraktikum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calclates the fuselage structure mass from the area</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Improvements on a Very Simple Preliminary Aircraft Design Model, F. Dorbath, Airbus FPO, 2008, p. 142</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">calcDorbathPraktikum mStructure: add a switch for small fuselages depending on mPayload</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../dfus/dfus.html#fuselage-dfus"><em>Parameter: dfus</em></a></li>
+<li><a class="reference internal" href="../lfus/lfus.html#fuselage-lfus"><em>Parameter: lfus</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcDorbathPraktikum1.jpg"><img alt="../../../../_images/calcDorbathPraktikum1.jpg" src="../../../../_images/calcDorbathPraktikum1.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Fuselage.Mass.mStructure.mStructure.calcFuselageMount">
+<tt class="descclassname">mStructure.</tt><tt class="descname">calcFuselageMount</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Fuselage.Mass.mStructure.mStructure.calcFuselageMount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calclates the fuselage structure mass from the finess ratio. Note that hfus and wfus as defined in LTH are not available inside VAMPzero and will not be taken into account
+:Source: LTH UL-442.0(T).
+The equation is updated by a factor of (1+k) ** 0.367, where the k value is 0.2 for fuselage mounted engines.
+:Source: LTH MA 508 12-02</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../dfus/dfus.html#fuselage-dfus"><em>Parameter: dfus</em></a></li>
+<li><a class="reference internal" href="../lfus/lfus.html#fuselage-lfus"><em>Parameter: lfus</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcFuselageMount3.jpg"><img alt="../../../../_images/calcFuselageMount3.jpg" src="../../../../_images/calcFuselageMount3.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Fuselage.Mass.mStructure.mStructure.calcWingMount">
+<tt class="descclassname">mStructure.</tt><tt class="descname">calcWingMount</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Fuselage.Mass.mStructure.mStructure.calcWingMount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calclates the fuselage structure mass from the finess ratio. Note that hfus and wfus as defined in LTH are not available inside VAMPzero and will not be taken into account</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">LTH UL-442.0(T).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../dfus/dfus.html#fuselage-dfus"><em>Parameter: dfus</em></a></li>
+<li><a class="reference internal" href="../lfus/lfus.html#fuselage-lfus"><em>Parameter: lfus</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcWingMount1.jpg"><img alt="../../../../_images/calcWingMount1.jpg" src="../../../../_images/calcWingMount1.jpg" style="width: 80%;" /></a>
+</div>
+<div class="section" id="cpacs-import">
+<h2>CPACS Import<a class="headerlink" href="#cpacs-import" title="Permalink to this headline">¶</a></h2>
+<p>The values for mStructure are imported from:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;cpacs&gt;</span>
+   <span class="nt">&lt;vehicles&gt;</span>
+      <span class="nt">&lt;aircraft&gt;</span>
+         <span class="nt">&lt;model&gt;</span>
+            <span class="nt">&lt;analyses&gt;</span>
+               <span class="nt">&lt;massBreakdown&gt;</span>
+                  <span class="nt">&lt;mOEM&gt;</span>
+                     <span class="nt">&lt;mEM&gt;</span>
+                        <span class="nt">&lt;mStructure&gt;</span>
+                           <span class="nt">&lt;mFuselagesStructure&gt;</span>
+                              <span class="nt">&lt;mFuselageStructure&gt;</span>
+                                 <span class="nt">&lt;massDescription&gt;</span>
+                                    <span class="nt">&lt;mass&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="cpacs-export">
+<h3>CPACS Export<a class="headerlink" href="#cpacs-export" title="Permalink to this headline">¶</a></h3>
+<p>The values for mStructure are exported to:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;cpacs&gt;</span>
+   <span class="nt">&lt;vehicles&gt;</span>
+      <span class="nt">&lt;aircraft&gt;</span>
+         <span class="nt">&lt;model&gt;</span>
+            <span class="nt">&lt;analyses&gt;</span>
+               <span class="nt">&lt;massBreakdown&gt;</span>
+                  <span class="nt">&lt;mOEM&gt;</span>
+                     <span class="nt">&lt;mEM&gt;</span>
+                        <span class="nt">&lt;mStructure&gt;</span>
+                           <span class="nt">&lt;mFuselagesStructure&gt;</span>
+                              <span class="nt">&lt;mFuselageStructure&gt;</span>
+                                 <span class="nt">&lt;massDescription&gt;</span>
+                                    <span class="nt">&lt;mass&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../htp/htp.html" title="Component: Htp"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../mFuselage/mFuselage.html" title="Parameter: mFuselage"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../fuselage.html" >Component: Fuselage</a> &raquo;</li>
+          <li><a href="../Mass.html" >Discipline: Mass</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

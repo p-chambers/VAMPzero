@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: mWing &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../../index.html" />
+    <link rel="up" title="Discipline: Mass" href="../Mass.html" />
+    <link rel="next" title="Component: Wingrootairfoil" href="../wingrootairfoil/wingrootairfoil.html" />
+    <link rel="prev" title="Discipline: Mass" href="../Mass.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../../index.html"><img src="../../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../wingrootairfoil/wingrootairfoil.html" title="Component: Wingrootairfoil"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Mass.html" title="Discipline: Mass"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../wing.html" >Component: Wing</a> &raquo;</li>
+          <li><a href="../Mass.html" accesskey="U">Discipline: Mass</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: mWing</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+<li><a class="reference internal" href="#cpacs-import">CPACS Import</a><ul>
+<li><a class="reference internal" href="#cpacs-export">CPACS Export</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../Mass.html"
+                        title="previous chapter">Discipline: Mass</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../wingrootairfoil/wingrootairfoil.html"
+                        title="next chapter">Component: Wingrootairfoil</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../../_sources/Components/aircraft/wing/mWing/mWing.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-mwing">
+<span id="wing-mwing"></span><h1>Parameter: mWing<a class="headerlink" href="#parameter-mwing" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>The wing mass definition equals the Airbus weight chapter 10. The wing mass includes the complete wing structure
+from tip to tip including centre wing box, broken down as follows:</p>
+<ul class="simple">
+<li>skins (including stringers)</li>
+<li>spars</li>
+<li>ribs</li>
+<li>pylon attachments (front and rear attachment, fairing attachments, spigot attachment)</li>
+<li>landing gear support (gear beam and ribs, attachments and fittings)</li>
+<li>fixed leading edge (ribs, panels, movable support structures)</li>
+<li>movable leading edge (slat, droop nose, krueger flaps, slat tracks)</li>
+<li>fixed trailing edges (panels, falsework, flap tracks and attachments, spoiler and aileron support)</li>
+<li>movable trailing edges (flaps including flap track rear link and carriages, ailerons and spoiler)</li>
+<li>miscellaneous (external paint final coat, wing tips, winglets, sealant, fairings, fittings and supports)</li>
+</ul>
+<p>The wing mass excludes systems (e.g. actuators) but fittings on which e.g. the actuators are fixed are included
+into wing mass but not the bolts, that are used for fixing the actuator.</p>
+<p>The main differences between the DIN 9020 (which is normally used within LTH) and the Airbus definition is
+that the wing-fuselage (belly) fairing as well as the landing gear doors in the belly fairing area is not
+accounted within the wing chapter. On the other hand the tank sealant, wing landing gear and pylon fittings and
+fittings of subsystems is accounted within the wing chapter.
+The wing weight of Airbus aircraft is ~1% lighter according to the Airbus weight chapter definition and
+the Fokker F100 is ~2% heavier.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[kg]</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Mass.mWing.mWing.calc">
+<tt class="descclassname">mWing.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Mass.mWing.mWing.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines the appropriate wing mass estimation method based on the strut or not</p>
+<p>CalcStrut and CalcDiss are currently being used</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../phi25/phi25.html#wing-phi25"><em>Parameter: phi25</em></a></li>
+<li><a class="reference internal" href="../aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../tcAVG/tcAVG.html#wing-tcavg"><em>Parameter: tcAVG</em></a></li>
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calc300.jpg"><img alt="../../../../_images/calc300.jpg" src="../../../../_images/calc300.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Mass.mWing.mWing.calcDiss">
+<tt class="descclassname">mWing.</tt><tt class="descname">calcDiss</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Mass.mWing.mWing.calcDiss" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the Wings Mass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">A multi-fidelity workflow to derive physics based conceptual design methods, D. Boehnke, DLR, 2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../phi25/phi25.html#wing-phi25"><em>Parameter: phi25</em></a></li>
+<li><a class="reference internal" href="../aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../tcAVG/tcAVG.html#wing-tcavg"><em>Parameter: tcAVG</em></a></li>
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcDiss.jpg"><img alt="../../../../_images/calcDiss.jpg" src="../../../../_images/calcDiss.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Mass.mWing.mWing.calcDorbathPraktikum">
+<tt class="descclassname">mWing.</tt><tt class="descname">calcDorbathPraktikum</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Mass.mWing.mWing.calcDorbathPraktikum" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the Wings Mass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Improvements on a Very Simple Preliminary Aircraft Design Model, F. Dorbath, Airbus FPO, 2008, p. 146</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../phi25/phi25.html#wing-phi25"><em>Parameter: phi25</em></a></li>
+<li><a class="reference internal" href="../aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../tcAVG/tcAVG.html#wing-tcavg"><em>Parameter: tcAVG</em></a></li>
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcDorbathPraktikum7.jpg"><img alt="../../../../_images/calcDorbathPraktikum7.jpg" src="../../../../_images/calcDorbathPraktikum7.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Mass.mWing.mWing.calcEureqa">
+<tt class="descclassname">mWing.</tt><tt class="descname">calcEureqa</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Mass.mWing.mWing.calcEureqa" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the wing&#8217;s mass from a method derived from PESTWing</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../phi25/phi25.html#wing-phi25"><em>Parameter: phi25</em></a></li>
+<li><a class="reference internal" href="../aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../tcAVG/tcAVG.html#wing-tcavg"><em>Parameter: tcAVG</em></a></li>
+<li><a class="reference internal" href="../taperRatio/taperRatio.html#wing-taperratio"><em>Parameter: taperRatio</em></a></li>
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcEureqa.jpg"><img alt="../../../../_images/calcEureqa.jpg" src="../../../../_images/calcEureqa.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Mass.mWing.mWing.calcLTH">
+<tt class="descclassname">mWing.</tt><tt class="descname">calcLTH</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Mass.mWing.mWing.calcLTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the Wings Mass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">LTH UL-442.0(T).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../phi25/phi25.html#wing-phi25"><em>Parameter: phi25</em></a></li>
+<li><a class="reference internal" href="../aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../tcAVG/tcAVG.html#wing-tcavg"><em>Parameter: tcAVG</em></a></li>
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcLTH.jpg"><img alt="../../../../_images/calcLTH.jpg" src="../../../../_images/calcLTH.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Mass.mWing.mWing.calcRaymer">
+<tt class="descclassname">mWing.</tt><tt class="descname">calcRaymer</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Mass.mWing.mWing.calcRaymer" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the Wings Mass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Aircraft Design: A Conceptual Approach, D. P. Raymer, AIAA Education Series, 1992, Second Edition, p.399, eq. 15.25</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../tcAVG/tcAVG.html#wing-tcavg"><em>Parameter: tcAVG</em></a></li>
+<li><a class="reference internal" href="../aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../phi25/phi25.html#wing-phi25"><em>Parameter: phi25</em></a></li>
+<li><a class="reference internal" href="../taperRatio/taperRatio.html#wing-taperratio"><em>Parameter: taperRatio</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcRaymer1.jpg"><img alt="../../../../_images/calcRaymer1.jpg" src="../../../../_images/calcRaymer1.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Mass.mWing.mWing.calcShevell">
+<tt class="descclassname">mWing.</tt><tt class="descname">calcShevell</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Mass.mWing.mWing.calcShevell" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the Wings Mass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Fundamentals of Flight, R. S. Shevell, Prentice Hall, 1988, p. 392</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../tcAVG/tcAVG.html#wing-tcavg"><em>Parameter: tcAVG</em></a></li>
+<li><a class="reference internal" href="../aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../phi50/phi50.html#wing-phi50"><em>Parameter: phi50</em></a></li>
+<li><a class="reference internal" href="../taperRatio/taperRatio.html#wing-taperratio"><em>Parameter: taperRatio</em></a></li>
+<li><a class="reference internal" href="../../mZFW/mZFW.html#aircraft-mzfw"><em>Parameter: mZFW</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcShevell.jpg"><img alt="../../../../_images/calcShevell.jpg" src="../../../../_images/calcShevell.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Mass.mWing.mWing.calcStrut">
+<tt class="descclassname">mWing.</tt><tt class="descname">calcStrut</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Mass.mWing.mWing.calcStrut" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the Wings Mass if a strut is present. This formula has been derived from a multi-fidelity workflow. The
+calculation is valid in the following boundaries</p>
+<p>wing.aspectRatio = 12. - 17.
+wing.tcAVG = 0.1 - 0.14
+wing.twist = -4. - -10.
+wing.phi25 = 10. - 25.
+aircraft.mTOM = 60000. - 90000.
+strut.etaStrut = 0.5 - 0.75
+strut.depth = 0.1 - 0.2</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">A multi-fidelity workflow to derive physics based conceptual design methods, D. Boehnke, DLR, 2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../phi25/phi25.html#wing-phi25"><em>Parameter: phi25</em></a></li>
+<li><a class="reference internal" href="../aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../tcAVG/tcAVG.html#wing-tcavg"><em>Parameter: tcAVG</em></a></li>
+<li><a class="reference internal" href="../../mTOM/mTOM.html#aircraft-mtom"><em>Parameter: mTOM</em></a></li>
+<li><a class="reference internal" href="../refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+<li><a class="reference internal" href="../twist/twist.html#wing-twist"><em>Parameter: twist</em></a></li>
+<li><a class="reference internal" href="../../strut/etaStrut/etaStrut.html#strut-etastrut"><em>Parameter: etaStrut</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcStrut.jpg"><img alt="../../../../_images/calcStrut.jpg" src="../../../../_images/calcStrut.jpg" style="width: 80%;" /></a>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Mass.mWing.mWing.calcToreenbeek">
+<tt class="descclassname">mWing.</tt><tt class="descname">calcToreenbeek</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Mass.mWing.mWing.calcToreenbeek" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the Wings Mass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Synthesis of Subsonic Airplane Design, E. Torenbeek, Delft University Press, 1982, p.280</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../refArea/refArea.html#wing-refarea"><em>Parameter: refArea</em></a></li>
+<li><a class="reference internal" href="../tcAVG/tcAVG.html#wing-tcavg"><em>Parameter: tcAVG</em></a></li>
+<li><a class="reference internal" href="../aspectRatio/aspectRatio.html#wing-aspectratio"><em>Parameter: aspectRatio</em></a></li>
+<li><a class="reference internal" href="../phi50/phi50.html#wing-phi50"><em>Parameter: phi50</em></a></li>
+<li><a class="reference internal" href="../../mZFW/mZFW.html#aircraft-mzfw"><em>Parameter: mZFW</em></a></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Sensitivities:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../../../../_images/calcToreenbeek.jpg"><img alt="../../../../_images/calcToreenbeek.jpg" src="../../../../_images/calcToreenbeek.jpg" style="width: 80%;" /></a>
+</div>
+<div class="section" id="cpacs-import">
+<h2>CPACS Import<a class="headerlink" href="#cpacs-import" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Mass.mWing.mWing.cpacsImport">
+<tt class="descclassname">mWing.</tt><tt class="descname">cpacsImport</tt><big>(</big><em>path='.\\cpacs.xml'</em>, <em>TIXIHandle=None</em>, <em>TIGLHandle=None</em><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Mass.mWing.mWing.cpacsImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imports the values for the primary wing structure and applies formula to calculate mWing
+Value is set to FIX, but a correction factor is applied to get secondary wing mass from
+the imported primary wing structure mass.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Analytical Fuselage and Wing Weight Estimation of Transport Aircraft, M. D. Ardema, M. C. Chambers, A. P. Patron, A. S. Hahn, H. Miura, M. D. Moore, NASA Technical Memorandum 110392, 1996, p. 22 eq. 109</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="section" id="cpacs-export">
+<h3>CPACS Export<a class="headerlink" href="#cpacs-export" title="Permalink to this headline">¶</a></h3>
+<p>The values for mWing are exported to:</p>
+<div class="highlight-xml"><div class="highlight"><pre>&lt;cpacs&gt;
+   &lt;vehicles&gt;
+      &lt;aircraft&gt;
+         &lt;model&gt;
+            &lt;analyses&gt;
+               &lt;massBreakdown&gt;
+                  &lt;mOEM&gt;
+                     &lt;mEM&gt;
+                        &lt;mStructure&gt;
+                           &lt;mWingsStructure&gt;
+                              &lt;mWingStructure[1]&gt;
+                                 &lt;massDescription[wing_mass]&gt;
+                                    &lt;mass&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../wingrootairfoil/wingrootairfoil.html" title="Component: Wingrootairfoil"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Mass.html" title="Discipline: Mass"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../wing.html" >Component: Wing</a> &raquo;</li>
+          <li><a href="../Mass.html" >Discipline: Mass</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

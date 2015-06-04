@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Component &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../index.html" />
+    <link rel="up" title="Introduction" href="../introduction.html" />
+    <link rel="next" title="Discipline" href="../Discipline/discipline.html" />
+    <link rel="prev" title="Introduction" href="../introduction.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../Discipline/discipline.html" title="Discipline"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../introduction.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../introduction.html" accesskey="U">Introduction</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../introduction.html"
+                        title="previous chapter">Introduction</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../Discipline/discipline.html"
+                        title="next chapter">Discipline</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/Introduction/Component/component.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="component">
+<span id="id1"></span><h1>Component<a class="headerlink" href="#component" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../../_images/component.jpg"><img alt="../../_images/component.jpg" class="align-center" src="../../_images/component.jpg" style="width: 80%;" /></a>
+<dl class="class">
+<dt id="VAMPzero.Handler.Component.component">
+<em class="property">class </em><tt class="descclassname">VAMPzero.Handler.Component.</tt><tt class="descname">component</tt><a class="headerlink" href="#VAMPzero.Handler.Component.component" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Superclass for all Components</strong></p>
+<p>The class component is inherited by all other components in VAMPzero. It defines the methods 
+that can be used throughout the code.</p>
+<p>Most calls in this class are recursive and reflexive as they go through all nested components 
+and parameters. For example the calc method will call all nested calc methods.</p>
+<ul class="simple">
+<li>If the member is a parameter, its calc is called</li>
+<li>If the member is a component and the component is nested deeper in the call hierarchy its calc is called</li>
+</ul>
+<p>Additionally, an arbitrary number of disciplines can be defined to only call the respective calc methods.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">disicplines are only known to the parameters in a component.</p>
+</div>
+<p>Several other methods, for reporting, error handling and logging are located in component. See the respective methods documentation</p>
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.calc">
+<tt class="descname">calc</tt><big>(</big><em>discipline=''</em>, <em>deviationAmplitude=0.0</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will Call the calc&#8217;discipline&#8217; method for all objects (including self) that own this method
+if discipline = &#8216;&#8217; all disciplines will be called that are part of the discipline List</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.calcAuto">
+<tt class="descname">calcAuto</tt><big>(</big><em>discipline=''</em>, <em>deviationAmplitude=0.0</em>, <em>debug=False</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.calcAuto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call Calc for self
+Validate Self
+if validation gives back an error than rerun
+Quit if Calc is called more than 2000 times</p>
+<p>...todo :</p>
+<blockquote>
+<div>Capsle the initialising loops into a single routine</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.check">
+<tt class="descname">check</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Looking up fixed values for all Objects that are existent in the calculation modules
+If a parameter is fixed and all callees as well throw a warning</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.checker">
+<tt class="descname">checker</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.checker" title="Permalink to this definition">¶</a></dt>
+<dd><p>recursive method for finding all parameters with status FIX and examine their callees</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.complexify">
+<tt class="descname">complexify</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.complexify" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function goes thruogh all nested components and parameters and tries to complexify
+all parameters found to set them to type zeroComplex</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.converge">
+<tt class="descname">converge</tt><big>(</big><em>converged</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.converge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validation of all Classes that are existent in the calculation modules
+All Parameters of Type List are checked of the Calculation Switch in entry [2]
+All Parameter of Type Aircraft are ignored
+If Parameter is a subclass of component validate will be called!</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.cpacsExport">
+<tt class="descname">cpacsExport</tt><big>(</big><em>CPACSObj</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.cpacsExport" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods exports all parameters nested in the component.
+Nested Components will be called as well.
+cpacsExport takes a CPACSObj that is an object from the CPACS class
+derived from the XML Schema Definition of CPACS</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.cpacsImport">
+<tt class="descname">cpacsImport</tt><big>(</big><em>path='.\\cpacs.xml'</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.cpacsImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Looks for parameter.CPACSPath in CPACSFilse defined by Path
+Transfers Value is possible
+Input Values will be set to &#8216;fix&#8217;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.createDoc">
+<tt class="descname">createDoc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.createDoc" title="Permalink to this definition">¶</a></dt>
+<dd><p>will look up all adjacent cpacsPaths or checks if an own cpacsImport method was applied</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.createMapping">
+<tt class="descname">createMapping</tt><big>(</big><em>fileHandler</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.createMapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#64;param fileHandler: to write mapping instructions</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.documenter">
+<tt class="descname">documenter</tt><big>(</big><em>myAircraft</em>, <em>parentFolder</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.documenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>recursive call for the createDoc method</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.exporter">
+<tt class="descname">exporter</tt><big>(</big><em>CPACSObj</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.exporter" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Do not use only for system use</strong></p>
+<p>This is the recursive child of cpacsExport</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.freemind">
+<tt class="descname">freemind</tt><big>(</big><em>path</em>, <em>withValues=True</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.freemind" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Do not use only for system use</strong></p>
+<p>This is the recursive child of freemindExport</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.freemindExport">
+<tt class="descname">freemindExport</tt><big>(</big><em>folder='.\\ReturnDirectory\\'</em>, <em>withValues=True</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.freemindExport" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods exports all parameters nested in the component.
+Nested Components will be called as well.
+Folder is an optional argument that specifies the output location of the mindMaps
+withValues specifies whether the values are included in the output or not.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.freeze">
+<tt class="descname">freeze</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.freeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Locking up fixed values for all Objects that are existent in the calculation modules
+If Parameter is a subclass of component freeze will be called!
+&#64;todo: Enter possibility to lock only parameters of a certain discipline!</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.graph">
+<tt class="descname">graph</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a graph representation from the caller and callee information
+that connects different parameters.</p>
+<p>It includes some fixed Nodes so that the plot can be subdivided.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.grapher">
+<tt class="descname">grapher</tt><big>(</big><em>myGraph</em>, <em>propList</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.grapher" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Do not use</strong></p>
+<p>This is the recursive child of graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.guiImport">
+<tt class="descname">guiImport</tt><big>(</big><em>path='.\\cpacs.xml'</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.guiImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Looks for parameter in CPACSFile defined by component.discipline.name
+Input Values will be set to &#8216;fix&#8217;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.importer">
+<tt class="descname">importer</tt><big>(</big><em>path</em>, <em>TIXIHandle</em>, <em>TIGLHandle</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.importer" title="Permalink to this definition">¶</a></dt>
+<dd><p>do not use for System use only!!!
+Calls the Parameter.cpacsImport or itsself recursively</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.inits">
+<tt class="descname">inits</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.inits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Looking up init values for all Objects that are existent in the calculation modules
+If Parameter is a subclass of component inits will be called!</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.inputer">
+<tt class="descname">inputer</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.inputer" title="Permalink to this definition">¶</a></dt>
+<dd><p>recursive method for finding all parameters with status FIX</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.inputs">
+<tt class="descname">inputs</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Looking up fixed values for all Objects that are existent in the calculation modules
+If Parameter is a subclass of component inputs will be called!</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.plot">
+<tt class="descname">plot</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls the plotAircraft function from lib.matplotlib</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.plotter">
+<tt class="descname">plotter</tt><big>(</big><em>ax</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.plotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursive call for the validation of Convergence in VAMPzero
+This method goes through all parameters and collects their history
+The data is then displayed in the ConvergencePlot</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.report">
+<tt class="descname">report</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Looking up init values for all Objects that are existent in the calculation modules
+If Parameter is a subclass of component inits will be called!</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.reporter">
+<tt class="descname">reporter</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.reporter" title="Permalink to this definition">¶</a></dt>
+<dd><p>recursive call for the report Method</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.sense">
+<tt class="descname">sense</tt><big>(</big><em>myAircraft</em>, <em>senseFile=None</em><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.sense" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Do not use</strong></p>
+<p>This is the recursive child of sensitivity</p>
+<p>Recursive method for finding all parameters and calculating sensitivities</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Handler.Component.component.sensitivity">
+<tt class="descname">sensitivity</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Handler.Component.component.sensitivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Sensitivity representation</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../Discipline/discipline.html" title="Discipline"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../introduction.html" title="Introduction"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Components/components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../introduction.html" >Introduction</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

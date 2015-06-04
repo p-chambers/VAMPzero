@@ -1,0 +1,29 @@
+.. _fuel.posCoGinnerWT:
+
+Parameter: posCoGinnerWT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    X Position of the center of gravity of the inner wing tank
+	
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuel.CoG.posCoGinnerWT.posCoGinnerWT.calc
+
+
+   :Dependencies: 
+   * :ref:`fuselage.dfus`
+   * :ref:`wing.xRoot`
+   * :ref:`wing.cRoot`
+   * :ref:`wing.phiLE`
+   * :ref:`wing.taperRatio`
+   * :ref:`wing.span`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

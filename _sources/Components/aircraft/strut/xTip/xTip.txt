@@ -1,0 +1,27 @@
+.. _strut.xTip:
+
+Parameter: xTip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The x position of the tip leading edge of the strut.
+
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Strut.Geometry.xTip.xTip.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.xRoot`
+   * :ref:`wing.cRoot`
+   * :ref:`wing.phiLE`
+   * :ref:`wing.span`
+   * :ref:`strut.cRoot`
+   * :ref:`strut.etaStrut`
+   * :ref:`strut.depth`
+   * :ref:`fuselage.dfus`
+
+
+

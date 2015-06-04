@@ -1,0 +1,26 @@
+.. _strut.expArea:
+
+Parameter: expArea
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The exposed area of the wing
+    
+    :Unit: [m2] 
+    :Wiki: http://adg.stanford.edu/aa241/wingdesign/winggeometry.html
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Geometry.expArea.expArea.calc
+
+
+   :Dependencies: 
+   * :ref:`strut.refArea`
+   * :ref:`strut.cRoot`
+   * :ref:`strut.cTip`
+   * :ref:`strut.span`
+   * :ref:`fuselage.dfus`
+   * :ref:`strut.zRoot`
+
+
+

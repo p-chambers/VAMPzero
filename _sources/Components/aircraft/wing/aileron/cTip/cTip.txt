@@ -1,0 +1,29 @@
+.. _aileron.cTip:
+
+Parameter: cTip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the tip chord of the aileron (note: only one aileron is considered).
+
+    :Unit: [m]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Aileron.Geometry.cTip.cTip.calc
+
+
+   :Dependencies: 
+   * :ref:`aileron.taperRatio`
+   * :ref:`aileron.cRoot`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

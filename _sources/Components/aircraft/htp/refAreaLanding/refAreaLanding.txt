@@ -1,0 +1,100 @@
+.. _htp.refAreaLanding:
+
+Parameter: refAreaLanding
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The reference area of the horizontal tailplane
+    
+    :Unit: [m2]
+    
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Htp.Geometry.refAreaLanding.refAreaLanding.calc
+
+
+   :Dependencies: 
+   * :ref:`atmosphere.aAP`
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.phi50`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.cMAC`
+   * :ref:`wing.refArea`
+   * :ref:`htp.lHT`
+   * :ref:`aircraft.static_margin`
+   * :ref:`htp.CLalphaHTP_TO`
+   * :ref:`aircraft.wsL`
+   * :ref:`aircraft.cLL`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`htp.DPR`
+   * :ref:`htp.detadalpha`
+
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.refAreaLanding.refAreaLanding.calcControl
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mLM`
+   * :ref:`htp.cLMAXht`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.cMAC`
+   * :ref:`wing.cM0L`
+   * :ref:`wing.refArea`
+   * :ref:`htp.lHT`
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.oswald`
+   * :ref:`aircraft.cD0`
+   * :ref:`engine.nEngine`
+   * :ref:`htp.DPR`
+   * :ref:`engine.zEngine`
+   * :ref:`aircraft.wsL`
+   * :ref:`aircraft.cLL`
+
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.refAreaLanding.refAreaLanding.calcGoAround
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mLM`
+   * :ref:`htp.cLMAXht`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.cMAC`
+   * :ref:`wing.cM0L`
+   * :ref:`wing.refArea`
+   * :ref:`htp.lHT`
+   * :ref:`engine.nEngine`
+   * :ref:`htp.DPR`
+   * :ref:`engine.zEngine`
+   * :ref:`aircraft.wsL`
+   * :ref:`aircraft.cLL`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`engine.thrustTO`
+
+
+
+.. automethod:: VAMPzero.Component.Htp.Geometry.refAreaLanding.refAreaLanding.calcStability
+
+
+   :Dependencies: 
+   * :ref:`atmosphere.aAP`
+   * :ref:`wing.aspectRatio`
+   * :ref:`wing.phi50`
+   * :ref:`wing.xMAC25`
+   * :ref:`wing.cMAC`
+   * :ref:`wing.refArea`
+   * :ref:`htp.lHT`
+   * :ref:`aircraft.static_margin`
+   * :ref:`htp.CLalphaHTP_TO`
+   * :ref:`aircraft.wsL`
+   * :ref:`aircraft.cLL`
+   * :ref:`atmosphere.rhoAP`
+   * :ref:`htp.DPR`
+   * :ref:`htp.detadalpha`
+
+
+

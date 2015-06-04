@@ -1,0 +1,31 @@
+.. _fuel.posCoG:
+
+Parameter: posCoG
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    X Position of the center of gravity of the combined fuel
+	
+    :Unit: [m]
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Fuel.CoG.posCoG.posCoG.calc
+
+
+   :Dependencies: 
+   * :ref:`fuel.mFuelMAXcenterWT`
+   * :ref:`fuel.posCoGcenterWT`
+   * :ref:`fuel.mFuelMAXinnerWT`
+   * :ref:`fuel.posCoGinnerWT`
+   * :ref:`fuel.mFuelMAXouterWT`
+   * :ref:`fuel.posCoGouterWT`
+   * :ref:`fuel.mFuelMAXTT`
+   * :ref:`fuel.posCoGTT`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

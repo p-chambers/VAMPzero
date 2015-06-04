@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameter: cDMINoffset &mdash; VAMPzero 0.3.bin documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.3.bin',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="VAMPzero 0.3.bin documentation" href="../../../../index.html" />
+    <link rel="up" title="Discipline: Aerodynamic" href="../Aerodynamic.html" />
+    <link rel="next" title="Parameter: cDw" href="../cDw/cDw.html" />
+    <link rel="prev" title="Parameter: cD0c" href="../cD0c/cD0c.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../../index.html"><img src="../../../../_static/header.jpg" border="0" height="60" alt="sampledoc"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../cDw/cDw.html" title="Parameter: cDw"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../cD0c/cD0c.html" title="Parameter: cD0c"
+             accesskey="P">previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../wing.html" >Component: Wing</a> &raquo;</li>
+          <li><a href="../Aerodynamic.html" accesskey="U">Discipline: Aerodynamic</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter: cDMINoffset</a><ul>
+<li><a class="reference internal" href="#calculation-methods">Calculation Methods</a></li>
+<li><a class="reference internal" href="#cpacs-import">CPACS Import</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../cD0c/cD0c.html"
+                        title="previous chapter">Parameter: cD0c</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../cDw/cDw.html"
+                        title="next chapter">Parameter: cDw</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../../_sources/Components/aircraft/wing/cDMINoffset/cDMINoffset.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parameter-cdminoffset">
+<span id="wing-cdminoffset"></span><h1>Parameter: cDMINoffset<a class="headerlink" href="#parameter-cdminoffset" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Modelling the drag polar as CD = k*(CL**2) + b*CL + CD0,
+cDMINoffset would be &#8216;b&#8217;. This class was mostly adapted
+from Daniel Boehnke&#8217;s oswald class. The value is normally
+negative, as the point of minimum drag is at a positive CL.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Unit:</th><td class="field-body">[ ]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Wiki:</th><td class="field-body"><a class="reference external" href="http://en.wikipedia.org/wiki/Drag_Polar">http://en.wikipedia.org/wiki/Drag_Polar</a></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="calculation-methods">
+<h2>Calculation Methods<a class="headerlink" href="#calculation-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Aerodynamic.cDMINoffset.cDMINoffset.calc">
+<tt class="descclassname">cDMINoffset.</tt><tt class="descname">calc</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Aerodynamic.cDMINoffset.cDMINoffset.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>If aeroPerformanceMap is not given, set cDMINoffset to 0.
+This will give the same results as previous VAMPzero versions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Aerodynamic.cDMINoffset.cDMINoffset.calcLiLi">
+<tt class="descclassname">cDMINoffset.</tt><tt class="descname">calcLiLi</tt><big>(</big><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Aerodynamic.cDMINoffset.cDMINoffset.calcLiLi" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates cDMINoffset for the wing from a precomputed
+aeroPerformanceMap in CPACS. The aeroPerformanceMap was
+imported by the cpacsImport method, if this method was
+triggered. A quadratic polynomial will be fitted to
+the aeroPerformanceMap to find cDMINoffset.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Source:</th><td class="field-body">Ein Mehrfach-Traglinienverfahren und seine Verwendung fuer Entwurf und Nachrechnung nichtplanarer Fluegelanordnungen, K. H. Horstmann, DFVLR-FB 87-51, 1987</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Dependencies:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="../../machCR/machCR.html#aircraft-machcr"><em>Parameter: machCR</em></a></li>
+<li><a class="reference internal" href="../reynoldsNr/reynoldsNr.html#wing-reynoldsnr"><em>Parameter: reynoldsNr</em></a></li>
+</ul>
+</dd></dl>
+
+</div>
+<div class="section" id="cpacs-import">
+<h2>CPACS Import<a class="headerlink" href="#cpacs-import" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="VAMPzero.Component.Wing.Aerodynamic.cDMINoffset.cDMINoffset.cpacsImport">
+<tt class="descclassname">cDMINoffset.</tt><tt class="descname">cpacsImport</tt><big>(</big><em>path='.\\cpacs.xml'</em>, <em>TIXIHandle=None</em>, <em>TIGLHandle=None</em><big>)</big><a class="headerlink" href="#VAMPzero.Component.Wing.Aerodynamic.cDMINoffset.cDMINoffset.cpacsImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites the parameter&#8217;s cpacsImport method! Will get
+the value for cDMINoffset from a CPACS aeroPerformanceMap.
+Does a monkey patch as it replaces cDMINoffset.calc with cDMINoffset.calcLiLi</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">cpacsImport cDMINoffset catch error if cfy is unequal zero</p>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../cDw/cDw.html" title="Parameter: cDw"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../cD0c/cD0c.html" title="Parameter: cD0c"
+             >previous</a> |</li>
+        <li><font color="white"><a href="../../../../index.html">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Introduction/introduction.html">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Getting_started/getting_started.html">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../components.html">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="../../../../Development/development.html">dev</a>|&nbsp;</font></li>
+
+        
+
+          <li><a href="../../../components.html" >Documentation</a> &raquo;</li>
+          <li><a href="../../aircraft.html" >Component: Aircraft</a> &raquo;</li>
+          <li><a href="../wing.html" >Component: Wing</a> &raquo;</li>
+          <li><a href="../Aerodynamic.html" >Discipline: Aerodynamic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2015, Deutsches Zentrum fuer Luft-und Raumfahrt e.V..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

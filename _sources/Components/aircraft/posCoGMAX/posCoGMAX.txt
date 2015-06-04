@@ -1,0 +1,40 @@
+.. _aircraft.posCoGMAX:
+
+Parameter: posCoGMAX
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The maximum x position of the center of gravity of the aircraft.
+    It is calculated considering different combinations of fuel and payload.
+    
+    :Unit: [m]
+    
+    :Author: Patrick Goden, Technische Universitaet Hamburg Harburg, Master Thesis
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.CoG.posCoGMAX.posCoGMAX.calc
+
+
+   :Dependencies: 
+   * :ref:`aircraft.mTOM`
+   * :ref:`fuselage.lcockpit`
+   * :ref:`fuselage.lcabin`
+   * :ref:`aircraft.oEM`
+   * :ref:`aircraft.posCoGOEM`
+   * :ref:`payload.mCargo`
+   * :ref:`fuselage.posCoG`
+   * :ref:`fuel.mFuelMAXcenterWT`
+   * :ref:`fuel.mFuelMAXinnerWT`
+   * :ref:`fuel.mFuelMAXouterWT`
+   * :ref:`fuel.mFuelMAXTT`
+   * :ref:`fuel.posCoGcenterWT`
+   * :ref:`fuel.posCoGinnerWT`
+   * :ref:`fuel.posCoGouterWT`
+   * :ref:`fuel.posCoGTT`
+   * :ref:`payload.mSinglePax`
+   * :ref:`fuselage.nPaxR`
+   * :ref:`fuselage.nRow`
+
+
+

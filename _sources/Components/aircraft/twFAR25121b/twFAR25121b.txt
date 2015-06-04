@@ -1,0 +1,39 @@
+.. _aircraft.twFAR25121b:
+
+Parameter: twFAR25121b
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    The thrust to weight ratio for the second segment climb 
+    
+    The configuration is:
+     
+     * Take-off Flaps extended
+     * Landing Gear is up
+     * Full thrust on remaining engines
+     * V = V2
+     * mTOM 
+    
+    :Unit: [kg/m2]
+    :Wiki: http://en.wikipedia.org/wiki/Thrust-to-weight_ratio
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Main.Sizing.twFAR25121b.twFAR25121b.calc
+
+
+   :Dependencies: 
+   * :ref:`engine.nEngine`
+   * :ref:`aircraft.cLTO`
+   * :ref:`aircraft.cD0`
+   * :ref:`engine.dCDOEI`
+   * :ref:`flap.dCDTO`
+   * :ref:`aircraft.oswald`
+   * :ref:`wing.aspectRatio`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+

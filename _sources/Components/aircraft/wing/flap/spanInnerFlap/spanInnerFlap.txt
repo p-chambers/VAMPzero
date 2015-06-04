@@ -1,0 +1,29 @@
+.. _flap.spanInnerFlap:
+
+Parameter: spanInnerFlap
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Calculates the span of the inner flap, one half of the wing.
+
+    :Unit: [m]
+
+    :Source: 
+    
+    :Author: Lisanne van Veen
+    
+
+Calculation Methods
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. automethod:: VAMPzero.Component.Wing.Flap.Geometry.spanInnerFlap.spanInnerFlap.calc
+
+
+   :Dependencies: 
+   * :ref:`wing.yKink`
+   * :ref:`wing.yFuselage`
+
+
+   :Sensitivities: 
+.. image:: calc.jpg 
+   :width: 80% 
+
+
