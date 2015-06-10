@@ -1,0 +1,4 @@
+2011-11-09 13:13:12,362 DEBUG    VAMPzero TIGL: Assuming this is linux
+2011-11-09 13:13:12,362 DEBUG    VAMPzero TIGL: trying to load from /usr/local/lib/libTIGL.so
+2011-11-09 13:13:12,363 WARNING  VAMPzero TIGL: could not load TIGL from Shared Folder
+2011-11-09 13:13:12,363 WARNING  VAMPzero TIGL: probably crashing soon

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map:mappings xmlns:map="http://www.dlr.de/sistec/tiva/tool/mapping" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/engines/engine/analysis/bpr00</map:source>
+        <map:target>/cpacs/vehicles/engines/engine/analysis/bpr00</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/engines/engine/geometry/diameter</map:source>
+        <map:target>/cpacs/vehicles/engines/engine/geometry/diameter</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/engines/engine/geometry/length</map:source>
+        <map:target>/cpacs/vehicles/engines/engine/geometry/length</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mPowerUnits/massDescription/massInertia/Jxx</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mPowerUnits/massDescription/massInertia/Jxx</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mPowerUnits/massDescription/massInertia/Jyy</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mPowerUnits/massDescription/massInertia/Jyy</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mPowerUnits/massDescription/massInertia/Jzz</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mPowerUnits/massDescription/massInertia/Jzz</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mPowerUnits/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mPowerUnits/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/engines/engine/analysis/thrust00</map:source>
+        <map:target>/cpacs/vehicles/engines/engine/analysis/thrust00</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/tWDat/thrust00Scaling</map:source>
+        <map:target>/cpacs/toolspecific/tWDat/thrust00Scaling</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/engines/engine/transformation/translation/x</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/engines/engine/transformation/translation/x</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/engines/engine/transformation/translation/y</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/engines/engine/transformation/translation/y</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/engines/engine/transformation/translation/z</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/engines/engine/transformation/translation/z</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/fuel/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/fuel/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mFurnishing/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mFurnishing/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mFuselagesStructure/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mFuselagesStructure/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mFuselagesStructure/massDescription/location/x</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mFuselagesStructure/massDescription/location/x</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[2]/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[2]/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[2]/massDescription/location/x</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[2]/massDescription/location/x</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/vampZero/htpUID</map:source>
+        <map:target>/cpacs/toolspecific/vampZero/htpUID</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mLandingGears/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mLandingGears/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/global/machCruise</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/global/machCruise</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mTOM/massInertia/Jxx</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mTOM/massInertia/Jxx</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mTOM/massInertia/Jyy</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mTOM/massInertia/Jyy</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mTOM/massInertia/Jzz</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mTOM/massInertia/Jzz</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mMLM/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mMLM/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mTOM/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mTOM/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mZFM/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mZFM/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mOperatorItems/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mOperatorItems/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/payload/mCargo/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/payload/mCargo/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/payload/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/payload/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/global/paxSeats</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/global/paxSeats</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mTOM/location/x</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/designMasses/mTOM/location/x</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mPylons/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mPylons/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mSystems/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mSystems/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mSystems/massDescription/location/x</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mSystems/massDescription/location/x</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/description</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/description</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/name</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/name</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/header/creator</map:source>
+        <map:target>/cpacs/header/creator</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/liftingLine/toolParameters/wingPanelings/wingPaneling[1]/chordwise</map:source>
+        <map:target>/cpacs/toolspecific/liftingLine/toolParameters/wingPanelings/wingPaneling[1]/chordwise</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/liftingLine/toolParameters/archiveMode</map:source>
+        <map:target>/cpacs/toolspecific/liftingLine/toolParameters/archiveMode</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/liftingLine/tool/name</map:source>
+        <map:target>/cpacs/toolspecific/liftingLine/tool/name</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/liftingLine/toolParameters/usePOLINT</map:source>
+        <map:target>/cpacs/toolspecific/liftingLine/toolParameters/usePOLINT</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/liftingLine/toolParameters/wingPanelings/wingPaneling[1]/spanwise</map:source>
+        <map:target>/cpacs/toolspecific/liftingLine/toolParameters/wingPanelings/wingPaneling[1]/spanwise</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/liftingLine/aircraftModelUID</map:source>
+        <map:target>/cpacs/toolspecific/liftingLine/aircraftModelUID</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/liftingLine/tool/version</map:source>
+        <map:target>/cpacs/toolspecific/liftingLine/tool/version</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/header/name</map:source>
+        <map:target>/cpacs/header/name</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/reference/point/y</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/reference/point/y</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/reference/point/z</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/reference/point/z</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/header/timestamp</map:source>
+        <map:target>/cpacs/header/timestamp</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/header/version</map:source>
+        <map:target>/cpacs/header/version</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[3]/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[3]/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[3]/massDescription/location/x</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[3]/massDescription/location/x</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/vampZero/vtpUID</map:source>
+        <map:target>/cpacs/toolspecific/vampZero/vtpUID</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/reference/length</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/reference/length</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[1]/massDescription/mass</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[1]/massDescription/mass</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[1]/massDescription/location/x</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/analyses/massBreakdown/mOEM/mEM/mStructure/mWingsStructure/mWingStructure[1]/massDescription/location/x</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/reference/area</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/reference/area</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/vampZero/wingUID</map:source>
+        <map:target>/cpacs/toolspecific/vampZero/wingUID</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/toolspecific/vampZero/results</map:source>
+        <map:target>/cpacs/toolspecific/vampZero/results</map:target>
+    </map:mapping>
+    <map:mapping mode="delete" >
+        <map:source>/cpacs/vehicles/aircraft/model/reference/point/x</map:source>
+        <map:target>/cpacs/vehicles/aircraft/model/reference/point/x</map:target>
+    </map:mapping>
+</map:mappings>

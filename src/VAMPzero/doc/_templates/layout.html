@@ -1,0 +1,27 @@
+{% extends "!layout.html" %}
+
+
+{% block rootrellink %}
+        <li><font color="white"><a href="{{ pathto('index') }}">home</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="{{ pathto('Introduction/introduction') }}">intro</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="{{ pathto('Getting_started/getting_started') }}">start</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="{{ pathto('Components/components') }}">doc</a>|&nbsp;</font></li>
+        <li><font color="white"><a href="{{ pathto('Development/development') }}">dev</a>|&nbsp;</font></li>
+
+        
+{% endblock %}
+
+
+{% block relbar1 %}
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="{{ pathto('index') }}"><img src="{{
+pathto("_static/header.jpg", 1) }}" border="0" height="60" alt="sampledoc"/></a>
+</div>
+{{ super() }}
+{% endblock %}
+
+{# put the sidebar before the body #}
+{% block sidebar1 %}{{ sidebar() }}{% endblock %}
+{% block sidebar2 %}{% endblock %}
+

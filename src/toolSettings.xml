@@ -1,0 +1,45 @@
+<cpacs>
+	<toolspecific>
+		<vampZero>
+			<toolSettings>
+				<!-- 
+					 <deviationAmplitude> 	->  the random deviation factor is multiplied by this factor
+												choose 0.0 to deactivate the deviation 
+					 
+					 <extendedOutput> 		-> 	true|false
+					 							to de/activate plotting and creation of mind maps
+					 							default value is true
+					 							deactivation will reduce execution time
+					 
+					 <calcSensitivities>	->  true|false
+					 							switch to turn on the calculation of sensitivities (experimental)
+					 
+					 <notConvergingAction> 	->  exit|copyInput|errorXML
+					 							choose the action to be performed when a calculation is not converging
+					 							default is exit 
+				-->
+				<deviationAmplitude>0.0</deviationAmplitude>
+				<extendedOutput>false</extendedOutput>
+				<calcSensitivities>false</calcSensitivities>
+				<notConvergingAction>copyInput</notConvergingAction>
+			</toolSettings>
+			<components>
+				<component>
+					<disciplines>
+						<discipline>
+							<parameters>
+								<parameter>
+									<name></name>
+									<value></value>
+									<factor></factor>
+									<status>calc|fix</status>
+									<exportTS>true|false</exportTS>
+								</parameter>
+							</parameters>
+						</discipline>
+					</disciplines>
+				</component>
+			</components>
+		</vampZero>
+	</toolspecific>
+</cpacs>
