@@ -16,10 +16,10 @@ limitations under the License.
 Copyright: Deutsches Zentrum fuer Luft- und Raumfahrt e.V., 2015 (c)
 Contact: daniel.boehnke@dlr.de and jonas.jepsen@dlr.de
 '''
-from math import cos, e, pi
+from math import e, pi
 
-from VAMPzero.Lib.TWDat.tWDat import getNearest
-from VAMPzero.Lib.CPACS.general import evalList
+from numpy.lib.function_base import interp
+
 from VAMPzero.Handler.Parameter import parameter
 from VAMPzero.Lib.TIXI.tixi import openTIXI, checkElement, getText
 
@@ -30,38 +30,37 @@ rad = pi / 180.
 class sfcCR(parameter):
     '''
     SFC for cruise condition 
-	
-    Specific fuel consumption, SFC, is an engineering term 
+
+    Specific fuel consumption, SFC, is an engineering term
     that is used to describe the fuel efficiency of an engine 
     design with respect to thrust output. It allows the efficiency 
     of different sized engines to be directly compared.    
-	
+
     :Unit: [kg/h/N]
     :Wiki: http://en.wikipedia.org/wiki/Thrust_specific_fuel_consumption
-	'''
+    '''
 
     def __init__(self, value=0., unit='kg/h/N', parent='', cpacsPath=''):
         super(sfcCR, self).__init__(value=value, unit=unit, doc=self.__doc__, status='init', parent=parent,
                                     cpacsPath=cpacsPath)
 
-    ###################################################################################################
-    ##cpacsImport
-    ###################################################################################################
-
     def cpacsImport(self, path='.\\cpacs.xml', TIXIHandle=None, TIGLHandle=None):
         '''
         Overwrites the parameters cpacsImport method!
-        Will get the value for the enginePerformanceMap
-        This method replaces the calcMethod by calcTWDat
-        sfcCR will not be set fix because ongoing calculation is needed to find
-        the correct values in the engineDeck 
+
+        Imports the enginePerformanceMap
+
+        This method replaces the initial calc method by calcCPACS
+
+        sfcCR will not be set fix because ongoing interpolation is necessary to find
+        the correct values
         '''
         if not TIXIHandle:
             TIXIHandle = openTIXI(path)
 
         if checkElement(TIXIHandle, '/cpacs/vehicles/engines/engine[last()]/analysis/performanceMaps/performanceMap'):
 
-            #Get performanceMap from CPACS
+            # Get performanceMap from CPACS
             Tmap = getText(TIXIHandle,
                            "/cpacs/vehicles/engines/engine[last()]/analysis/performanceMaps/performanceMap/thrust").split(
                 ';')
@@ -114,27 +113,74 @@ class sfcCR(parameter):
         else:
             self.importError()
 
-    ###################################################################################################
-    ##calc
-    ###################################################################################################
+    def getNearest(self, FLList, FL, MA, T):
+        '''
+        getNearest is a function to interpolate in a CPACS engine performance map.
+        '''
+
+        def getUpLow(List, Target):
+            Plus = [99999999., 0]
+            Minus = [0., 0]
+
+            for item in List:
+                # Set the lower value for the interpolation of Flight Level
+                if item[0] - Target > Minus[0] - Target and item[0] - Target < 0.:
+                    Minus = item
+
+                # Set the upper value for the interpolation of Flight Level
+                if item[0] - Target < Plus[0] - Target and item[0] - Target > 0.:
+                    Plus = item
+
+            if List[-1][0] < Target:
+                Minus = List[-2]
+                Plus = List[-1]
+                self.log.warning('VAMPzero SFC: Interpolation Error need to extrapolate! Target value is: %s' % Target)
+                self.log.warning('VAMPzero SFC: New up: %s and low: %s' % (Plus[0], Minus[0]))
+
+            return Plus, Minus
+
+        FLplus, FLminus = getUpLow(FLList, FL)
+
+        FLplusMAplus, FLplusMAminus = getUpLow(FLplus[1], MA)
+        FLminusMAplus, FLminusMAminus = getUpLow(FLminus[1], MA)
+
+        FLplusMAplusTplus, FLplusMAplusTminus = getUpLow(FLplusMAplus[1], T)
+        FLplusMAminusTplus, FLplusMAminusTminus = getUpLow(FLplusMAminus[1], T)
+        FLminusMAplusTplus, FLminusMAplusTminus = getUpLow(FLminusMAplus[1], T)
+        FLminusMAminusTplus, FLminusMAminusTminus = getUpLow(FLminusMAminus[1], T)
+
+        # Do the interpolations
+        SFCFLplusMaplus = interp(T, [FLplusMAplusTminus[0], FLplusMAplusTplus[0]],
+                                 [FLplusMAplusTminus[1], FLplusMAplusTplus[1]])
+        SFCFLplusMaminus = interp(T, [FLplusMAminusTminus[0], FLplusMAminusTplus[0]],
+                                  [FLplusMAminusTminus[1], FLplusMAminusTplus[1]])
+        SFCFLminusMaplus = interp(T, [FLminusMAplusTminus[0], FLminusMAplusTplus[0]],
+                                  [FLminusMAplusTminus[1], FLminusMAplusTplus[1]])
+        SFCFLminusMaminus = interp(T, [FLminusMAminusTminus[0], FLminusMAminusTplus[0]],
+                                   [FLminusMAminusTminus[1], FLminusMAminusTplus[1]])
+
+        SFCFLplus = interp(MA, [FLplusMAminus[0], FLplusMAplus[0]], [SFCFLplusMaminus, SFCFLplusMaplus])
+        SFCFLminus = interp(MA, [FLminusMAminus[0], FLminusMAplus[0]], [SFCFLminusMaminus, SFCFLminusMaplus])
+
+        SFC = interp(FL, [FLminus[0], FLplus[0]], [SFCFLminus, SFCFLplus])
+        return SFC
 
     def calc(self):
         '''
         Sets the calc method to calcOverallEff
-		'''
+        '''
         self.calc = self.calcOverallEff
-
 
     def calcJet(self):
         '''
         calculates the SFC for cruise Condition from the Bypass Ratio
         this method my be replaced by calcTWDat if cpacsImport is called on sfcCR
-		
+
         :Source: Aircraft Design: A Conceptual Approach, D. P. Raymer, AIAA Education Series, 1992, Second Edition, p. 198, Eq. 10.9
         '''
         bypassRatio = self.parent.bypassRatio.getValue()
 
-        ConversionFactor = 3600. / 35303.92683      # to kg/h/N
+        ConversionFactor = 3600. / 35303.92683  # to kg/h/N
 
         return self.setValueCalc((0.88 * e ** (-0.05 * bypassRatio)) * ConversionFactor)
 
@@ -147,7 +193,7 @@ class sfcCR(parameter):
         altCR = self.parent.aircraft.altCR.getValue()
         machCR = self.parent.aircraft.machCR.getValue()
         thrustCR = self.parent.thrustCR.getValue()
-        candidate = getNearest(self.TList, altCR, machCR, thrustCR) / thrustCR * 3600
+        candidate = self.getNearest(self.TList, altCR, machCR, thrustCR) / thrustCR * 3600
 
         if candidate < 0.005:
             self.log.warning('VAMPzero CALC: TWDAT seems to return too low candidate. Probably extrapolation issues.')
@@ -159,22 +205,6 @@ class sfcCR(parameter):
             candidate = 0.1
 
         return self.setValueCalc(candidate)
-
-
-    def calcEurequa(self):
-        '''
-        Calculation Method used for an approach integrating a Eurequa regression
-        '''
-        h = self.parent.aircraft.altCR.getValue()
-        Mach = self.parent.aircraft.machCR.getValue()
-        Thrust = self.parent.thrustCR.getValue()
-
-        ConversionFactor = 3600. / 35303.92683      # to kg/h/N
-
-        result = 0.0099446 + (0.196267 * Mach + 8.71238 * 10 ** (-6) * Thrust + 1.07584 * 10 ** (
-            -5) * Mach * Thrust - 2.21311 * 10 ** (-10) * h * Thrust - 1.80992 * 10 ** (-5) * h * Mach) / cos(
-            (2.36431 * 10 ** (-9) * h * Thrust - 0.252681)) / Thrust * 3600 * 9.81
-        return self.setValueCalc(result * ConversionFactor)
 
     def calcOverallEff(self):
         '''
@@ -188,13 +218,13 @@ class sfcCR(parameter):
         etaTransm = self.parent.etaTransm.getValue()
         etaTherm = self.parent.etaTherm.getValue()
 
-        hFuel = 42.80e6                        # Standard low heating value for aviation fuel
+        hFuel = 42.80e6  # Standard low heating value for aviation fuel
 
         overallEff = etaProp * etaTransm * etaTherm
 
-        conversionFactor = 3600                # to kg/h/N
-        #conversionFactor = 1e6                # to mg/s/N
-        #conversionFactor = 35303.92683        # to lbm/h/lbf
+        conversionFactor = 3600  # to kg/h/N
+        # conversionFactor = 1e6                # to mg/s/N
+        # conversionFactor = 35303.92683        # to lbm/h/lbf
 
         return self.setValueCalc((TAS / (hFuel * overallEff)) * conversionFactor)
 
@@ -221,12 +251,3 @@ class sfcCR(parameter):
         proschub = Thrust / 9.81
         result = benoetigteLeistung / ed / proschub
         return self.setValueCalc(result)
-
-if __name__ == '__main__':
-    mySFC = sfcCR()
-    mySFC.cpacsImport(path='../../../../ToolInput/dlr_cror.xml')
-    print getNearest(mySFC.TList, 1500*0.3048, 0.4, (58000./2.)) / (58000./2.) * 3600
-
-        ###################################################################################################
-        #EOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFE#
-        ###################################################################################################
