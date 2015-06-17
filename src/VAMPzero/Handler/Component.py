@@ -26,7 +26,6 @@ import matplotlib
 from VAMPzero.Handler.Parameter import parameter
 from VAMPzero.Lib.CPACS.general import printFooter
 from VAMPzero.Lib.Log.log import zeroLogger
-from VAMPzero.Lib.NetworkX.networkX import zeroGraph
 from VAMPzero.Lib.TIGL.tigl import openTIGL
 from VAMPzero.Lib.TIXI.tixi import openTIXI, closeXML, getText
 from VAMPzero.Lib.Sphinx.createDisciplineDoc import createDisciplineDoc
@@ -61,25 +60,19 @@ class component(object):
     Several other methods, for reporting, error handling and logging are located in component. See the respective methods documentation     
     '''
 
-    ###################################################################################################
-    ##Init
-    ###################################################################################################
-
     def __init__(self):
-        #Used for Logging Stuff
+        # Used for Logging Stuff
         self.log = zeroLogger('Component')
 
-    ###################################################################################################
-    ##Access Parameters
-    ###################################################################################################
+    # Access Parameters
     def getParameters(self, sorting=str.lower, componentWise=True):
         def getParametersOnly():
             params = []
-            #go through all Parameters of self
-            #distinguish between the two types parameter and component
+            # go through all Parameters of self
+            # distinguish between the two types parameter and component
             for para in sorted(self.__dict__, key=str.lower):
                 para = getattr(self, para)
-                #if paramter valid add to List
+                # if paramter valid add to List
                 if issubclass(para.__class__, parameter):
                     params.append(para)
             return params
@@ -88,8 +81,8 @@ class component(object):
             params = []
             for para in sorted(self.__dict__, key=str.lower):
                 para = getattr(self, para)
-                #if para is a subclass of component call the exporter again
-                #check as well if para is of a lower level so that it will be called top down
+                # if para is a subclass of component call the exporter again
+                # check as well if para is of a lower level so that it will be called top down
                 if issubclass(para.__class__, component) and para.level > self.level:
                     params.append(para)
             return params
@@ -100,12 +93,9 @@ class component(object):
             
         if componentWise:
             return params
-        return sorted(params, key=lambda para: para['name'].lower())#lambda x,y: x['name']<y['name'])
+        return sorted(params, key=lambda para: para['name'].lower())
     
-    ###################################################################################################
-    ##Report
-    ###################################################################################################
-
+    # Report
     def report(self):
         '''
         Looking up init values for all Objects that are existent in the calculation modules
@@ -133,7 +123,7 @@ class component(object):
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is parameter do the validation
+            # If para is parameter do the validation
             if issubclass(para.__class__, parameter):
                 para.realify()
                 para.help()
@@ -141,14 +131,9 @@ class component(object):
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is component call yourself
+            # If para is component call yourself
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.reporter()
-
-
-    ###################################################################################################
-    ##Create Mapping
-    ###################################################################################################
 
     def createMapping(self, fileHandler):
         '''
@@ -159,7 +144,7 @@ class component(object):
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is parameter do the validation
+            # If para is parameter do the validation
             if issubclass(para.__class__, parameter) and para.getCpacsPath() != '':
                 cpacsPath = para.getCpacsPath()
                 fileHandler.write("    <map:mapping mode=\"delete\" >\n")
@@ -171,43 +156,11 @@ class component(object):
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is component call yourself
+            # If para is component call yourself
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.createMapping(fileHandler)
 
-                #=======================================================================
-                # cpacsPaths,zeroTree  = self.documenter([],dict(),self)
-                # myOutMapping         = outMapping(cpacsPaths)
-                # myToolSpecific       = toolSpecificSchema(zeroTree,'zero')
-                # printZeroTreeToSphynx(zeroTree)
-                # self.log.info("VAMPzero DOC: done.")
-
-                #    #If para is parameter and has a CPACS Path, append it for the mapping runs
-                #    if issubclass(para.__class__,parameter) and para.getCpacsPath() != '':
-                #        cpacsPaths.append(para.getCpacsPath())
-
-                #        def addParameter(para,zeroTree):
-                #            '''
-                #            adds parameter and its discipline to a zeroTree
-                #            '''
-                #            entry = {"name": para.getName(),"value": para.getValue(),"factor" : para.getFactor(),'doc':para['doc']}
-                #
-                #            #if component already has discipline add parameter
-                #            if zeroTree[self.id].has_key(para.getDiscipline()):
-                #                zeroTree[self.id][para.getDiscipline()].append(entry)
-                #            else:
-                #                zeroTree[self.id][para.getDiscipline()] = []
-                #                zeroTree[self.id][para.getDiscipline()].append(entry)
-                #
-                #            return zeroTree
-
-                #=======================================================================
-
-
-    ###################################################################################################
-    ##Create Documentation
-    ###################################################################################################
-
+    # Create Documentation
     def createDoc(self):
         '''
         will look up all adjacent cpacsPaths or checks if an own cpacsImport method was applied
@@ -239,7 +192,7 @@ class component(object):
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is a parameter make him do his doc file
+            # If para is a parameter make him do his doc file
             if issubclass(para.__class__, parameter) and para["name"].find('uID') == -1:
                 para.createDoc(myAircraft, parentFolder)
 
@@ -255,7 +208,6 @@ class component(object):
         createDisciplineDoc(disciplines, parentFolder)
         createComponentDoc(self, self.__doc__, components, disciplines, parentFolder)
 
-
         # Go through all user declared attributes 2
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
@@ -264,10 +216,7 @@ class component(object):
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.documenter(myAircraft, parentFolder)
 
-    ###################################################################################################
-    ##Inits
-    ###################################################################################################
-
+    # Inits
     def inits(self):
         '''
         Looking up init values for all Objects that are existent in the calculation modules
@@ -283,10 +232,7 @@ class component(object):
                 self.log.debug(
                     "    - %-*s is only initialized! Value is: %s" % (15, para.getName(), str(para.getValue())))
 
-
-        ###########################################################################################
-        #Inits Main
-        ###########################################################################################
+        # Inits Main
         self.log.debug('')
         self.log.debug("VAMPzero INIT: for component: %s" % self.id)
         # Go through all user declared attributes
@@ -305,11 +251,7 @@ class component(object):
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.inits()
 
-
-    ###################################################################################################
-    ##Convergence
-    ###################################################################################################
-
+    # Convergence
     def converge(self, converged):
         '''
         Validation of all Classes that are existent in the calculation modules
@@ -317,14 +259,10 @@ class component(object):
         All Parameter of Type Aircraft are ignored
         If Parameter is a subclass of component validate will be called! 
         '''
-        ###########################################################################################
-        #Validation Main
-        ###########################################################################################
-
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is parameter do the validation
+            # If para is parameter do the validation
             if issubclass(para.__class__, parameter):
                 if type(para.getValue()) == float or type(para.getValue()) == zeroComplex:
                     parameterConverged = para.checkConvergence()
@@ -334,7 +272,8 @@ class component(object):
                         converged = False
                         #break
 
-        if converged:#go on with checking                    
+        # go on with checking
+        if converged:
             for para in self.__dict__:
                 para = getattr(self, para)
 
@@ -352,11 +291,7 @@ class component(object):
 
         return converged
 
-
-    ###################################################################################################
-    ##Freeze
-    ###################################################################################################
-
+    # Freeze
     def freeze(self):
         '''
         Locking up fixed values for all Objects that are existent in the calculation modules
@@ -380,14 +315,11 @@ class component(object):
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.freeze()
 
-    ###################################################################################################
-    ##Complexify
-    ###################################################################################################
-
+    # Complexify
     def complexify(self):
         '''
-	This function goes thruogh all nested components and parameters and tries to complexify
-	all parameters found to set them to type zeroComplex
+        This function goes thruogh all nested components and parameters and tries to complexify
+        all parameters found to set them to type zeroComplex
         '''
         self.log.debug('')
         self.log.debug("VAMPzero COMPLEX: for component: %s" % self.id)
@@ -396,21 +328,18 @@ class component(object):
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is parameter do the validation
+            # If para is parameter do the validation
             if issubclass(para.__class__, parameter):
                 para.complexify()
 
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is component call yourself
+            # If para is component call yourself
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.complexify()
 
-    ###################################################################################################
-    ##Check inconsistencies
-    ###################################################################################################
-
+    # Check inconsistencies
     def check(self):
         '''
         Looking up fixed values for all Objects that are existent in the calculation modules
@@ -447,12 +376,12 @@ class component(object):
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is parameter do the validation
+            # If para is parameter do the validation
             if issubclass(para.__class__, parameter):
 
                 if isFix(para):
                     ok = False
-                    #go through all callees
+                    # go through all callees
                     for callee in para["callee"]:
                         # if the para is not fixed everything is fine
                         if not isFix(callee):
@@ -464,14 +393,11 @@ class component(object):
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is component call yourself
+            # If para is component call yourself
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.checker()
     
-    ###################################################################################################
-    ##Input Listings
-    ###################################################################################################
-
+    # Input Listings
     def inputs(self):
         '''
         Looking up fixed values for all Objects that are existent in the calculation modules
@@ -506,121 +432,18 @@ class component(object):
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is parameter do the validation
+            # If para is parameter do the validation
             if issubclass(para.__class__, parameter):
                 checkStatus(para)
 
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is component call yourself
+            # If para is component call yourself
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.inputer()
 
-    ###################################################################################################
-    ##Graph Drawing
-    ###################################################################################################
-
-    def graph(self):
-        '''
-        Create a graph representation from the caller and callee information
-        that connects different parameters.
-
-        It includes some fixed Nodes so that the plot can be subdivided.
-        '''
-
-        def getFixedNodes(self):
-            '''
-            Returns a dictionary with entries for longName, x, y position
-            relevant to the position of center of gravity
-            '''
-            fixList = {}
-
-            #aircraft
-            name = "aircraft.posCoG"
-            x = self.posCoG.getValue()
-            y = 0.
-            fixList[name] = [x, y]
-
-            #wing
-            name = "wing.posCoG"
-            x = self.wing.posCoG.getValue()
-            y = self.wing.span.getValue() * 0.35 / 2.
-            fixList[name] = [x, y]
-
-            #vtp
-            name = "vtp.posCoG"
-            x = self.vtp.posCoG.getValue()
-            y = 0.
-            fixList[name] = [x, y]
-
-            #vtp
-            name = "htp.posCoG"
-            x = self.htp.posCoG.getValue()
-            y = self.htp.span.getValue() * 0.35 / 2.
-            fixList[name] = [x, y]
-
-            #engine
-            name = "engine.posCoG"
-            x = self.engine.posCoG.getValue()
-            y = self.wing.span.getValue() * 0.35 / 2.
-            fixList[name] = [x, y]
-
-            #fuselage
-            name = "fuselage.posCoG"
-            x = self.fuselage.posCoG.getValue()
-            y = 0.
-            fixList[name] = [x, y]
-
-            return fixList
-
-        self.log.info('')
-        self.log.info("##############################################################################")
-        self.log.info("VAMPzero Graph")
-        self.log.info("##############################################################################")
-
-        myGraph = zeroGraph()
-        propList = {"edges": [], "colors": [], "labels": []}
-
-        fixList = getFixedNodes(self)
-        myGraph, propList = self.grapher(myGraph, propList)
-
-        myGraph.createEdges(propList["edges"])
-        myGraph.draw(node_color=propList["colors"], fixList=fixList)
-
-
-    def grapher(self, myGraph, propList):
-        '''
-        **Do not use**
-
-        This is the recursive child of graph
-        '''
-
-        self.log.info('')
-        self.log.info("VAMPzero GRAPH: for component: %s" % self.id)
-
-        for para in sorted(self.__dict__, key=str.lower):
-            para = getattr(self, para)
-
-            #If para is parameter do the validation
-            if issubclass(para.__class__, parameter):
-                #do not call the ones that are empty
-                if not para["caller"] == [] and not para["callee"] == []:
-                    myGraph, propList = para.createGraphNode(myGraph, propList)
-
-        for para in sorted(self.__dict__, key=str.lower):
-            para = getattr(self, para)
-
-            #If para is component call yourself
-            if issubclass(para.__class__, component) and para.level > self.level:
-                para.grapher(myGraph, propList)
-
-        return myGraph, propList
-
-    ###################################################################################################
-    ##Sensitivity
-    ###################################################################################################
-
+    # Sensitivity
     def sensitivity(self):
         '''
         Creates a Sensitivity representation
@@ -655,16 +478,16 @@ class component(object):
         self.log.info('')
         self.log.info("VAMPzero SENSE: for component: %s" % self.id)
 
-        #@note: this might hurt a little
+        # @note: this might hurt a little
         reload(matplotlib)
-        #@todo: find a solution to get the hidden matplotlib folder or pray for a solution in tcl/tk
+        # @todo: find a solution to get the hidden matplotlib folder or pray for a solution in tcl/tk
         if os.path.isfile('C:\\Dokumente und Einstellungen\\boeh_da\\.matplotlib\\fontList.cache'):
             os.remove('C:\\Dokumente und Einstellungen\\boeh_da\\.matplotlib\\fontList.cache')
 
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is parameter do the validation
+            # If para is parameter do the validation
             if issubclass(para.__class__, parameter):
                 para.complexify()
                 para.sense(myAircraft, senseFile)
@@ -672,17 +495,11 @@ class component(object):
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #If para is component call yourself
+            # If para is component call yourself
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.sense(myAircraft, senseFile)
 
-
-
-    ###################################################################################################
-    ##AutoCalc
-    ###################################################################################################
-
-
+    # AutoCalc
     def preCalc(self, debug, i):
         self.log.info('VAMPzero CALC: Iteration %s' % str(i))
         self.calc(discipline='')
@@ -709,7 +526,7 @@ class component(object):
 
         count = 6
 
-        #Do some preruns to make it nicer
+        # Do some preruns to make it nicer
         for i in range(count):
             self.preCalc(debug, i)
 
@@ -740,10 +557,6 @@ class component(object):
 
         self.log.info("VAMPzero CALCAuto: done.")
 
-    ###################################################################################################
-    ##Calculation
-    ###################################################################################################
-
     def calc(self, discipline='', deviationAmplitude=0.0):
         '''
         Will Call the calc'discipline' method for all objects (including self) that own this method
@@ -752,13 +565,13 @@ class component(object):
         disciplineList = ['Atmosphere', 'Geometry', 'Mass', 'CoG', 'Inertia', 'Mission', 'Aerodynamic', 'Cabin',
                           'Propulsion', 'Sizing', 'CPACS']
 
-        #Call your own routines
+        # Call your own routines
         if discipline == '':
             discipline = disciplineList
 
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
-            #if it is a parameter
+            # If it is a parameter
             if issubclass(para.__class__, parameter):
                 try:
                     para.calc()
@@ -783,19 +596,16 @@ class component(object):
                     print e, para['name'], para['value']
                     self.log.debug("########### %s, %s, %s" %(e, para['name'], para['value']))
 
-        #Call everyone that is under yourself!
+        # Call everyone that is under yourself!
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
-            #Case 1 discipline is defined by user
+            # Case 1 discipline is defined by user
             if hasattr(para, 'level') and issubclass(para.__class__, component):
-                #Only call topdown
+                # Only call topdown
                 if para.level > self.level:
                     para.calc(discipline, deviationAmplitude)
 
-    ###################################################################################################
-    ##Export to CPACS
-    ###################################################################################################
-
+    # Export to CPACS
     def cpacsExport(self, CPACSObj):
         '''
         This methods exports all parameters nested in the component.
@@ -811,13 +621,13 @@ class component(object):
 
         This is the recursive child of cpacsExport
         '''
-        #go through all Parameters of self
-        #distinguish between the two types parameter and component
+        # go through all Parameters of self
+        # distinguish between the two types parameter and component
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
-            #if paramter and cpacsPath valid build up tree and add value
+            # if paramter and cpacsPath valid build up tree and add value
             if issubclass(para.__class__, parameter):
-                #this is a small workaround to make sure that there are no complex numbers left before exporting
+                # this is a small workaround to make sure that there are no complex numbers left before exporting
                 if issubclass(type(para.getValue()), complex):
                     para.setValue(para.getValue().real)
                     para.realify()
@@ -826,15 +636,12 @@ class component(object):
 
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
-            #if para is a subclass of component call the exporter again
-            #check as well if para is of a lower level so that it will be called top down
+            # if para is a subclass of component call the exporter again
+            # check as well if para is of a lower level so that it will be called top down
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.cpacsExport(CPACSObj)
 
-    ###################################################################################################
-    ##Export to Freemind
-    ###################################################################################################
-
+    # Export to Freemind
     def freemindExport(self, folder='.\\ReturnDirectory\\', withValues=True):
         '''
         This methods exports all parameters nested in the component.
@@ -842,7 +649,6 @@ class component(object):
         Folder is an optional argument that specifies the output location of the mindMaps
         withValues specifies whether the values are included in the output or not.
         '''
-
         self.log.info('')
         self.log.info("##############################################################################")
         self.log.info("VAMPzero Freemind Export to %s" % folder)
@@ -860,24 +666,21 @@ class component(object):
         '''
         self.log.debug("VAMPzero MIND: for component: %s" % self.id)
 
-        #go through all Parameters of self
-        #distinguish between the two types parameter and component
+        # go through all Parameters of self
+        # distinguish between the two types parameter and component
         for para in sorted(self.__dict__, key=str.lower):
             para = getattr(self, para)
 
-            #if paramter and cpacsPath valid build up tree and add value
+            # if paramter and cpacsPath valid build up tree and add value
             if issubclass(para.__class__, parameter):
                 para.freemindExport(withValues=withValues)
 
-                #if para is a subclass of component call the exporter again
-                #check as well if para is of a lower level so that it will be called top down
+               #if para is a subclass of component call the exporter again
+               #check as well if para is of a lower level so that it will be called top down
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.freemind(path, withValues=withValues)
-    
-    ###################################################################################################
-    ##Import from CPACS
-    ###################################################################################################
 
+    # Import from CPACS
     def cpacsImport(self, path='.\\cpacs.xml'):
         '''
         Looks for parameter.CPACSPath in CPACSFilse defined by Path
@@ -920,13 +723,12 @@ class component(object):
         do not use for System use only!!!
         Calls the Parameter.cpacsImport or itsself recursively
         '''
-
-        #go through all Parameters of self
-        #distinguish between the two types parameter and component
+        # go through all Parameters of self
+        # distinguish between the two types parameter and component
         for para in self.__dict__:
             para = getattr(self, para)
 
-            #if paramter and cpacsPath valid build up tree and add value
+            # if paramter and cpacsPath valid build up tree and add value
             if issubclass(para.__class__, parameter):
                 try:
                     #self.log.debug("STATUS: %s, \t\t%s" %(para['name'], para.getStatus()))
@@ -947,18 +749,15 @@ class component(object):
                     para.cpacsImport(path)
                     self.log.debug("VAMPzero Import TypeError for Parameter: %s" % para.longName)
 
-                    #if para is a subclass of component call the importer again
-                    #check as well if para is of a lower level so that it will be called top down
+            # if para is a subclass of component call the importer again
+            # check as well if para is of a lower level so that it will be called top down
             if issubclass(para.__class__, component) and para.level > self.level:
                 try:
                     para.importer(path, TIXIHandle, TIGLHandle)
                 except TypeError:
                     self.log.debug("VAMPzero Import TypeError for Component: %s" % para.id)
 
-                    ###################################################################################################
-                    ##Import from GUI
-                    ###################################################################################################
-
+    # Import from GUI
     def guiImport(self, path='.\\cpacs.xml'):
         '''
         Looks for parameter in CPACSFile defined by component.discipline.name
@@ -966,12 +765,7 @@ class component(object):
         '''
         importGUI(self, path)
 
-
-    ###################################################################################################
-    ##Plotting
-    ###################################################################################################
-
-
+    # Plotting
     def plotter(self, ax):
         '''
         Recursive call for the validation of Convergence in VAMPzero
@@ -990,7 +784,6 @@ class component(object):
                     y = range(len(x))
                     ax.plot(y, x, label=para["name"])
 
-
         for para in self.__dict__:
             para = getattr(self, para)
 
@@ -998,15 +791,8 @@ class component(object):
             if issubclass(para.__class__, component) and para.level > self.level:
                 para.plotter(ax)
 
-
     def plot(self):
         '''
         Calls the plotAircraft function from lib.matplotlib
         '''
-
         plotAircraft(self)
-
-    ###################################################################################################
-    #EOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFE#
-    ###################################################################################################
-        

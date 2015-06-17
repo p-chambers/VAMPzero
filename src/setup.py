@@ -47,7 +47,6 @@ setup(
     #seems to be bitching around with the installation of PySide
     install_requires=['setuptools>=0.6',
                       'matplotlib>=1.0',
-                      'networkx>=1.5',
                       'scipy>=0.9',
                       'numpy>=1.0',
                       'lxml>=2.1'],
