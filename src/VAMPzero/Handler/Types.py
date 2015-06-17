@@ -40,10 +40,7 @@ class zeroComplex(complex):
     def __coerce__(self, other):
         return self, zeroComplex(other)
 
-    #===============================================================================
     # Math Operators
-    #===============================================================================
-
     def __div__(self, other):
         if not isinstance(other, zeroComplex):
             other = zeroComplex(other)
@@ -72,7 +69,6 @@ class zeroComplex(complex):
         result = super(zeroComplex, self).__sub__(other)
         return zeroComplex(result)
 
-
     def __mul__(self, other):
         if not isinstance(other, zeroComplex):
             other = zeroComplex(other)
@@ -80,17 +76,11 @@ class zeroComplex(complex):
         result = super(zeroComplex, self).__mul__(other)
         return zeroComplex(result)
 
-    #===============================================================================
     # Conversions
-    #===============================================================================
-
     def __int__(self):
         return int(self.real)
 
-    #===============================================================================
     # Rich Comparison Operators
-    #===============================================================================
-
     def __eq__(self, other):
         if self.real == other:
             return True

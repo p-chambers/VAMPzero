@@ -32,13 +32,11 @@ from VAMPzero.Lib.Sphinx.createParameterDoc import createParameterDoc
 from VAMPzero.Handler.Types import zeroComplex
 
 
-
 # added this function to retrieve the discipline from parent folder
 if sys.platform == 'win32':
     splitter = '\\'
 else:
     splitter = '/'
-
 
 class parameter(dict):
     '''
@@ -77,8 +75,8 @@ class parameter(dict):
     
     For the methods of parameter see the following documentation. Please note that some of these routines maybe overwritten.  
     '''
-    # Some global switches for fooling around:
-    # Adjacence is important for the mindmaps and setting content of caller and callee keys 
+
+    # Adjacence is important for the mindmaps and setting content of caller and callee keys
     doAdjacence = True
 
     # If this is set to True VAMPzero will call its callee if its value is set by a setValueCalc
@@ -141,10 +139,6 @@ class parameter(dict):
                 if issubclass(type(caller), VAMPzero.Handler.Component.component):
                     return caller
 
-        #=======================================================================
-        # Main Constructor
-        #=======================================================================
-        # Used for Login Stuff
         self.log = zeroLogger(setname(self))
         self.parent = parent
 
@@ -173,14 +167,9 @@ class parameter(dict):
             self.parent = parent
 
         self.longName = self.parent.id + '.' + self['name']
-
         self.count = 0
 
-
-    ###################################################################################################
-    # #Help String
-    ###################################################################################################
-
+    # Help String
     def help(self):
         '''
         Returns a help String similar to Matlab
@@ -192,10 +181,7 @@ class parameter(dict):
         self.log.info(
             'VAMPzero HELP: %-*s in [%-*s], value: %s' % (19, str(self["name"]), 5, str(self["unit"]), result))
 
-    ###################################################################################################
-    # #Getter
-    ###################################################################################################
-
+    # Getter
     def getUnit(self):
         '''
         Returns the unit of the parameter
@@ -272,9 +258,7 @@ class parameter(dict):
                 pass
 
             if issubclass(type(caller), parameter):
-                #===============================================================
                 # Append Caller
-                #===============================================================
                 appendCaller = True
                 for item in self['caller']:
                     if caller.longName == item.longName:
@@ -283,9 +267,7 @@ class parameter(dict):
                 if appendCaller or len(self['caller']) == 0:
                     self['caller'].append(caller)
 
-                #===============================================================
                 # Append Callee in Caller
-                #===============================================================
                 appendCallee = True
                 for item in caller['callee']:
                     if item.longName == self.longName:
@@ -311,16 +293,11 @@ class parameter(dict):
         '''
         return self["devFactor"]
 
-    ###################################################################################################
-    # #Check if standard deviation is set
-    ###################################################################################################
+    # Check if standard deviation is set
     def hasDeviation(self):
         return self["stdDeviation"] != None
 
-    ###################################################################################################
-    # #Setters
-    ###################################################################################################
-
+    # Setters
     def setUnit(self, unit=''):
         '''
         Sets the unit of the parameter
@@ -396,17 +373,15 @@ class parameter(dict):
         If isComplex is true all values need to be converted to zeroComplex. 
         If isComplex is false value should only have a real part 
         '''
-        #=======================================================================
-        # Do this if NO complex values are wanted 
-        #=======================================================================
+
+        # Do this if NO complex values are wanted
         if not parameter.isComplex:
             if type(value) == complex or type(value) == zeroComplex:
                 self["value"] = value.real
             else:
                 self["value"] = value
-                #=======================================================================
+
         # Do this if complex values are wanted
-        #=======================================================================
         else:
             try:
                 self["value"] = zeroComplex(value)
@@ -447,21 +422,17 @@ class parameter(dict):
         convergence checks can be run.  
         '''
         if not cmp(self.getStatus(), 'fix') == 0:
-            #===================================================================
             # Set Value
-            #===================================================================
             try:
                 self.setValue(value * self["factor"])
             except TypeError:
                 self.setValue(value)
                 self.log.debug("VAMPzero setValue: Could not apply factor to paramter: %s" % self.longName)
-                #===================================================================
+
             # Set Status
-            #===================================================================
             self.setStatus('calc')
-            #===================================================================
+
             # Set History
-            #===================================================================
             if type(value) == float or type(value) == int:
                 self.getHistory().append(value)
             elif type(value) == zeroComplex or type(value) == complex or type(value) == complex128:
@@ -471,10 +442,7 @@ class parameter(dict):
 
         return self["value"]
 
-    ###################################################################################################
-    # #Complex methods
-    ###################################################################################################
-
+    # Complex methods
     def complexify(self):
         '''
         Tries to convert the own value to a zeroComplex value
@@ -501,24 +469,18 @@ class parameter(dict):
                 self.log.debug(
                     "VAMPzero REAL: could not convert %s to real, value is: %s" % (self.longName, str(self["value"])))
 
-                ###################################################################################################
-                # #Check for Convergence
-                ###################################################################################################
-
+    # Check for Convergence
     def checkConvergence(self):
         '''
         Checks whether the parameter seems to have converged
         it will be checked whether the value has changed more than 10-5% from the last calculation 
         '''
-        #=======================================================================
+
         # Don't even get started if you are fixed
-        #=======================================================================
         if self.getStatus() == "fix" or self.getStatus() == "init":
             return True
 
-        #=======================================================================
         # Get the actual value
-        #=======================================================================
         if type(self.getHistory()[-1]) == zeroComplex:
             this = self.getHistory()[-1].real
         elif type(self.getHistory()[-1]) == float:
@@ -528,13 +490,9 @@ class parameter(dict):
         else:
             this = 0.
 
-        #=======================================================================
         # Do the Check
-        #=======================================================================
         if this != 0. and len(self.getHistory()) > 2:
-            #===================================================================
-            # Get the second value 
-            #===================================================================
+            # Get the second value
             if type(self.getHistory()[-2]) == zeroComplex:
                 last = self.getHistory()[-2].real
             # if the starting value is an integer it still might change to a float during iteration
@@ -558,11 +516,6 @@ class parameter(dict):
         else:
             return True
 
-
-            ###################################################################################################
-            # #Calc Method
-            ###################################################################################################
-
     def calc(self):
         '''
         Each parameter will overwrite this method with it's own calculation methods
@@ -570,10 +523,6 @@ class parameter(dict):
         Strictly, speaking the method could also throw a warning if called
         '''
         pass
-
-    ###################################################################################################
-    # #Export to Freemind
-    ###################################################################################################
 
     def freemindExport(self, depth=3, withValues=True):
         '''
@@ -586,31 +535,6 @@ class parameter(dict):
 
         myNode.appendLeftNodes(self, withValues=withValues)
         myNode.createMindMap()
-
-    ###################################################################################################
-    # #Export to NetworkX
-    ###################################################################################################
-
-    def createGraphNode(self, myGraph, propList):
-        '''
-        Created a Node in a Graph and adds Edges to EgdeList
-        '''
-        propList = myGraph.addNode(self.longName, propList)
-
-        # If you are called put your name second
-        for item in self["caller"]:
-            propList["edges"].append([item.longName, self.longName])
-
-        # if you call vice-versa
-        for item in self["callee"]:
-            propList["edges"].append([self.longName, item.longName])
-
-        return myGraph, propList
-
-
-    ###################################################################################################
-    # #sense
-    ###################################################################################################
 
     def sense(self, myAircraft, senseFile=None, doc=False, name=''):
         '''
@@ -628,10 +552,6 @@ class parameter(dict):
             self.log.warning(
                 "VAMPzero SENSE: Sensitivity of %s could not be calculated due to the following error: %s" % (
                     self.longName, str(e)))
-
-            ###################################################################################################
-            # #Export to CPACS
-            ###################################################################################################
 
     def cpacsExport(self, CPACSObj):
         '''
@@ -669,12 +589,6 @@ class parameter(dict):
         else:
             resultLine = str(self.longName + '=' + str(value) + ';\n')
         fileHandle.write(resultLine)
-#        fileHandle.writelines(parameter.resultList)
-
-
-    ###################################################################################################
-    # #Import from CPACS
-    ###################################################################################################
 
     def cpacsImport(self, path='.\\cpacs.xml', TIXIHandle=None, TIGLHandle=None):
         '''
@@ -702,20 +616,11 @@ class parameter(dict):
             else:
                 self.importError()
 
-
-                ###################################################################################################
-                # #Documentation
-                ###################################################################################################
-
     def createDoc(self, myAircraft, parentFolder):
         '''
         Creates a structured Text File so that the documentation can be created
         '''
         createParameterDoc(self, myAircraft, parentFolder)
-
-    ###################################################################################################
-    # #Errors
-    ###################################################################################################
 
     def importError(self):
         '''
@@ -743,7 +648,3 @@ class parameter(dict):
         '''
         self.log.debug('VAMPzero CALC: %-*s monkey-patched. Calc routine replaced by %s' % (
             19, self.parent.id + '.' + self.getName(), routine))
-
-###################################################################################################
-# EOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFEOFE#
-###################################################################################################
