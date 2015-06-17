@@ -4,3 +4,4 @@
 .svn
 bin
 qm
+*.pyc
