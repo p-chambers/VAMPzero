@@ -45,8 +45,8 @@ def createTrackAileron(uid, eta, trackType):
     eta = doubleBaseType(valueOf_=str(eta))
     trackType = stringBaseType(valueOf_=trackType)
     controlSurfaceAttachment = materialDefinitionType(materialUID=stringBaseType(valueOf_='aluminium2024'), thickness=doubleBaseType(valueOf_='0.001'))
-    parentAttachment = materialDefinitionType(materialUID=stringBaseType(valueOf_='aluminium2024'), thickness=doubleBaseType(valueOf_='0.001'))
-    trackStructure = trackStructureType(parentAttachment=parentAttachment, controlSurfaceAttachment=controlSurfaceAttachment)     
+    #parentAttachment = materialDefinitionType(materialUID=stringBaseType(valueOf_='aluminium2024'), thickness=doubleBaseType(valueOf_='0.001'))
+    trackStructure = trackStructureType(controlSurfaceAttachment=controlSurfaceAttachment)
     return controlSurfaceTrackTypeType(uID=uid, eta=eta, trackType=trackType, trackStructure=trackStructure)
 
 
@@ -60,7 +60,7 @@ def createTrackFlap(uID, eta, trackType, trackSubType=None, actuatorcounter=1):
     trackActuator = trackActuatorType(uID=uID + '_actuatorUID', actuatorUID=stringUIDBaseType(isLink='true', valueOf_='Act_FT'+str(nFlapActuators)), material=materialDefinitionType(materialUID=stringBaseType(valueOf_='aluminium2024'), thickness=doubleBaseType(valueOf_='0.001')))
     nFlapActuators += 1
     controlSurfaceAttachment = materialDefinitionType(materialUID=stringBaseType(valueOf_='aluminium2024'), thickness=doubleBaseType(valueOf_='0.001'))
-    parentAttachment = materialDefinitionType(materialUID=stringBaseType(valueOf_='aluminium2024'), thickness=doubleBaseType(valueOf_='0.001'))
+    #parentAttachment = materialDefinitionType(materialUID=stringBaseType(valueOf_='aluminium2024'), thickness=doubleBaseType(valueOf_='0.001'))
     sidePanels = materialDefinitionType(materialUID=stringBaseType(valueOf_='aluminium2024'), thickness=doubleBaseType(valueOf_='0.001'))
     upperPanel = materialDefinitionType(materialUID=stringBaseType(valueOf_='aluminium2024'), thickness=doubleBaseType(valueOf_='0.001'))
     lowerPanel = materialDefinitionType(materialUID=stringBaseType(valueOf_='titan'), thickness=doubleBaseType(valueOf_='0.001'))
@@ -68,7 +68,7 @@ def createTrackFlap(uID, eta, trackType, trackSubType=None, actuatorcounter=1):
     ribs = materialDefinitionType(materialUID=stringBaseType(valueOf_='aluminium2024'), thickness=doubleBaseType(valueOf_='0.001'))
     car = materialDefinitionType(materialUID=stringBaseType(valueOf_='aluminium2024'), thickness=doubleBaseType(valueOf_='0.001'))
     
-    trackStructure = trackStructureType(parentAttachment=parentAttachment, controlSurfaceAttachment=controlSurfaceAttachment, sidePanels=sidePanels, upperPanel=upperPanel, lowerPanel=lowerPanel, rollerTrack=rollerTrack, ribs=ribs, car=car)     
+    trackStructure = trackStructureType(controlSurfaceAttachment=controlSurfaceAttachment, sidePanels=sidePanels, upperPanel=upperPanel, lowerPanel=lowerPanel, rollerTrack=rollerTrack, ribs=ribs, car=car)
     
     if trackSubType is None:
         return controlSurfaceTrackTypeType(uID=uID, eta=eta, trackType=trackType, trackStructure=trackStructure, actuator=trackActuator)

@@ -128,9 +128,9 @@ def createWingSection(parent, thickness, tx, ty, tz, sx, sy, sz, rx, ry, rz, Air
         @param descr: Description of this Element [string]
         '''
         myElement = wingElementType(uID=UID)
-        myElement.set_name(stringBaseType(None, None, None, Name))
-        myElement.set_description(stringBaseType(None, None, None, descr))
-        myElement.set_airfoilUID(stringBaseType(None, None, None, AirfUID))
+        myElement.set_name(stringBaseType(valueOf_=Name))
+        myElement.set_description(stringBaseType(valueOf_=descr))
+        myElement.set_airfoilUID(stringBaseType(valueOf_=AirfUID))
         # Translation
         createTransformation(myElement, 'absGlobal', tx, ty, tz, sx, sy, sz, rx, ry, rz)
         parent.add_element(myElement)

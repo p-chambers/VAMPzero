@@ -25,7 +25,7 @@ from VAMPzero.Lib.CPACS.cpacs import stringBaseType, componentSegmentsType, \
     materialDefinitionType, capType, webType, wingSkinType, wingStringerType, \
     wingShellType, wingFuelTankBorderType, wingFuelTankGeometryType, \
     wingFuelTankType, wingFuelTanksType, wingRibCrossSectionType, ribRotationType, \
-    wingRibsPositioningType, ribCrossingBehaviourType1, wingRibsDefinitionType, \
+    wingRibsPositioningType, ribCrossingBehaviourType, wingRibsDefinitionType, \
     wingRibsDefinitionsType, integerBaseType, ribIdentificationType, \
     wingFuselageAttachmentType, wingFuselageAttachmentsType, wingWingAttachmentType, \
     wingWingAttachmentsType, wingWingAttachmentElementsType,wingWingAttachmentSparsType, \
@@ -134,16 +134,16 @@ def createSpars(parent, parentUID, typeOfSeg, etaFus=0.1, etaKink=0.3, cTip=1.0,
     # Assign Spar Locations 
     #===========================================================================
     for item in frontSparLocactions:
-        x = doubleBaseType(None, None, None, str(item[0]))
-        y = doubleBaseType(None, None, None, str(item[1]))
-        mySparPostion = sparPositionType(None, None, None, myUID + '_FS_P' + str(frontSparLocactions.index(item)), x, y)
+        x = doubleBaseType(valueOf_=str(item[0]))
+        y = doubleBaseType(valueOf_=str(item[1]))
+        mySparPostion = sparPositionType(None, None, None, myUID + '_FS_P' + str(frontSparLocactions.index(item)), eta=x, xsi=y)
         mySparPositions.add_sparPosition(mySparPostion)
 
     if len(rearSparLocactions) != 0:
         for item in rearSparLocactions:
-            x = doubleBaseType(None, None, None, str(item[0]))
-            y = doubleBaseType(None, None, None, str(item[1]))
-            mySparPostion = sparPositionType(None, None, None, myUID + '_RS_P' + str(rearSparLocactions.index(item)), x, y)
+            x = doubleBaseType(valueOf_=str(item[0]))
+            y = doubleBaseType(valueOf_=str(item[1]))
+            mySparPostion = sparPositionType(None, None, None, myUID + '_RS_P' + str(rearSparLocactions.index(item)), eta=x, xsi=y)
             mySparPositions.add_sparPosition(mySparPostion)
         
     #===========================================================================
@@ -272,7 +272,7 @@ def createRibs(parent, parentUID, typeOfSeg, thickness=0.03, pitch=.8, nRibs=Non
         ribEnd = stringBaseType(None, None, None, parentUID + '_Spar_RS')
         ribRotation = ribRotationType(None, None, None, stringBaseType(None, None, None, 'globalY'), \
                                            doubleBaseType(None, None, None, '90.'))
-        ribCrossing = ribCrossingBehaviourType1(None, None, None, 'cross')
+        ribCrossing = ribCrossingBehaviourType(None, None, None, 'cross')
 
         #=======================================================================
         # First set of 4 ribs inside the fuselage
@@ -320,7 +320,7 @@ def createRibs(parent, parentUID, typeOfSeg, thickness=0.03, pitch=.8, nRibs=Non
         etaStart = doubleBaseType(None, None, None, str(etaEng + etaPylon + pitch / span))
         etaEnd = doubleBaseType(None, None, None, '0.95')
         
-        ribCrossing = ribCrossingBehaviourType1(None, None, None, 'end')
+        ribCrossing = ribCrossingBehaviourType(None, None, None, 'end')
         ribRotation = ribRotationType(None, None, None, stringBaseType(None, None, None, 'wing_Spar_FS'), \
                                            doubleBaseType(None, None, None, '90.'))
 
@@ -348,7 +348,7 @@ def createRibs(parent, parentUID, typeOfSeg, thickness=0.03, pitch=.8, nRibs=Non
         ribEnd = stringBaseType(None, None, None, parentUID + '_Spar_RS')
         ribRotation = ribRotationType(None, None, None, stringBaseType(None, None, None, 'globalY'), \
                                            doubleBaseType(None, None, None, '90.'))
-        ribCrossing = ribCrossingBehaviourType1(None, None, None, 'cross')
+        ribCrossing = ribCrossingBehaviourType(None, None, None, 'cross')
 
         #=======================================================================
         # First set of 4 ribs inside the fuselage
@@ -381,7 +381,7 @@ def createRibs(parent, parentUID, typeOfSeg, thickness=0.03, pitch=.8, nRibs=Non
         etaStart = doubleBaseType(None, None, None, str(etaStrut + pitch / span))
         etaEnd = doubleBaseType(None, None, None, '0.95')
 
-        ribCrossing = ribCrossingBehaviourType1(None, None, None, 'end')
+        ribCrossing = ribCrossingBehaviourType(None, None, None, 'end')
         ribRotation = ribRotationType(None, None, None, stringBaseType(None, None, None, 'wing_Spar_FS'), \
                                            doubleBaseType(None, None, None, '90.'))
 
@@ -409,7 +409,7 @@ def createRibs(parent, parentUID, typeOfSeg, thickness=0.03, pitch=.8, nRibs=Non
         ribEnd = stringBaseType(None, None, None, 'trailingEdge')
         ribRotation = ribRotationType(None, None, None, stringBaseType(None, None, None, 'globalY'), \
                                            doubleBaseType(None, None, None, '90.'))
-        ribCrossing = ribCrossingBehaviourType1(None, None, None, 'cross')
+        ribCrossing = ribCrossingBehaviourType(None, None, None, 'cross')
 
         etaStart = doubleBaseType(None, None, None, str(0.001))
         etaEnd = doubleBaseType(None, None, None, str(0.999))
@@ -442,7 +442,7 @@ def createRibs(parent, parentUID, typeOfSeg, thickness=0.03, pitch=.8, nRibs=Non
         ribEnd = stringBaseType(None, None, None, 'trailingEdge')
         ribRotation = ribRotationType(None, None, None, stringBaseType(None, None, None, 'globalY'), \
                                            doubleBaseType(None, None, None, '90.'))
-        ribCrossing = ribCrossingBehaviourType1(None, None, None, 'cross')
+        ribCrossing = ribCrossingBehaviourType(None, None, None, 'cross')
         if nRibs is None:
             ribSpacing = doubleBaseType(None, None, None, pitch)
             ribsPositioning = wingRibsPositioningType(None, None, None, ribReference, etaStart, etaEnd, ribStart, ribEnd, \
@@ -472,7 +472,7 @@ def createRibs(parent, parentUID, typeOfSeg, thickness=0.03, pitch=.8, nRibs=Non
         ribEnd = stringBaseType(None, None, None, 'trailingEdge')
         ribRotation = ribRotationType(None, None, None, stringBaseType(None, None, None, 'globalY'), \
                                            doubleBaseType(None, None, None, '90.'))
-        ribCrossing = ribCrossingBehaviourType1(None, None, None, 'cross')
+        ribCrossing = ribCrossingBehaviourType(None, None, None, 'cross')
 
         etaStart = doubleBaseType(None, None, None, str(0.0))
         etaEnd = doubleBaseType(None, None, None, str(0.95))
@@ -503,7 +503,7 @@ def createRibs(parent, parentUID, typeOfSeg, thickness=0.03, pitch=.8, nRibs=Non
         ribEnd = stringBaseType(None, None, None, 'trailingEdge')
         ribRotation = ribRotationType(None, None, None, stringBaseType(None, None, None, 'globalY'), \
                                            doubleBaseType(None, None, None, '90.'))
-        ribCrossing = ribCrossingBehaviourType1(None, None, None, 'cross')
+        ribCrossing = ribCrossingBehaviourType(None, None, None, 'cross')
         if nRibs is None:
             ribSpacing = doubleBaseType(None, None, None, pitch)
             ribsPositioning = wingRibsPositioningType(None, None, None, ribReference, etaStart, etaEnd, ribStart, ribEnd, \
@@ -535,7 +535,7 @@ def createRibs(parent, parentUID, typeOfSeg, thickness=0.03, pitch=.8, nRibs=Non
         ribEnd = stringBaseType(None, None, None, 'trailingEdge')
         ribRotation = ribRotationType(None, None, None, stringBaseType(None, None, None, 'leadingEdge'), \
                                            doubleBaseType(None, None, None, '90.'))
-        ribCrossing = ribCrossingBehaviourType1(None, None, None, 'cross')
+        ribCrossing = ribCrossingBehaviourType(None, None, None, 'cross')
         if nRibs is None:
             ribSpacing = doubleBaseType(None, None, None, pitch)
             ribsPositioning = wingRibsPositioningType(None, None, None, ribReference, etaStart, etaEnd, ribStart, ribEnd, \

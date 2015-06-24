@@ -164,7 +164,7 @@ def buildElement(Obj,el,uID=''):
     #
     Obj.buildChildren(node,node,el)
     if el == 'global':
-        ret_Obj = getattr(Obj, 'globalxx')
+        ret_Obj = getattr(Obj, 'global_')
     else:
         ret_Obj = getattr(Obj, el)
     if isinstance(ret_Obj, ListType):
@@ -393,7 +393,7 @@ def getObjfromXpath(CPACSObj,xpath):
             continue
         # change special element names for the cpacslib.
         if el == 'global':  # fix name, automatic change in cpacslib out of keyword issues
-            el = 'globalxx'
+            el = 'global_'
         
         # check if the object has the needed element
         # if NOT print FAILURE and exit
@@ -410,7 +410,7 @@ def getObjfromXpath(CPACSObj,xpath):
             if Obj is None:
                 #print "IS None!"
                 # process special elements for cpacslib
-                if el == 'globalxx':
+                if el == 'global_':
                     Obj = buildElement(lastObj,'global',uID)
                 else:
                     Obj = buildElement(lastObj,el, uID)
@@ -471,12 +471,13 @@ def createTransformation(parent, refType='absGlobal',tx=0.,ty=0.,tz=0., sx=1.,sy
     '''
     # Convert to CPACS Types
 
-    myTranslation    = pointAbsRelType(None,None,None,refType,None,doubleBaseType(None, None, None,str(tx)),doubleBaseType(None, None, None,str(ty)),doubleBaseType(None, None, None,str(tz)))
-    myScaling        = pointType(None,None,None,None,doubleBaseType(None, None, None,str(sx)),doubleBaseType(None, None, None,str(sy)),doubleBaseType(None, None, None,str(sz)))
-    myRotation       = pointType(None,None,None,None,doubleBaseType(None, None, None,str(rx)),doubleBaseType(None, None, None,str(ry)),doubleBaseType(None, None, None,str(rz)))
+    myTranslation    = pointAbsRelType(refType=refType, x=doubleBaseType(valueOf_=str(tx)), y=doubleBaseType(valueOf_=str(ty)), z=doubleBaseType(valueOf_=str(tz)))
+    myScaling        = pointType(x=doubleBaseType(valueOf_=str(sx)), y=doubleBaseType(valueOf_=str(sy)), z=doubleBaseType(valueOf_=str(sz)))
+    myRotation       = pointType(x=doubleBaseType(valueOf_=str(rx)), y=doubleBaseType(valueOf_=str(ry)), z=doubleBaseType(valueOf_=str(rz)))
     
     #Create Element
-    myTransformation = transformationType(None,None,None,None,myScaling, myRotation, myTranslation )
+    myTransformation = transformationType(scaling=myScaling, rotation=myRotation, translation=myTranslation )
+
     #Append to Parent
     parent.set_transformation(myTransformation)
 
